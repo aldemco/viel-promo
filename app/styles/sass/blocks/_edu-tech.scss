@@ -1,0 +1,110 @@
+
+.tech-section {
+    width: 100%;
+    min-height: 720px;
+    position: relative;
+    z-index: 2;
+    padding: 55px 0px 55px 0px;
+	&__container {
+        display: flex;
+        gap: 90px;
+
+    }
+    &__heading{
+        margin-bottom: 20px;
+    }
+    &__about{
+        margin-bottom: 35px;
+        font-size: 22px;
+        line-height: 26px;
+
+    }
+	&__left-col {
+        flex-basis: 50%;
+    }
+	&__right-col {
+        flex-basis: 50%;
+    }
+    &__accordion{
+        margin-bottom: 35px;
+    }
+    &__actions{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 25px;
+        @include media-breakpoint-down(xxl) {
+            flex-direction: column;
+        }
+    }
+    &::after{
+        content: '';
+        background: url(/images/tech-bg-polygon.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        position: absolute;
+        width: 551px;
+        height: 551px;
+        left: -244.78px;
+        top: 60px;
+        z-index: -1;
+    }
+    &::before{
+        content: '';
+        background: url(/images/tech-bg-polygon.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        position: absolute;
+        width: 551px;
+        height: 551px;
+        left: 1155.22px;
+        top: 0;
+        z-index: -1;
+    }
+}
+
+.accordion {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 30px;
+	&__item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        padding: 20px 35px;
+        background: #FFFFFF;
+        border: $border solid $success;
+        border-radius: 10px;
+        
+    }
+	&__label {
+        font-size: 22px;
+        line-height: 26px;
+    }
+	&__icon {
+        background-image: url(/images/accordion.svg);
+        background-repeat: no-repeat;
+        width: 37px;
+        height: 20px;
+        
+    }
+}
+
+@include media-breakpoint-down(lg) {
+    .tech-section {
+
+        &__container {
+            display: flex;
+            flex-direction: column;
+            gap: 90px;
+
+        }
+        &__left-col {
+            flex-basis: 50%;
+        }
+        &__right-col {
+            flex-basis: 50%;
+        }
+    }
+}

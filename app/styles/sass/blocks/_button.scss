@@ -1,0 +1,72 @@
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $gray;
+    border: $border solid $gray;
+    border-color: #fff;
+    border-radius: 10px;
+    padding: 0px 1em 0px 1em;
+    color: $textcolor;
+    text-decoration: none;
+    white-space: nowrap;
+    font-weight: 500;
+    overflow: hidden;
+    position: relative;
+
+    &_large { 
+        font-size: 22px;
+        height: 65px;
+    }
+    &_medium {
+        font-size: 22px;
+        height: 55px;
+    }
+    &_small {
+        font-size: 18px;
+        height: 45px;
+    }
+
+    &_success {
+        &.btn_line{
+            color: $success;
+        }
+        background-color: $success;
+        border-color: $success;
+        color: #fff;
+    }
+    &_warning {
+        &.btn_line{
+            color: $accent;
+        }
+        background-color: $accent;
+        border-color: $accent;
+        color: $textcolor;
+    }
+    &_line {
+        background-color: initial;
+        border-width: $border;
+        border-style: solid;
+    }
+    &::before{
+        content: '';
+        position: absolute;
+        top: 0;
+        height: 100%;
+        width: 45px;
+        transform: skewX(-45deg); // Наклон
+        animation: flareAnimation;
+        left: -150%;
+        background: linear-gradient(90deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.4));
+        animation: flareAnimation 3s infinite linear; // Время и тип анимации можно менять
+    }
+}
+
+@keyframes flareAnimation {
+    0% {
+        left: -150%;
+    }
+    100% {
+        left: 150%;
+    }
+}

@@ -1,0 +1,134 @@
+
+.body-section {
+    padding: 55px 0px 55px 0px;
+	&__container {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        flex-direction: row;
+    }
+    &__right-col {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    &__left-col {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: center;
+    }
+	&__heading {
+        margin-bottom: 30px;
+    }
+	&__desc {
+        margin-bottom: 60px;
+        max-width: 620px;
+        font-size: 22px;
+    }
+	&__btn {
+        max-width: 323px;
+        align-self: center;
+    }
+	&__picture {
+        position: relative;
+        padding: 20px 0px 20px 0px;
+    }
+    &__back {
+        height: auto;
+        left: -53px;
+        position: absolute;
+        top: 86px;
+        width: 100%;
+        animation: rotate 14s infinite;
+    }
+	&__front {
+        position: relative;
+        z-index: 2;
+        height: 591px;
+        width: 591px;
+        mask-image: url(/images/hexagon20.svg);
+        mask-repeat: no-repeat;
+        mask-size: contain;
+        background: rgb(228, 228, 228);
+    }
+}
+
+
+@include media-breakpoint-down(xl) {
+    .body-section {
+        &__left-col { 
+            display: flex;
+            flex-basis: 40%;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+    
+}
+
+
+@include media-breakpoint-down(lg) {
+    .body-section {
+        &__container {
+            gap: 1em;
+        }
+        &__heading {
+            text-align: center;
+        }
+        &__desc {
+            text-align: center;
+            max-width: initial;
+        }
+        &__picture{
+            width: 100%;
+
+        }
+        &__front{
+            width: auto;
+
+        }
+        &__back { 
+            display: none;
+        }
+        &__right-col {
+            margin-bottom: 50px;
+            flex-basis: 50%;
+        }
+        &__left-col {
+            flex-basis: 40%;
+        }
+
+    }
+    
+}
+
+@include media-breakpoint-down(md) {
+    .body-section {
+        &__container {
+            flex-direction: column-reverse;
+        }
+        &__heading {
+            text-align: center;
+        }
+        &__desc {
+            text-align: center;
+            max-width: initial;
+        }
+        &__picture{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+        &__back { 
+            display: none;
+        }
+        &__left-col {
+            margin-bottom: 50px;
+            max-height: 500px;
+        }
+
+    }
+    
+}
+

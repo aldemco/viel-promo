@@ -1,22 +1,38 @@
 // USER VARIABLES SECTION
 
-$accent: orange; // Accent Color
-$fontsize: 16px; // Body Font Size
-$textcolor: #333; // Text Color
-$lineheight: 1.65; // Document Line Height
+$accent: #FFD600; // Accent Color
+$success: #7CA950; // Accent Color
+$gray: #F8F8F8; // Accent Color
+$fontsize: 18px; // Body Font Size
+$border: 3px;
+$textcolor: #000; // Text Color
+$lineheight: 1.65; // Document Line Height 25
 $userfont: roboto-oh5, sans-serif; // User Font Family
 $systemfont: -apple-system, BlinkMacSystemFont, Arial, sans-serif; // System Font Family
+
 
 // Bootstrap compatible gutter variable => $gutter
 $grid-gutter-width: 30px;
 $gutter: $grid-gutter-width;
 
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1430px
+) !default;
+
 // IMPORT SECTION
 
+@import 'node_modules/swiper/swiper.scss';
 @import 'node_modules/bootstrap/scss/bootstrap-reboot.scss'; // Bootstrap Reboot collection
 @import 'node_modules/bootstrap/scss/mixins/_breakpoints.scss'; // Bootstrap Breakpoints mixin
-@import 'node_modules/bootstrap/scss/bootstrap-grid.scss'; // Optional Bootstrap Grid
+//@import 'node_modules/bootstrap/scss/bootstrap-grid.scss'; // Optional Bootstrap Grid
 // @import 'node_modules/bootstrap/scss/_utilities.scss' // Optional Bootstrap Utilites
+
+
 
 // FONTS LOAD SECTION
 
@@ -70,4 +86,9 @@ body{
 	min-width: 320px;
 	position: relative;
 	overflow-x: hidden;
+}
+
+a {
+	text-decoration: none;
+	color: $success;
 }

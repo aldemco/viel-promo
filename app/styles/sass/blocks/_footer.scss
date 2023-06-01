@@ -1,0 +1,31 @@
+.footer-section {
+    padding: 50px 0;
+    font-weight: 200;
+    &__container{
+        display: flex;
+
+    }
+	&__left-col {
+        flex-basis: 50%;
+    }
+	&__right-col {
+        flex-basis: 50%;
+        text-align: right;
+    }
+}
+
+
+@include media-breakpoint-down(md) {
+    .footer-section {
+        &__container {
+            flex-direction: column;
+        }
+        &__left-col {
+            text-align: center;
+        }
+        &__right-col {
+            text-align: center;
+        }
+    }
+}
+

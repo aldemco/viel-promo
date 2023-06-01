@@ -1,0 +1,106 @@
+.form-select, .form-input, .form-textarea {
+    padding:  0 1em;
+    border-radius: 10px;
+    background-color: $gray;
+    height: 55px;
+    width: 100%;
+    border: none;
+}
+
+.form-select{
+    &_large { 
+        font-size: 22px;
+        height: 65px;
+    }
+    &_medium {
+        font-size: 22px;
+        height: 55px;
+    }
+    &_small {
+        font-size: 18px;
+        height: 45px;
+    }
+    
+    &_line{
+        background-color: initial;
+        border-width: $border;
+        border-style: solid;
+    }
+    &_success {
+        background-color: white;
+        border-color: $success;
+        color: $success;
+    }
+    &_warning {
+        background-color: white;
+        border-color: $accent;
+        color: $textcolor;
+    }
+}
+
+
+.form-input{
+    &_large { 
+        font-size: 22px;
+        height: 65px;
+    }
+    &_medium {
+        font-size: 22px;
+        height: 55px;
+    }
+    &_small {
+        font-size: 18px;
+        height: 45px;
+    }
+
+    &_line{
+        background-color: initial;
+        border-width: $border;
+        border-style: solid;
+    }
+    &_success {
+        background-color: white;
+        border-color: $success;
+        color: $success;
+    }
+    &_warning {
+        background-color: $accent;
+        border-color: $accent;
+        color: $textcolor;
+    }
+}
+
+.form-textarea{
+    &_large { 
+        font-size: 22px;
+        height: 65px;
+    }
+    &_medium {
+        font-size: 22px;
+        height: 55px;
+    }
+    &_small {
+        font-size: 18px;
+        height: 45px;
+    }
+
+    &_line{
+        background-color: initial;
+        border-width: $border;
+        border-style: solid;
+    }
+    &_success {
+        background-color: white;
+        border-color: $success;
+        color: $success;
+    }
+    &_warning {
+        background-color: white;
+        border-color: $accent;
+        color: #5A5A5A;;
+    }
+}
+
+label {
+    font-size: 22px;
+}

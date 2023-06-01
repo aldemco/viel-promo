@@ -1,0 +1,40 @@
+.cons-section {
+    background-image: url(/images/consultation-bg.jpg);
+    background-size: cover;
+    background-position: center center;
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 55px 0px 55px 0px;
+	&__heading {
+        text-align: center;
+        margin-bottom: 35px;
+    }
+	&__subtitle {
+        text-align: center;
+        font-weight: 100;
+        margin-bottom: 100px;
+    }
+	&__form {
+        display: flex;
+        gap: 20px;
+        align-items: center;
+        justify-content: center;
+    }
+	&__input {
+        height: 60px;
+        max-width: 327px;
+        margin-bottom: 0;
+    }
+	&__btn { }
+}
+
+
+@include media-breakpoint-down(lg) {
+    .cons-section {
+        &__form{
+            flex-direction: column;
+        }
+    }
+}

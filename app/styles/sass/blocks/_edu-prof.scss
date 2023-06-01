@@ -1,0 +1,158 @@
+.prof-section {
+	&__container {
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-start;
+        position: relative;
+    }
+
+    &__content {
+        background-color: $gray;
+        height: 580px;
+        width: 1263px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        outline: $border solid $success;
+        outline-offset: -20px;
+        padding-right: 350px;
+        padding-left: 115px;
+        
+    }
+    &__images {
+        position: absolute;
+        right: 0;
+        top: 130px;
+    }
+	&__prof-pic {
+        position: relative;
+        left: 0;
+        width: 498px;
+        height: 489px;
+    }
+	&__sertificat-pic {
+        height: 180px;
+        left: 0;
+        position: absolute;
+        top: -46px;
+        width: 250px;
+        
+    }
+	&__heading {
+        margin-bottom: 30px;
+    }
+	&__about {
+        max-width: 585px;
+        font-size: 22px;
+        line-height: 26px;
+        margin-bottom: 50px;
+    }
+	&__offer-about {
+        margin-bottom: 30px;
+        font-size: 22px;
+    }
+    &__offer-heading {
+        margin-bottom: 15px;
+    }
+	&__actions {
+        display: flex;
+        gap: 20px;
+    }
+	&__btn {
+        min-width: 346px;
+    }
+}
+
+@include media-breakpoint-down(xxl) {
+    .prof-section {
+        &__images {
+            left: initial;
+            right: -7%;
+        }
+        &__btn {
+            min-width: auto;
+        }
+    }
+
+}
+
+@include media-breakpoint-down(xl) {
+    .prof-section {
+        height: auto;
+        &__container {
+            flex-direction: column;
+        }
+        &__images {
+            left: initial;
+            position: absolute;
+            top: 25px;
+        }
+        &__content {
+            padding-left: 43px;
+            padding-right: 33%;
+            padding-top: 50px;
+            padding-bottom: 50px;
+            width: auto;
+            height: auto;
+        }
+    }
+}
+
+@include media-breakpoint-down(lg) {
+    .prof-section {
+        height: auto;
+        &__container {
+            flex-direction: column;
+        }
+        &__images {
+            position: absolute;
+            left: initial;
+            right: -136px;
+            top: 20px;
+        }
+        &__content {
+            padding-left: 43px;
+            padding-right: 33%;
+            padding-top: 50px;
+            padding-bottom: 50px;
+        }
+    }
+}
+
+
+@include media-breakpoint-down(md) {
+    .prof-section {
+        &__images {
+            display: block;
+            position: relative;
+            right: auto;
+            top: auto;
+            width: 100%;
+        }
+        &__prof-pic {
+            position: relative;
+            left: 0;
+            width: 100%;
+            height: auto;
+        }
+        &__sertificat-pic {
+            height: 180px;
+            right: 0;
+            left: initial;
+            position: absolute;
+            top: -9px;
+            width: 250px;
+        }
+        &__content {
+            padding: 40px;
+            width: auto;
+            height: auto;
+        }
+        &__btn {
+            margin-bottom: 40px;
+            span {
+                display: none;
+            }
+        }
+    }
+}

@@ -1,0 +1,87 @@
+.main-section {
+    padding-bottom: 40px;
+    &-container{
+        position: relative;
+        min-height: 550px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-image: url(/images/main-bg.jpg);
+        border-radius: 10px;
+        overflow: hidden;
+        background-color: $gray;
+        padding: 55px 20px 55px 20px;
+    }
+	&__subtitle {
+        font-weight: 100;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+	&__title {
+        max-width: 1000px;
+        text-align: center;
+        margin-bottom: 70px;
+    }
+    &__accent{
+        display: inline-block;
+        background-color: $accent;
+        padding: 0px 10px 0px 10px;
+        border-radius: 5px;
+    }
+	&__btn {
+        min-width: 460px;
+    }
+	&__price-label {
+        position: absolute;
+        left: 1116px;
+        top: 47px;
+    }
+}
+
+.price-label {
+    width: 183px;
+    height: 210px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    mask-image: url(/images/hexagon20.svg);
+    mask-repeat: no-repeat;
+    mask-size: cover;
+    background: $success;
+    color: white;
+    font-weight: 500;
+    line-height: 1.2;
+	&__from {
+        font-size: 30px;
+    }
+	&__cost { 
+        font-size: 50px;
+    }
+}
+
+.main-section_gradient {
+    position: relative;
+    &::before{
+        content: ' ';
+        position: absolute;
+        height: 503px;
+        width: 100%;
+        left: 0px;
+        right: 0px;
+        top: 200px;
+        background: linear-gradient(180deg, #E49700 0%, #FFD98F 100%);
+    }
+}
+
+@include media-breakpoint-down(md) {
+    .main-section {
+        &__container{
+        }
+        &__btn {
+            min-width: auto;
+        }
+    }
+
+}

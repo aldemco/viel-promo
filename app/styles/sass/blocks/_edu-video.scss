@@ -1,0 +1,31 @@
+.video-section {
+    padding: 55px 0px 55px 0px;
+	&__container {
+
+    }
+	&__heading {
+        margin-bottom: 38px;
+    }
+	&__videos {
+        display: flex;
+        gap: 20px;
+    }
+	&__video {
+        flex-basis: 33%;
+        overflow: hidden;
+        border-radius: 10px;
+        max-height: 253px;
+        background-color: $success;
+    }
+}
+
+@include media-breakpoint-down(md) {
+    .video-section {
+        &__videos {
+            flex-direction: column;
+        }
+        &__video {
+            flex-basis: auto;
+        }
+    }
+}

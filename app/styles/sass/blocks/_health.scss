@@ -1,0 +1,110 @@
+.health-section {
+    background-color: $gray;
+    padding: 55px 0px 55px 0px;
+	&__container {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        flex-direction: row;
+    }
+	&__left-col {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+	&__heading {
+        margin-bottom: 30px;
+    }
+	&__desc {
+        margin-bottom: 60px;
+        max-width: 620px;
+        font-size: 22px;
+    }
+	&__list {}
+	&__btn {
+        max-width: 323px;
+        align-self: center;
+    }
+	&__right-col { }
+	&__picture {
+        position: relative;
+        display: flex;
+        align-items: center;
+    }
+	&__back { 
+        height: 100%;
+        left: 33px;
+        position: absolute;
+        top: -51px;
+        width: 100%;
+
+        animation: scale-up-center 7s infinite cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+    }
+	&__front {
+        position: relative;
+        z-index: 2;
+    }
+}
+
+@include media-breakpoint-down(xxl) {
+    .health-section {
+        &__back { 
+            left: 0;
+            top: -51px;
+        }
+    }
+    
+}
+
+
+@include media-breakpoint-down(xl) {
+    .health-section {
+        &__right-col { 
+            display: flex;
+            flex-basis: 40%;
+            align-items: center;
+            justify-content: center;
+        }
+        &__back { 
+            left: 0;
+            top: -51px;
+        }
+    }
+    
+}
+
+
+@include media-breakpoint-down(lg) {
+    .health-section {
+        &__container {
+            flex-direction: column;
+        }
+        &__heading {
+            text-align: center;
+        }
+        &__desc {
+            text-align: center;
+            max-width: initial;
+        }
+        &__back { 
+            left: 30px;
+            top: -51px;
+        }
+        &__left-col {
+            margin-bottom: 50px;
+        }
+
+    }
+    
+}
+
+
+@include media-breakpoint-down(md) {
+    .health-section {
+        &__back { 
+            left: 0px;
+            top: -50px;
+        }
+    }
+    
+}

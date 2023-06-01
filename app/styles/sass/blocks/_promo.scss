@@ -1,0 +1,49 @@
+.promo-section {
+    &__heading{
+        margin-bottom: 40px;
+    }
+	&__btn {
+        margin-bottom: 40px;
+    }
+    &__promo-slider{
+        margin-bottom: 20px;
+    }
+    &__actions{
+        text-align: center;
+    }
+}
+
+.promo-slider {
+    position: relative;
+	&__slide { 
+        max-width: 1380px;
+        max-height: 585px;
+    }
+	&__banner { }
+    &__next{
+
+    }
+    &__prev{
+
+    }
+}
+
+
+@include media-breakpoint-down(md) {
+    .promo-slider {
+        position: relative;
+        &__slide { 
+            max-width: 1380px;
+            max-height: 585px;
+        }
+        &__banner { }
+        &__next{
+            display: none;
+        }
+        &__prev{
+             display: none;
+        }
+    }
+
+}
+

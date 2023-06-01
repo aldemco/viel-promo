@@ -1,0 +1,66 @@
+.teacher-section {
+    min-height: 720px;
+    background: linear-gradient(180deg, #F8F8F8 0%, rgba(248, 248, 248, 0) 100%);
+    padding: 55px 0px 55px 0px;
+    &__container { 
+        display: flex;
+        flex-direction: column;
+
+    }
+	&__heading {
+        text-align: center;
+        margin-bottom: 60px;
+    }
+	&__teachers {
+        display: flex;
+        flex-direction: column;
+    }
+	&__teacher {
+        display: flex;
+        align-items: center;
+        gap: 1em;
+    }
+	&__teacher-photo {
+        flex-basis: 40%;
+    }
+	&__content {
+        flex-basis: 60%;
+    }
+	&__name {
+        font-size: 32px;
+        line-height: 38px;
+        font-weight: 500;
+        color: #7CA950;
+        margin-bottom: 15px;
+    }
+	&__about {
+        display: inline-block;
+        font-style: normal;
+        font-weight: 200;
+        font-size: 22px;
+        line-height: 26px;
+        margin-bottom: 40px;
+        min-width: 672px;
+    }
+	&__text {
+        margin-bottom: 15px;
+    }
+	&__btn { }
+}
+
+
+@include media-breakpoint-down(lg) {
+    .teacher-section {
+        &__teacher {
+            flex-direction: column;
+            text-align: center;
+        }
+        &__about{
+            min-width: auto;
+        }
+    }
+}
+
+@include media-breakpoint-down(md) {
+
+}

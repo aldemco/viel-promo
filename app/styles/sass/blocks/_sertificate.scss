@@ -1,0 +1,97 @@
+.sertificate-section {
+    background-image: url(/images/sertificate-bg.jpg);
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    padding: 55px 0px 55px 0px;
+	&__container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+	&__left-col {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        flex-basis: 50%;
+    }
+	&__heading {
+        color: white;
+        margin-bottom: 37px;
+    }
+	&__subtitle {
+        color: white;
+        font-weight: 100;
+        font-size: 30px;
+        line-height: 35px;
+        margin-bottom: 45px;
+    }
+	&__right-col {
+        display: flex;
+        justify-content: end;
+        flex-basis: 50%;
+    }
+	&__picture {
+        overflow: hidden;
+        border-radius: 10px;
+        object-fit: cover;
+        height: max-content;
+
+        animation: scale-up-center 10s infinite cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+        filter: drop-shadow(0px 0px 30px rgba(0, 0, 0, 0.25));
+    
+    }
+	&__btn {
+        align-self: center;
+        justify-self: center;
+    }
+}
+
+
+@include media-breakpoint-down(lg) {
+    .sertificate-section {
+        &__container {
+            flex-direction: column;
+        }
+        &__left-col {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            flex-basis: auto;
+        }
+        &__heading {
+            color: white;
+            margin-bottom: 37px;
+            text-align: center;
+        }
+        &__subtitle {
+            color: white;
+            font-weight: 100;
+            font-size: 30px;
+            line-height: 35px;
+            margin-bottom: 45px;
+            text-align: center;
+        }
+        &__right-col {
+            display: flex;
+            justify-content: center;
+            flex-basis: 50%;
+            margin-bottom: 50px;
+        }
+        &__picture {
+            overflow: hidden;
+            border-radius: 10px;
+            object-fit: cover;
+            height: max-content;
+    
+            filter: drop-shadow(0px 0px 30px rgba(0, 0, 0, 0.25));
+        }
+        &__btn {
+            align-self: center;
+            justify-self: center;
+        }
+    }
+    
+    
+}

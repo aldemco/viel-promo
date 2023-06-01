@@ -1,0 +1,99 @@
+
+.children-section {
+    padding: 55px 0px 55px 0px;
+	&__container {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        flex-direction: row;
+    }
+    &__right-col {
+        flex-basis: 50%;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: center;
+    }
+	&__heading {
+        margin-bottom: 30px;
+    }
+	&__desc {
+        margin-bottom: 60px;
+        max-width: 620px;
+        font-size: 22px;
+    }
+	&__btn {
+        max-width: 323px;
+        align-self: center;
+    }
+	&__picture {
+        position: relative;
+        display: flex;
+        align-items: center;
+        padding: 20px 0px 20px 0px
+        ;
+    }
+}
+
+@include media-breakpoint-down(xxl) {
+    .children-section {
+        &__back { 
+            left: 0;
+            top: -51px;
+        }
+    }
+    
+}
+
+
+@include media-breakpoint-down(xl) {
+    .children-section {
+        &__left-col { 
+            display: flex;
+            flex-basis: 40%;
+            align-items: center;
+            justify-content: center;
+        }
+        &__back { 
+            left: 0;
+            top: -51px;
+        }
+    }
+    
+}
+
+
+@include media-breakpoint-down(lg) {
+    .children-section {
+        &__container {
+            flex-direction: column-reverse;
+        }
+        &__heading {
+            text-align: center;
+        }
+        &__desc {
+            text-align: center;
+            max-width: initial;
+        }
+        &__back { 
+            left: 30px;
+            top: -51px;
+        }
+        &__left-col {
+            margin-bottom: 50px;
+        }
+
+    }
+    
+}
+
+
+@include media-breakpoint-down(md) {
+    .children-section {
+        &__back { 
+            left: 0px;
+            top: -50px;
+        }
+    }
+    
+}
