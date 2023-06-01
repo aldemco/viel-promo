@@ -38,7 +38,7 @@
     }
     &::after{
         content: '';
-        background: url(images/tech-bg-polygon.png);
+        background: url(/images/tech-bg-polygon.png);
         background-repeat: no-repeat;
         background-size: contain;
         position: absolute;
@@ -50,7 +50,7 @@
     }
     &::before{
         content: '';
-        background: url(images/tech-bg-polygon.png);
+        background: url(/images/tech-bg-polygon.png);
         background-repeat: no-repeat;
         background-size: contain;
         position: absolute;
@@ -83,7 +83,7 @@
         line-height: 26px;
     }
 	&__icon {
-        background-image: url(images/accordion.svg);
+        background-image: url(/images/accordion.svg);
         background-repeat: no-repeat;
         width: 37px;
         height: 20px;

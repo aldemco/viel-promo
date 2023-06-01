@@ -59,7 +59,7 @@ header.sticky {
     display: flex;
     align-items: center;
     &__menu-toggle{
-        background-image: url(images/accordion.svg);
+        background-image: url(/images/accordion.svg);
         background-repeat: no-repeat;
         width: 25px;
         height: 15px;
@@ -119,7 +119,7 @@ header.sticky {
             }
 
             .header-navigation__menu-toggle{
-                background-image: url(images/close.svg);
+                background-image: url(/images/close.svg);
                 background-repeat: no-repeat;
                 width: 40px;
                 height: 40px;
