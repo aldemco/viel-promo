@@ -7,7 +7,7 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        background-image: url(/images/main-bg.jpg);
+        background-image: url(images/main-bg.jpg);
         border-radius: 10px;
         overflow: hidden;
         background-color: $gray;
@@ -46,7 +46,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    mask-image: url(/images/hexagon20.svg);
+    mask-image: url(images/hexagon20.svg);
     mask-repeat: no-repeat;
     mask-size: cover;
     background: $success;
