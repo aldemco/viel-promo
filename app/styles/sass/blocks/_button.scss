@@ -30,14 +30,26 @@
     &_success {
         &.btn_line{
             color: $success;
+            &:hover{
+                color:$success;
+            }
         }
         background-color: $success;
         border-color: $success;
         color: #fff;
+        &:hover{
+            color:#fff;
+        }
     }
     &_warning {
         &.btn_line{
             color: $accent;
+            &:hover{
+                color:$accent;
+            }
+        }
+        &:hover{
+            color:#000;
         }
         background-color: $accent;
         border-color: $accent;
@@ -60,6 +72,7 @@
         background: linear-gradient(90deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.4));
         animation: flareAnimation 3s infinite linear; // Время и тип анимации можно менять
     }
+
 }
 
 @keyframes flareAnimation {

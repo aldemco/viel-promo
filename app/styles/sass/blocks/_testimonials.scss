@@ -45,6 +45,9 @@
         font-size: 18px;
         line-height: 21px;
         text-align: center;
+        max-height: 225px;
+        overflow-y: auto;
+        padding: 2px;
     }
 	&__prev {
         position: absolute;

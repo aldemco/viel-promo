@@ -3,6 +3,7 @@
 import Swiper, { Autoplay, Navigation, Parallax } from 'swiper';
 import { CountUp } from 'countup.js';
 import axios from 'axios'
+import IMask from 'imask';
 
 Swiper.use([ Parallax, Navigation, Autoplay ])
 
@@ -43,15 +44,13 @@ document.addEventListener('DOMContentLoaded', () => {
 		const header = document.querySelector('header');
 		const body = document.querySelector('body');
 		let offset = header.offsetHeight;
-
 		const sticky = () => {
-
 			if (window.pageYOffset >= offset) {
-			header.classList.add("sticky");
-			body.style.marginTop = offset +'px';
+				header.classList.add("sticky");
+				body.style.marginTop = offset +'px';
 			} else {
-			header.classList.remove("sticky");
-			body.style.marginTop = 0;
+				header.classList.remove("sticky");
+				body.style.marginTop = 0;
 			}
 		}
 	
@@ -114,11 +113,12 @@ document.addEventListener('DOMContentLoaded', () => {
 			const formData = new FormData(event.target)
 			const setMessage = (message) => {
 				let messageLabel = event.target.querySelector('.message');
+				messageLabel.style.display = 'block';
 				messageLabel.innerHTML = message;
 			}
 			axios({
 				method: "post",
-				url: "https://courses.viel-center.ru/api/form",
+				url: "https://courses.viel-center.ru/api/forms",
 				data: formData,
 				headers: { "Content-Type": "multipart/form-data" },
 			  })
@@ -141,6 +141,20 @@ document.addEventListener('DOMContentLoaded', () => {
 	}
 
 	formHandler()
+
+	const phoneMask = () => {
+		const elements = document.querySelectorAll("input[name='phone']");
+		const mask = (e) => {
+			const maskOptions = {
+				mask: '+{7}0000000000'
+			};
+		
+			IMask(e, maskOptions);
+		}
+		elements.forEach((e) =>mask(e))
+	}
+
+	phoneMask()
 
 	// Custom JS
 	const promo = new Swiper('.promo-slider', {

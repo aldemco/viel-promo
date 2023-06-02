@@ -4052,6 +4052,11 @@
     "replace-ext" "^2.0.0"
     "slash" "^3.0.0"
 
+"imask@^6.6.1":
+  "integrity" "sha512-3JfLZVYABpNUGZpObu92/+3ptwwNIHXWNYqCfS+OaHBmMhLKBAAnGa2oNJWLbx5r3EyWxnkFNb2bX5Dz4wLkuA=="
+  "resolved" "https://registry.npmjs.org/imask/-/imask-6.6.1.tgz"
+  "version" "6.6.1"
+
 "immutable@^3":
   "integrity" "sha512-15gZoQ38eYjEjxkorfbcgBKBL6R7T459OuK+CpcWt7O3KF4uPCx2tD0uFETlUDIyo+1789crbMhTvQBSR5yBMg=="
   "resolved" "https://registry.npmjs.org/immutable/-/immutable-3.8.2.tgz"
