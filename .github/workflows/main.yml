@@ -2,13 +2,13 @@ on: push
 name: 🚀 Deploy website on push
 jobs:
   web-deploy:
-    name: 🎉 Deploy education page
+    name: 🎉 Deploy sites
     runs-on: ubuntu-latest
     steps:
     - name: 🚚 Get latest code
       uses: actions/checkout@v3
     
-    - name: 📂 Sync files
+    - name: 📂 Sync files Edu
       uses: SamKirkland/FTP-Deploy-Action@v4.3.4
       with:
         server: ${{ secrets.FTP_SERVER }}
@@ -17,3 +17,11 @@ jobs:
         local-dir: ./dist/
         exclude: |
           /old/
+
+    - name: 📂 Sync files Medical
+      uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+      with:
+        server: ${{ secrets.FTP_SERVER }}
+        username: ${{ secrets.FTP_USERNAME_MED }}
+        password: ${{ secrets.FTP_PASSWORD_MED }}
+        local-dir: ./dist/
