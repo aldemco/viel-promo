@@ -48,6 +48,10 @@
         max-height: 225px;
         overflow-y: auto;
         padding: 2px;
+        &::-webkit-scrollbar {
+            width: 6px;
+            background-color: #F5F5F5;
+        }
     }
 	&__prev {
         position: absolute;
@@ -68,6 +72,7 @@
 
 @include media-breakpoint-down(md) {
     .testimonials-slider {
+        padding: 0 35px;
         &__prev {
             border-radius: 10px;
             background-color: white;
