@@ -90,3 +90,11 @@
         }
     }
 }
+
+@include media-breakpoint-down(md) {
+    .contacts-section {
+        &__about {
+            background-color: #ffffffba;
+        }
+    }
+}

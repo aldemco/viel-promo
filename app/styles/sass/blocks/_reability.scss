@@ -122,12 +122,19 @@
         }
         &__picture{
             width: 100%;
+            height: auto;
+        }
+        &__front{
+            height: auto;
         }
         &__back { 
             display: none;
         }
         &__left-col {
             margin-bottom: 50px;
+        }
+        &__right-col {
+            height: auto;
         }
 
     }

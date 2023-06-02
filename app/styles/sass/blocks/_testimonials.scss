@@ -63,4 +63,21 @@
         top: 50%;
         transform: translateY(-50%);
     }
+    
+}
+
+@include media-breakpoint-down(md) {
+    .testimonials-slider {
+        &__prev {
+            border-radius: 10px;
+            background-color: white;
+            padding: 5px;
+        }
+        &__next {
+            border-radius: 10px;
+            background-color: white;
+            padding: 5px;
+        }
+    }
+    
 }
