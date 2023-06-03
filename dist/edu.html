@@ -357,6 +357,8 @@
                 <div class="message">
                 </div>
                 <input type="text" name="phone" required class="cons-section__input form-input form-input_success form-input_line" placeholder="+7">
+                <input type="hidden" name="from" value="Нужна консультация">
+                <input type="hidden" name="site" value="УЦ">
                 <button type="submit" class="cons-section__btn btn btn_warning btn_medium" data-popup-from="Получить консультацию">
                     Получить консультацию
                 </button>
@@ -615,6 +617,8 @@
                 </textarea>
             </div>
             <div class="popup__form-row">
+                <input type="hidden" name="from" value="Получить прайс (popup)">
+                <input type="hidden" name="site" value="УЦ">
                 <input type="submit" class="contacts-section__btn btn btn_warning btn_medium"  value="Получить прайс">
             </div>
         </form>
@@ -646,39 +650,9 @@
                 </textarea>
             </div>
             <div class="popup__form-row">
+                <input type="hidden" name="from" value="Обратный звонок (popup)">
+                <input type="hidden" name="site" value="УЦ">
                 <input type="submit" class="contacts-section__btn btn btn_warning btn_medium"  value="Отправить">
-            </div>
-        </form>
-    </div>
-</div>
-
-
-<div class="popup" id="course-program">
-    <div class="popup__top-bar">
-        <a class="popup__close" href="#">  <img src="images/close.svg" alt="close"></a>
-    </div>
-    <div class="popup__body">
-        <h3 class="popup__heading heading heading_medium">Получить программу курса</h3>
-        <p class="popup__message">Оставьте заявку и получите программу курса Учебного центра “Виэль”
-        </p>
-        <form action="/" method="POST" class="popup__form" id="callback-form">
-            <div class="popup__form-row">
-                <div class="popup__form-row message">
-                </div>
-                <label class="popup__form-label" for="phone">Ваш телефон: *  </label>
-                <input class="popup__input form-input" type="text" name="phone"  placeholder="+7" required>
-            </div>
-            <div class="popup__form-row">
-                <label class="popup__form-label" for="name">Ваше имя: (необязательно)</label>
-                <input class="popup__input form-input" type="text" name="name">
-            </div>
-            <div class="popup__form-row">
-                <label class="popup__form-label" for="message">Сообщение: (необязательно)</label>
-                <textarea class="popup__textarea form-textarea" name="message">
-                </textarea>
-            </div>
-            <div class="popup__form-row">
-                <input type="submit" class="contacts-section__btn btn btn_warning btn_medium"  value="Получить программу курса">
             </div>
         </form>
     </div>
@@ -710,7 +684,8 @@
                 </textarea>
             </div>
             <div class="popup__form-row">
-                <input type="hidden" name="from">
+                <input type="hidden" name="from" value="Получить программы курсов (popup)">
+                <input type="hidden" name="site" value="УЦ">
                 <input type="submit" class="contacts-section__btn btn btn_warning btn_medium"  value="Получить программы">
             </div>
         </form>
@@ -742,7 +717,8 @@
                 </textarea>
             </div>
             <div class="popup__form-row">
-                <input type="hidden" name="from">
+                <input type="hidden" name="from" value="Получить расписание курсов (popup)">
+                <input type="hidden" name="site" value="УЦ">
                 <input type="submit" class="contacts-section__btn btn btn_warning btn_medium"  value="Получить расписание">
             </div>
         </form>
