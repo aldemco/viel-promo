@@ -1,5 +1,4 @@
 .testimonials-section {
-    background-color: $gray;
     padding: 60px 0px 60px 0px;
 	&__container {
         display: flex;
@@ -8,6 +7,9 @@
     }
 	&__heading {
         margin-bottom: 60px;
+    }
+    &_gray{
+        background-color: $gray;
     }
 }
 
