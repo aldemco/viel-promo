@@ -105,6 +105,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		const sendData = ( event ) =>{
 			const formInputs = event.target.querySelectorAll("[type='text'],textarea")
 			const formData = new FormData(event.target)
+			const goal = event.target.dataset.goal ?? 'successform'
 			const setMessage = (message) => {
 				let messageLabel = event.target.querySelector('.message');
 				messageLabel.style.display = 'block';
@@ -122,16 +123,16 @@ document.addEventListener('DOMContentLoaded', () => {
 				headers: { "Content-Type": "multipart/form-data" },
 			  })
 				.then(function (response) {
-				  //handle success
 				  if(response.data.status == 'success'){
+					let counterId = Number(Object.keys(window.Ya._metrika.counters)[0].slice(0, -2))
+					console.log(counterId, goal)
+					ym(counterId,'reachGoal', goal)
 					setMessage('Ваше сообщение отправлено')
 					clearInputs(formInputs)
 				  }
 
 				})
 				.catch(function (response) {
-				  //handle error
-
 				  switch(response.code) {
 					case 'ERR_BAD_REQUEST': 
 						if(response.response.data.message){

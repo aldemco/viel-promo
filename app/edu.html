@@ -580,7 +580,7 @@
         <h3 class="popup__heading heading heading_medium">Получить прайс</h3>
         <p class="popup__message">Оставьте заявку и получите полный прайс на образовательные услуги учебного центра "Виэль”
         </p>
-        <form action="/" method="POST" class="popup__form" id="get-price-form">
+        <form action="/" method="POST" class="popup__form" id="get-price-form" data-goal="price">
             <div class="popup__form-row message">
             </div>
             <div class="popup__form-row">
@@ -612,7 +612,7 @@
         <h3 class="popup__heading heading heading_medium">Обратный звонок</h3>
         <p class="popup__message">Оставьте Ваши контакты и наш специалист  свяжется с Вами в самое ближайшее время
         </p>
-        <form action="/" method="POST" class="popup__form" id="callback-form">
+        <form action="/" method="POST" class="popup__form" id="callback-form" data-goal="zvonok">
             <div class="popup__form-row message">
             </div>
             <div class="popup__form-row">
@@ -700,6 +700,24 @@
         </form>
     </div>
 </div>
+
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+    (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+    m[i].l=1*new Date();
+    for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+    k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+    (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+ 
+    ym(90115197, "init", {
+         clickmap:true,
+         trackLinks:true,
+         accurateTrackBounce:true,
+         webvisor:true
+    });
+ </script>
+ <noscript><div><img src="https://mc.yandex.ru/watch/90115197" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+ <!-- /Yandex.Metrika counter -->
 
 <!--#include virtual="/parts/footer.html" -->
 

@@ -394,7 +394,7 @@
             <h2 class="cons-section__heading heading heading_large">
                 Запишитесь на массаж и получите первый сеанс <br> <span class="heading__success">со скидкой 20%</span>
             </h2>
-            <form action="/" method="POST" class="cons-section__form">
+            <form action="/" method="POST" class="cons-section__form" data-goal="seance">
                 <div class="message">
                 </div>
                 <input type="text" name="phone" required class="cons-section__input form-input form-input_success form-input_line" placeholder="+7">
@@ -656,7 +656,7 @@
         <p class="popup__message">Оставьте заявку и получите полный прайс 
             на услуги Центра массажа и остеопрактики "Виэль”
         </p>
-        <form action="/" method="POST" class="popup__form" id="get-price-form">
+        <form action="/" method="POST" class="popup__form" id="get-price-form"  data-goal="price">
             <div class="popup__form-row message">
             </div>
             <div class="popup__form-row">
@@ -690,7 +690,7 @@
         <h3 class="popup__heading heading heading_medium">Обратный звонок</h3>
         <p class="popup__message">Оставьте Ваши контакты и наш специалист  свяжется с Вами в самое ближайшее время
         </p>
-        <form action="/" method="POST" class="popup__form" id="callback-form">
+        <form action="/" method="POST" class="popup__form" id="callback-form"  data-goal="zvonok">
             <div class="popup__form-row message">
             </div>
             <div class="popup__form-row">
@@ -724,7 +724,7 @@
         <h3 class="popup__heading heading heading_medium">Акции</h3>
         <p class="popup__message">Участвуйте в акциях Центра массажа и остеопрактики "Виэль", получите скидку прямо сейчас
         </p>
-        <form action="/" method="POST" class="popup__form" id="promo-form">
+        <form action="/" method="POST" class="popup__form" id="promo-form" data-goal="skidka">
             <div class="popup__form-row message">
             </div>
             <div class="popup__form-row">
@@ -785,7 +785,7 @@
         </div>
     </div>
     <div class="popup__footer popup-employment__footer">
-        <form action="/" method="POST" class="popup-employment__form" id="record-form">
+        <form action="/" method="POST" class="popup-employment__form" id="record-form" data-goal="zapis">
             <div class="popup-employment-row message">
             </div>
             <div class="popup-employment-row">
@@ -829,7 +829,7 @@
         </div>
     </div>
     <div class="popup__footer popup-employment__footer">
-        <form action="/" method="POST" class="popup-employment__form" id="record-form">
+        <form action="/" method="POST" class="popup-employment__form" id="record-form" data-goal="zapis">
             <div class="popup-employment-row message">
             </div>
             <div class="popup-employment-row">
@@ -868,7 +868,7 @@
         </div>
     </div>
     <div class="popup__footer popup-employment__footer">
-        <form action="/" method="POST" class="popup-employment__form" id="record-form">
+        <form action="/" method="POST" class="popup-employment__form" id="record-form" data-goal="zapis">
             <div class="popup-employment-row message">
             </div>
             <div class="popup-employment-row">
@@ -905,18 +905,17 @@
     (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
     m[i].l=1*new Date();
     for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
-    k=e.createElement(t),a=e.getElementsByTagName(t)
-    [0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+    k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
     (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
-        ym(93859979, "init", {
-        clickmap:true,
-        trackLinks:true,
-        accurateTrackBounce:true,
-        webvisor:true
-        });
-</script>
-<noscript><div><img src="https://mc.yandex.ru/watch/93859979" style="position:absolute;
-    left:-9999px;" alt="" /></div></noscript>
-<!-- /Yandex.Metrika counter -->
+ 
+    ym(93859979, "init", {
+         clickmap:true,
+         trackLinks:true,
+         accurateTrackBounce:true,
+         webvisor:true
+    });
+ </script>
+ <noscript><div><img src="https://mc.yandex.ru/watch/93859979" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+ <!-- /Yandex.Metrika counter -->
 
 <!--#include virtual="/parts/footer.html" -->
