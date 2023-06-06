@@ -4,6 +4,7 @@ import Swiper, { Autoplay, Navigation, Parallax } from 'swiper';
 import { CountUp } from 'countup.js';
 import axios from 'axios'
 import IMask from 'imask';
+import { Input } from 'postcss';
 
 Swiper.use([ Parallax, Navigation, Autoplay ])
 
@@ -17,7 +18,6 @@ document.addEventListener('DOMContentLoaded', () => {
 		});
 		
 	}
-	countUpJS();
 
 	const menuToggle = () => {
 		const containers = document.querySelectorAll('.header-navigation');
@@ -38,7 +38,6 @@ document.addEventListener('DOMContentLoaded', () => {
 		});
 		
 	}
-	menuToggle();
 
 	const stickyHeader = () => {
 		const header = document.querySelector('header');
@@ -57,7 +56,6 @@ document.addEventListener('DOMContentLoaded', () => {
 		window.onscroll = sticky;
 		
 	}
-	stickyHeader();
 
 	const popUpInit = (popupSelector, openLinkSelector, overlaySelector) => {
 		const popUps = document.querySelectorAll(popupSelector);
@@ -100,21 +98,22 @@ document.addEventListener('DOMContentLoaded', () => {
 			element.addEventListener('click', openPopup)
 		});
 
-
-
 	}
-
-	popUpInit('.popup', '.popup_btn', '.popup-background')
-
 
 	const formHandler = () =>{
 		const forms = document.querySelectorAll('form');
 		const sendData = ( event ) =>{
+			const formInputs = event.target.querySelectorAll("[type='text'],textarea")
 			const formData = new FormData(event.target)
 			const setMessage = (message) => {
 				let messageLabel = event.target.querySelector('.message');
 				messageLabel.style.display = 'block';
 				messageLabel.innerHTML = message;
+			}
+			const clearInputs = (formInputs) => {
+				formInputs.forEach(formInput=>{
+					formInput.value = ''
+				})
 			}
 			axios({
 				method: "post",
@@ -124,14 +123,34 @@ document.addEventListener('DOMContentLoaded', () => {
 			  })
 				.then(function (response) {
 				  //handle success
-				  console.log(response.data);
-				  setMessage('Отправлено')
+				  if(response.data.status == 'success'){
+					setMessage('Ваше сообщение отправлено')
+					clearInputs(formInputs)
+				  }
+
 				})
 				.catch(function (response) {
 				  //handle error
-				  console.log(response.data);
-				  setMessage('Ошибка')
+
+				  switch(response.code) {
+					case 'ERR_BAD_REQUEST': 
+						if(response.response.data.message){
+							setMessage(response.response.data.message)
+							break
+						}
+						setMessage('Ошибка сервера')
+					 	break
+
+					case 'ERR_NETWORK':
+						setMessage('Ошибка, проверьте соединение')
+						break
+				  
+					default:
+						break
+				  }
+
 				});
+
 				event.preventDefault()
 		}
 
@@ -139,8 +158,6 @@ document.addEventListener('DOMContentLoaded', () => {
 			form.addEventListener('submit', sendData)
 		})
 	}
-
-	formHandler()
 
 	const phoneMask = () => {
 		const elements = document.querySelectorAll("input[name='phone']");
@@ -154,6 +171,11 @@ document.addEventListener('DOMContentLoaded', () => {
 		elements.forEach((e) =>mask(e))
 	}
 
+	menuToggle();
+	stickyHeader();
+	countUpJS();
+	popUpInit('.popup', '.popup_btn', '.popup-background')
+	formHandler()
 	phoneMask()
 
 	// Custom JS
