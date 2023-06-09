@@ -354,14 +354,21 @@
                 Оставьте заявку и наш менеджер свяжется в течении 5 минут
             </h2>
             <form action="/" method="POST" class="cons-section__form" data-goal="consult">
-                <div class="message">
+                <div>
+                    <div class="message"></div>
+                    <input type="text" name="phone" required class="cons-section__input form-input form-input_success form-input_line" placeholder="+7">
                 </div>
-                <input type="text" name="phone" required class="cons-section__input form-input form-input_success form-input_line" placeholder="+7">
-                <input type="hidden" name="from" value="Нужна консультация">
-                <input type="hidden" name="site" value="УЦ">
-                <button type="submit" class="cons-section__btn btn btn_warning btn_medium" data-popup-from="Получить консультацию">
-                    Получить консультацию
-                </button>
+                <div>
+                    <input type="hidden" name="from" value="Нужна консультация">
+                    <input type="hidden" name="site" value="УЦ">
+                    <button type="submit" class="cons-section__btn btn btn_warning btn_medium" data-popup-from="Получить консультацию">
+                        Получить консультацию
+                    </button>
+                </div>
+                <div class="cons-section__agree">
+                    <input type="checkbox" name="agree" checked required> 
+                    <span>Я принимаю условия и соглашаюсь на обработку персональных данных в соответствии с <a href="privacy-edu.pdf" target="_blank">Политикой в отношении обработки персональных данных </a> в ООО «ВИЭЛЬ» </span>    
+                </div>
             </form>
         </div>
     </section>
@@ -525,7 +532,7 @@
         <div class="container question-section__container">
             <div class="question-section__left-col">
                 <div class="question-section__picture">
-                    <img class="" src="images/elvira-official.png" alt=" Эльвира Бычик, руководитель Центра “Виэль”">
+                    <img  src="images/elvira-official.png" alt=" Эльвира Бычик, руководитель Центра “Виэль”">
                 </div>
             </div>
             <div class="question-section__right-col">
@@ -615,6 +622,10 @@
                 <label class="popup__form-label" for="message">Сообщение:  </label>
                 <textarea maxlength="499" class="popup__textarea form-textarea" name="message"></textarea>
             </div>
+            <div class="popup__form-row popup__agree">
+                <input  type="checkbox" name="agree" checked required> 
+                <span>Я принимаю условия и соглашаюсь на обработку персональных данных в соответствии с <a href="privacy-edu.pdf" target="_blank">Политикой в отношении обработки персональных данных </a> в ООО «ВИЭЛЬ» </span>
+            </div>
             <div class="popup__form-row">
                 <input type="hidden" name="from" value="Получить прайс (popup)">
                 <input type="hidden" name="site" value="УЦ">
@@ -646,6 +657,10 @@
             <div class="popup__form-row">
                 <label class="popup__form-label" for="message">Сообщение: </label>
                 <textarea maxlength="499" class="popup__textarea form-textarea" name="message"></textarea>
+            </div>
+            <div class="popup__form-row popup__agree">
+                <input  type="checkbox" name="agree" checked required> 
+                <span>Я принимаю условия и соглашаюсь на обработку персональных данных в соответствии с <a href="privacy-edu.pdf" target="_blank">Политикой в отношении обработки персональных данных </a> в ООО «ВИЭЛЬ» </span>
             </div>
             <div class="popup__form-row">
                 <input type="hidden" name="from" value="Обратный звонок (popup)">
@@ -680,6 +695,10 @@
                 <label class="popup__form-label" for="message">Сообщение: </label>
                 <textarea maxlength="499" class="popup__textarea form-textarea" name="message"></textarea>
             </div>
+            <div class="popup__form-row popup__agree">
+                <input  type="checkbox" name="agree" checked required> 
+                <span>Я принимаю условия и соглашаюсь на обработку персональных данных в соответствии с <a href="privacy-edu.pdf" target="_blank">Политикой в отношении обработки персональных данных </a> в ООО «ВИЭЛЬ» </span>
+            </div>
             <div class="popup__form-row">
                 <input type="hidden" name="from" value="Получить программы курсов (popup)">
                 <input type="hidden" name="site" value="УЦ">
@@ -711,6 +730,10 @@
             <div class="popup__form-row">
                 <label class="popup__form-label" for="message">Сообщение: </label>
                 <textarea maxlength="499" class="popup__textarea form-textarea" name="message"></textarea>
+            </div>
+            <div class="popup__form-row popup__agree">
+                <input type="checkbox" name="agree" checked required> 
+                <span>Я принимаю условия и соглашаюсь на обработку персональных данных в соответствии с <a href="privacy-edu.pdf" target="_blank">Политикой в отношении обработки персональных данных </a> в ООО «ВИЭЛЬ» </span>
             </div>
             <div class="popup__form-row">
                 <input type="hidden" name="from" value="Получить расписание курсов (popup)">

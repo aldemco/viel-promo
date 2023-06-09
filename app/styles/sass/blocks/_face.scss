@@ -6,6 +6,7 @@
         flex-wrap: nowrap;
         justify-content: space-between;
         flex-direction: row;
+        column-gap: 3em;
     }
     &__right-col {
         display: flex;
@@ -45,7 +46,7 @@
         left: -11px;
         position: absolute;
         top: 14px;
-        width: 553px;
+        width: 100%;
 
     }
 	&__front {

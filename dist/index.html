@@ -240,7 +240,7 @@
                     Моно- и Комбинированные техники реабилитации после травм и операций
                 </p>
                 <div class="list-columns">
-                    <ul class="list-columns__column list-hexagon">
+                    <ul class="list-columns__column list-columns__column_100 list-hexagon">
                         <li class="list-hexagon__item list-hexagon_success">Посттравматичекая реабилитация</li>
                         <li class="list-hexagon__item list-hexagon_success">После инсультов</li>
                     </ul>
@@ -282,7 +282,7 @@
                     Комплекс эффективных процедур для борьбы с лишним весом, целлюлитом
                 </p>
                 <div class="list-columns">
-                    <ul class="list-columns__column list-hexagon">
+                    <ul class="list-columns__column list-columns__column_100 list-hexagon">
                         <li class="list-hexagon__item list-hexagon_success">Эстетический массаж</li>
                         <li class="list-hexagon__item list-hexagon_success">Тайский SLIM-Массаж</li>
                         <li class="list-hexagon__item list-hexagon_success">Антицеллюлитный массаж</li>
@@ -410,19 +410,26 @@
     </section>
 
     <section class="cons-section">
-        <div class="container">
+        <div class="container cons-section__container">
             <h2 class="cons-section__heading heading heading_large">
                 Запишитесь на массаж и получите первый сеанс <br> <span class="heading__success">со скидкой 20%</span>
             </h2>
             <form action="/" method="POST" class="cons-section__form" data-goal="seance">
-                <div class="message">
+                <div>
+                    <div class="message"></div>
+                    <input type="text" name="phone" required class="cons-section__input form-input form-input_success form-input_line" placeholder="+7">
                 </div>
-                <input type="text" name="phone" required class="cons-section__input form-input form-input_success form-input_line" placeholder="+7">
-                <input type="hidden" name="from" value="Запишитесь на массаж и получите первый сеанс со скидкой 20%">
-                <input type="hidden" name="site" value="МЦ">
-                <button type="submit" class="cons-section__btn btn btn_warning btn_medium" data-popup-from="Записаться на массаж">
-                    &nbsp; Записаться на массаж &nbsp; 
-                </button>
+                <div>
+                    <input type="hidden" name="from" value="Запишитесь на массаж и получите первый сеанс со скидкой 20%">
+                    <input type="hidden" name="site" value="МЦ">
+                    <button type="submit" class="cons-section__btn btn btn_warning btn_medium" data-popup-from="Получить консультацию">
+                        &nbsp; Записаться на массаж &nbsp; 
+                    </button>
+                </div>
+                <div class="cons-section__agree">
+                    <input type="checkbox" name="agree" checked required> 
+                    <span>Я принимаю условия и соглашаюсь на обработку персональных данных в соответствии с <a href="privacy-edu.pdf" target="_blank">Политикой в отношении обработки персональных данных </a> в ООО «ВИЭЛЬ» </span>    
+                </div>
             </form>
         </div>
     </section>
@@ -692,6 +699,10 @@
                 <textarea maxlength="499" class="popup__textarea form-textarea" name="message"></textarea>
             </div>
             <div class="popup__form-row">
+                <input type="checkbox" name="agree" checked required> 
+                <span>Я принимаю условия и соглашаюсь на обработку персональных данных в соответствии с <a href="privacy-med.pdf" target="_blank">Политикой в отношении обработки персональных данных </a> в ООО «ВИЭЛЬ» </span>
+            </div>
+            <div class="popup__form-row">
                 <input type="hidden" name="from" value="Получить прайс (popup)">
                 <input type="hidden" name="site" value="МЦ">
                 <input type="submit" class="contacts-section__btn btn btn_warning btn_medium"  value="Получить прайс">
@@ -724,6 +735,10 @@
             <div class="popup__form-row">
                 <label class="popup__form-label" for="message">Сообщение: </label>
                 <textarea maxlength="499" class="popup__textarea form-textarea" name="message"></textarea>
+            </div>
+            <div class="popup__form-row">
+                <input type="checkbox" name="agree" checked required> 
+                <span>Я принимаю условия и соглашаюсь на обработку персональных данных в соответствии с <a href="privacy-med.pdf" target="_blank">Политикой в отношении обработки персональных данных </a> в ООО «ВИЭЛЬ» </span>
             </div>
             <div class="popup__form-row">
                 <input type="hidden" name="from" value="Обратный звонок">
@@ -769,6 +784,10 @@
                 <textarea maxlength="499" class="popup__textarea form-textarea form-textarea" name="message"> </textarea>
             </div>
             <div class="popup__form-row">
+                <input type="checkbox" name="agree" checked required> 
+                <span>Я принимаю условия и соглашаюсь на обработку персональных данных в соответствии с <a href="privacy-med.pdf" target="_blank">Политикой в отношении обработки персональных данных </a> в ООО «ВИЭЛЬ» </span>
+            </div>
+            <div class="popup__form-row">
                 <input type="hidden" name="from" value="Акции (popup)">
                 <input type="hidden" name="site" value="МЦ">
                 <input type="submit" class="contacts-section__btn btn btn_warning btn_medium"  value="Купить по скидке">
@@ -806,9 +825,9 @@
     </div>
     <div class="popup__footer popup-employment__footer">
         <form action="/" method="POST" class="popup-employment__form" id="record-form" data-goal="zapis">
-            <div class="popup-employment-row message">
+            <div class="popup-employment__form-row message">
             </div>
-            <div class="popup-employment-row">
+            <div class="popup-employment__form-row">
                 <input class="popup-employment__input form-input form-input_line form-input_success" placeholder="Имя" type="text" name="name">
             </div>
             <div class="popup-employment__form-row">
@@ -818,6 +837,10 @@
                 <input type="hidden" name="from" value="Запись Бычик Виолетта Вячеславовна (popup)">
                 <input type="hidden" name="site" value="МЦ">
                 <input type="submit" class="contacts-section__btn btn btn_warning btn_medium"  value="Записаться">
+            </div>
+            <div class="popup-employment__form-row popup-employment__agree">
+                <input type="checkbox" name="agree" checked required> 
+                <span>Я принимаю условия и соглашаюсь на обработку персональных данных в соответствии с <a href="privacy-med.pdf" target="_blank">Политикой в отношении обработки персональных данных </a> в ООО «ВИЭЛЬ» </span>
             </div>
         </form>
     </div>
@@ -850,9 +873,9 @@
     </div>
     <div class="popup__footer popup-employment__footer">
         <form action="/" method="POST" class="popup-employment__form" id="record-form" data-goal="zapis">
-            <div class="popup-employment-row message">
+            <div class="popup-employment__form-row message">
             </div>
-            <div class="popup-employment-row">
+            <div class="popup-employment__form-row">
                 <input class="popup-employment__input form-input form-input_line form-input_success" placeholder="Имя" type="text" name="name">
             </div>
             <div class="popup-employment__form-row">
@@ -862,6 +885,10 @@
                 <input type="hidden" name="from" value="Запись Дроздов Игорь Юрьевич (popup)">
                 <input type="hidden" name="site" value="МЦ">
                 <input type="submit" class="contacts-section__btn btn btn_warning btn_medium"  value="Записаться">
+            </div>
+            <div class="popup-employment__form-row popup-employment__agree">
+                <input type="checkbox" name="agree" checked required> 
+                <span>Я принимаю условия и соглашаюсь на обработку персональных данных в соответствии с <a href="privacy-med.pdf" target="_blank">Политикой в отношении обработки персональных данных </a> в ООО «ВИЭЛЬ» </span>
             </div>
         </form>
     </div>
@@ -889,9 +916,9 @@
     </div>
     <div class="popup__footer popup-employment__footer">
         <form action="/" method="POST" class="popup-employment__form" id="record-form" data-goal="zapis">
-            <div class="popup-employment-row message">
+            <div class="popup-employment__form-row message">
             </div>
-            <div class="popup-employment-row">
+            <div class="popup-employment__form-row">
                 <input class="popup-employment__input form-input form-input_line form-input_success" placeholder="Имя" type="text" name="name">
             </div>
             <div class="popup-employment__form-row">
@@ -901,6 +928,10 @@
                 <input type="hidden" name="from" value="Запись Бычик Эльвира Игоревна (popup)">
                 <input type="hidden" name="site" value="МЦ">
                 <input type="submit" class="contacts-section__btn btn btn_warning btn_medium"  value="Записаться">
+            </div>
+            <div class="popup-employment__form-row popup__agree">
+                <input type="checkbox" name="agree" checked required> 
+                <span>Я принимаю условия и соглашаюсь на обработку персональных данных в соответствии с <a href="privacy-med.pdf" target="_blank">Политикой в отношении обработки персональных данных </a> в ООО «ВИЭЛЬ» </span>
             </div>
         </form>
     </div>

@@ -1,3 +1,25 @@
+.price-label {
+    width: 183px;
+    height: 210px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    mask-image: url(/images/hexagon20.svg);
+    mask-repeat: no-repeat;
+    mask-size: cover;
+    background: $success;
+    color: white;
+    font-weight: 500;
+    line-height: 1.2;
+	&__from {
+        font-size: 30px;
+    }
+	&__cost { 
+        font-size: 50px;
+    }
+}
+
 .main-section {
     padding-bottom: 40px;
     &-container{
@@ -29,7 +51,7 @@
         display: inline-block;
         background-color: $accent;
         padding: 0px 10px 0px 10px;
-        border-radius: 5px;
+        border-radius: 10px;
     }
 	&__btn {
         min-width: 460px;
@@ -38,30 +60,13 @@
         position: absolute;
         left: 1116px;
         top: 47px;
+        @media (max-width: 1300px) {
+            display: none;
+        }
     }
 }
 
-.price-label {
-    width: 183px;
-    height: 210px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    mask-image: url(/images/hexagon20.svg);
-    mask-repeat: no-repeat;
-    mask-size: cover;
-    background: $success;
-    color: white;
-    font-weight: 500;
-    line-height: 1.2;
-	&__from {
-        font-size: 30px;
-    }
-	&__cost { 
-        font-size: 50px;
-    }
-}
+
 
 .main-section_gradient {
     position: relative;
