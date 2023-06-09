@@ -104,6 +104,7 @@ function images() {
 function buildcopy() {
 	return src([
 		'{app/js,app/css}/*.min.*',
+		'app/*.pdf',
 		'app/images/**/*.*',
 		'!app/images/src/**/*',
 		'app/fonts/**/*'
