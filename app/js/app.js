@@ -54,7 +54,6 @@ document.addEventListener('DOMContentLoaded', () => {
 		}
 	
 		window.onscroll = sticky;
-		
 	}
 
 	const popUpInit = (popupSelector, openLinkSelector, overlaySelector) => {
@@ -173,11 +172,11 @@ document.addEventListener('DOMContentLoaded', () => {
 	}
 
 	menuToggle();
-	stickyHeader();
 	countUpJS();
 	popUpInit('.popup', '.popup_btn', '.popup-background')
 	formHandler()
 	phoneMask()
+	stickyHeader();
 
 	// Custom JS
 	const promo = new Swiper('.promo-slider', {
