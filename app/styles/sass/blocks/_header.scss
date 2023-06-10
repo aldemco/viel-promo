@@ -107,7 +107,6 @@ header.sticky {
             background-color: #ffffffed;
             gap: 2em;
             padding: 1em;
-            
             .header-menu__link{
                 font-size: 40px;
             }
@@ -186,10 +185,19 @@ header.sticky {
     .header-navigation{
         order: 2;
         align-items: center;
+        &.show {
+            .header-menu__link{
+                font-size: 30px;
+            }
+        }
     }
     .header-actions{
         &__btn{
             display: none;
          }
+        &__address{
+            display: none;
+        }
     }
+
 }

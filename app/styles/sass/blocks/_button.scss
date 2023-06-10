@@ -75,6 +75,28 @@
 
 }
 
+@include media-breakpoint-down(sm) {
+    .btn {
+
+        text-align: center;
+    
+        &_large { 
+            font-size: 18px;
+            height: 55px;
+        }
+        &_medium {
+            font-size: 18px;
+            height: 50px;
+        }
+        &_small {
+            font-size: 18px;
+            height: 40px;
+        }
+
+    
+    }
+}
+
 @keyframes flareAnimation {
     0% {
         left: -150%;

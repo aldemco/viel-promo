@@ -1,8 +1,12 @@
 .container{
+	width: 100%;
 	max-width: 1380px;
 	margin: 0px auto 0px auto;
 	@include media-breakpoint-down(xxl) {
 		padding: 0px $gutter;
+	}
+	@include media-breakpoint-down(sm) {
+		padding: 0px 10px;
 	}
 }
 
@@ -118,8 +122,6 @@
 	cursor: pointer;
 }
 
-
-
 .list-columns {
     margin-bottom: 55px;
     display: flex;
@@ -132,6 +134,7 @@
 		}
     }
 }
+
 .list-hexagon {
 	&__item {
         font-weight: 200;
@@ -163,27 +166,6 @@
 		justify-content: space-between;
 		&__column {
 			flex-basis: auto;
-		}
-	}
-	.list-hexagon {
-		&__item {
-			font-weight: 200;
-			font-size: 22px;
-			line-height: 26px;
-			color: #000000;
-			margin-bottom: 11px;
-			&::before{
-				content: '';
-				margin-right: 8px;
-				display: inline-block;
-				width: 23.33px;
-				height: 23.33px;
-				mask-image: url(/images/hexagon20.svg);
-				transform: rotate(15deg);
-				mask-repeat: no-repeat;
-				mask-size: contain;
-				background: $success;
-			}
 		}
 	}
 }

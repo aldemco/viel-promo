@@ -108,3 +108,15 @@
         }
     }
 }
+
+@include media-breakpoint-down(sm) {
+    .accordion {
+        &__item {
+            gap: 5px;
+            padding: 15px 30px;
+        }
+        &__label {
+            font-size: 18px;
+        }
+    }
+}
