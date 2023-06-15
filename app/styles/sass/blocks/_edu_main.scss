@@ -61,9 +61,16 @@
         padding: 0px 10px 0px 10px;
         border-radius: 10px;
     }
-	&__btn {
-        min-width: 460px;
+    &__actions{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1em;
         margin-bottom: 40px;
+        align-items: center;
+        justify-content: center;
+    }
+	&__btn {
+        //min-width: 460px;
     }
 	&__price-label {
         position: absolute;
@@ -147,10 +154,6 @@
         }
         &__sertificat-detail{
             display: inline-block;
-        }
-        &__btn {
-            min-width: auto;
-            margin-bottom: 40px;
         }
     
     }
