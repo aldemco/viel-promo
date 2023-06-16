@@ -163,7 +163,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		const elements = document.querySelectorAll("input[name='phone']");
 		const mask = (e) => {
 			const maskOptions = {
-				mask: '+{7}0000000000'
+				mask: '+{7} (000) 000-00-00'
 			};
 		
 			IMask(e, maskOptions);

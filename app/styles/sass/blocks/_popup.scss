@@ -57,13 +57,16 @@
         flex-direction: column;
     }
 	&__form-row {
-        margin-bottom: 15px;
+        margin-bottom: 10px;
     }
 	&__form-label {
-        margin-bottom: 15px;
+        margin-bottom: 5px;
     }
 	&__input {
-
+        &:invalid{
+            border-color: red;
+            box-shadow: inset 0 0 5px #ff0c0040;
+        }
     }
     &__agree{
         font-size: 16px;
@@ -138,7 +141,7 @@
         gap: 20px;
     }
     &__form-row{
-        
+        flex-grow: 1;
     }
     &__agree{
         width: 100%;
@@ -173,6 +176,9 @@
         }
         &__form{
             flex-direction: column;
+        }
+        &__form-row{
+            width: 100%;
         }
     }
 }
