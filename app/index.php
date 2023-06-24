@@ -1,5 +1,23 @@
-<!--#set var="title" value="Центр массажа и остеопрактики в Краснодаре - Виэль" -->
-<!--#include virtual="/parts/header-main.html" -->
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<meta charset="utf-8">
+
+	<title>Центр массажа и остеопрактики в Краснодаре - Виэль</title>
+	<meta name="description" content="Виэль">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<link rel="icon" href="medical/images/logo.png">
+	<meta property="og:image" content="images/prof-illustration.png">
+	
+	<link rel="stylesheet" href="medical/css/app.min.css?v={BUILD_ID}">
+
+</head>
+
+<body>
 
 <header>
     <div class="container">
@@ -951,22 +969,8 @@
 </div>
 
 
-<!-- Yandex.Metrika counter -->
-<script type="text/javascript" >
-    (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-    m[i].l=1*new Date();
-    for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
-    k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
-    (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
- 
-    ym(93859979, "init", {
-         clickmap:true,
-         trackLinks:true,
-         accurateTrackBounce:true,
-         webvisor:true
-    });
- </script>
- <noscript><div><img src="https://mc.yandex.ru/watch/93859979" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
- <!-- /Yandex.Metrika counter -->
 
-<!--#include virtual="/parts/footer.html" -->
+<script src="medical/js/app.min.js?v={BUILD_ID}"></script>
+
+</body>
+</html>
