@@ -422,7 +422,7 @@
                 </div>
                 <div>
                     <input type="hidden" name="from" value="Запишитесь на массаж и получите первый сеанс со скидкой 20%">
-                    <input type="hidden" name="site" value="МЦ">
+                    <input type="hidden" name="site" value="МЦ-ГЛАВНЫЙ">
                     <button type="submit" class="cons-section__btn btn btn_warning btn_medium" data-popup-from="Получить консультацию">
                         &nbsp; Записаться на массаж &nbsp; 
                     </button>
@@ -709,7 +709,7 @@
             </div>
             <div class="popup__form-row">
                 <input type="hidden" name="from" value="Получить прайс (popup)">
-                <input type="hidden" name="site" value="МЦ">
+                <input type="hidden" name="site" value="МЦ-ГЛАВНЫЙ">
                 <input type="submit" class="contacts-section__btn btn btn_warning btn_medium"  value="Получить прайс">
             </div>
         </form>
@@ -751,7 +751,7 @@
             </div>
             <div class="popup__form-row">
                 <input type="hidden" name="from" value="Обратный звонок">
-                <input type="hidden" name="site" value="МЦ">
+                <input type="hidden" name="site" value="МЦ-ГЛАВНЫЙ">
                 <input type="submit" class="contacts-section__btn btn btn_warning btn_medium"  value="Отправить">
             </div>
         </form>
@@ -798,7 +798,7 @@
             </div>
             <div class="popup__form-row">
                 <input type="hidden" name="from" value="Акции (popup)">
-                <input type="hidden" name="site" value="МЦ">
+                <input type="hidden" name="site" value="МЦ-ГЛАВНЫЙ">
                 <input type="submit" class="contacts-section__btn btn btn_warning btn_medium"  value="Купить по скидке">
             </div>
         </form>
@@ -847,7 +847,7 @@
             </div>
             <div class="popup-employment__form-row">
                 <input type="hidden" name="from" value="Запись Бычик Виолетта Вячеславовна (popup)">
-                <input type="hidden" name="site" value="МЦ">
+                <input type="hidden" name="site" value="МЦ-ГЛАВНЫЙ">
                 <input type="submit" class="contacts-section__btn btn btn_warning btn_medium"  value="Записаться">
             </div>
             <div class="popup-employment__form-row popup__agree">
@@ -898,7 +898,7 @@
             </div>
             <div class="popup-employment__form-row">
                 <input type="hidden" name="from" value="Запись Дроздов Игорь Юрьевич (popup)">
-                <input type="hidden" name="site" value="МЦ">
+                <input type="hidden" name="site" value="МЦ-ГЛАВНЫЙ">
                 <input type="submit" class="contacts-section__btn btn btn_warning btn_medium"  value="Записаться">
             </div>
             <div class="popup-employment__form-row popup__agree">
@@ -944,7 +944,7 @@
             </div>
             <div class="popup-employment__form-row">
                 <input type="hidden" name="from" value="Запись Бычик Эльвира Игоревна (popup)">
-                <input type="hidden" name="site" value="МЦ">
+                <input type="hidden" name="site" value="МЦ-ГЛАВНЫЙ">
                 <input type="submit" class="contacts-section__btn btn btn_warning btn_medium"  value="Записаться">
             </div>
             <div class="popup-employment__form-row popup__agree">
