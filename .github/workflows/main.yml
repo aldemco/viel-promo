@@ -31,7 +31,7 @@ jobs:
       with:
         find: "/images/"
         replace: "/medical/images/"
-        include: "./dist/css/*.css"
+        include: "/dist/css/*.css"
         
     - name: 📂 Sync files Main
       uses: SamKirkland/FTP-Deploy-Action@v4.3.4
