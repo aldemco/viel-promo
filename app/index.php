@@ -6,7 +6,7 @@
         <div class="site-header">
             <div class="logo">
                 <a href="#" class="logo__image">
-                    <img src="images/logo.png" alt="logo">
+                    <img src="medical/images/logo.png" alt="logo">
                 </a>
                 <div class="logo__label">
                     <span class="logo__desc">
@@ -95,30 +95,30 @@
                 <div class="swiper-wrapper">
                     <div class="swiper-slide promo-slider__slide">
                         <a href="#get-promo" class="">
-                            <img class="promo-slider__banner" src="images/promo/anticellulit.jpg" alt="ac">
+                            <img class="promo-slider__banner" src="medical/images/promo/anticellulit.jpg" alt="ac">
                         </a>
                     </div>
                     <div class="swiper-slide promo-slider__slide">
                         <a href="#get-promo" class="">
-                            <img class="promo-slider__banner" src="images/promo/buccalniy.jpg" alt="bc">
+                            <img class="promo-slider__banner" src="medical/images/promo/buccalniy.jpg" alt="bc">
                         </a>
                     </div>
                     <div class="swiper-slide promo-slider__slide">
                         <a href="#get-promo" class="">
-                            <img class="promo-slider__banner" src="images/promo/presstherapy.jpg" alt="pt">
+                            <img class="promo-slider__banner" src="medical/images/promo/presstherapy.jpg" alt="pt">
                         </a>
                     </div>
                     <div class="swiper-slide promo-slider__slide">
                         <a href="#get-promo" class="">
-                            <img class="promo-slider__banner" src="images/promo/stelki.jpg" alt="st">
+                            <img class="promo-slider__banner" src="medical/images/promo/stelki.jpg" alt="st">
                         </a>
                     </div>
                 </div>
                 <div class="swiper-button-prev promo-slider__prev">
-                    <img src="images/left-arrow.svg" alt="prev">
+                    <img src="medical/images/left-arrow.svg" alt="prev">
                 </div>
                 <div class="swiper-button-next promo-slider__next">
-                    <img src="images/right-arrow.svg" alt="next">
+                    <img src="medical/images/right-arrow.svg" alt="next">
                 </div>
             </div>
 
@@ -162,10 +162,10 @@
             <div class="health-section__right-col ">
                 <div class="health-section__picture">
                     <div class="health-section__front">
-                        <img src="images/health-front.png" alt="Оздоровительные процедуры">
+                        <img src="medical/images/health-front.png" alt="Оздоровительные процедуры">
                     </div>
                     <div class="health-section__back drop-shadow">
-                        <img src="images/health-back.svg" alt="Оздоровительные процедуры">
+                        <img src="medical/images/health-back.svg" alt="Оздоровительные процедуры">
                     </div>
                 </div>
             </div>
@@ -178,7 +178,7 @@
                 <div class="children-section__picture">
                     <div class="children-section__back"></div>
                     <div class="children-section__front drop-shadow">
-                        <img src="images/children.png" alt="Оздоровительные процедуры">
+                        <img src="medical/images/children.png" alt="Оздоровительные процедуры">
                     </div>
                 </div>
             </div>
@@ -232,10 +232,10 @@
             <div class="reability-section__right-col">
                 <div class="reability-section__picture">
                     <div class="reability-section__back">
-                        <img src="images/reability-back.png" alt="Реабилитология">
+                        <img src="medical/images/reability-back.png" alt="Реабилитология">
                     </div>
                     <div class="reability-section__front">
-                        <img src="images/reability.jpg" alt="Реабилитология">
+                        <img src="medical/images/reability.jpg" alt="Реабилитология">
                     </div>
                 </div>
             </div>
@@ -247,10 +247,10 @@
             <div class="body-section__left-col">
                 <div class="body-section__picture">
                     <div class="body-section__back">
-                        <img src="images/body-back.svg" alt="Оздоровительные процедуры">
+                        <img src="medical/images/body-back.svg" alt="Оздоровительные процедуры">
                     </div>
                     <div class="body-section__front">
-                        <img src="images/body.png" alt="Оздоровительные процедуры">
+                        <img src="medical/images/body.png" alt="Оздоровительные процедуры">
                     </div>
                 </div>
             </div>
@@ -320,13 +320,13 @@
             <div class="spa-section__right-col">
                 <div class="spa-section__picture">
                     <div class="spa-section__back">
-                        <img src="images/spa-back.svg" alt="Spa-процедуры">
+                        <img src="medical/images/spa-back.svg" alt="Spa-процедуры">
                     </div>
                     <div class="spa-section__front">
-                        <img src="images/spa-front.jpg" alt="Spa-процедуры">
+                        <img src="medical/images/spa-front.jpg" alt="Spa-процедуры">
                     </div>
                     <div class="spa-section__leaf">
-                        <img src="images/spa-green-leafs.png" alt="Spa-процедуры">
+                        <img src="medical/images/spa-green-leafs.png" alt="Spa-процедуры">
                     </div>
                 </div>
             </div>
@@ -338,10 +338,10 @@
             <div class="face-section__left-col">
                 <div class="face-section__picture">
                     <div class="face-section__back">
-                        <img src="images/face-back.png" alt="Техники по лицу">
+                        <img src="medical/images/face-back.png" alt="Техники по лицу">
                     </div>
                     <div class="face-section__front">
-                        <img src="images/face-front.jpg" alt="Техники по лицу">
+                        <img src="medical/images/face-front.jpg" alt="Техники по лицу">
                     </div>
                 </div>
             </div>
@@ -380,7 +380,7 @@
             </div>
             <div class="sertificate-section__right-col">
                 <div class="sertificate-section__picture drop-shadow">
-                    <img src="images/gift-sertificate.jpg" alt="Лучший подарок - процедуры массажа">
+                    <img src="medical/images/gift-sertificate.jpg" alt="Лучший подарок - процедуры массажа">
                 </div>
             </div>
             <a href="#callback" class="popup_btn sertificate-section__btn btn btn_light btn_large" data-popup-from="Приобрести сертификат">
@@ -425,7 +425,7 @@
             <div class="employee-section__list">
                 <div class="employer">
                     <div class="employer__photo drop-shadow">
-                        <img src="images/person/violetta-empl.png" alt="Бычик Виолетта ">
+                        <img src="medical/images/person/violetta-empl.png" alt="Бычик Виолетта ">
                     </div>
                     <div class="employer__info">
                         <span class="employer__name">Бычик Виолетта 
@@ -446,7 +446,7 @@
                 </div>
                 <div class="employer">
                     <div class="employer__photo drop-shadow">
-                        <img src="images/person/drozdov-empl.png" alt="Дроздов Игорь">
+                        <img src="medical/images/person/drozdov-empl.png" alt="Дроздов Игорь">
                     </div>
                     <div class="employer__info">
                         <span class="employer__name">Дроздов 
@@ -467,7 +467,7 @@
                 </div>
                 <div class="employer">
                     <div class="employer__photo drop-shadow">
-                        <img src="images/person/elvira-empl.png" alt="Бычик Эльвира">
+                        <img src="medical/images/person/elvira-empl.png" alt="Бычик Эльвира">
                     </div>
                     <div class="employer__info">
                         <span class="employer__name">Бычик Эльвира
@@ -500,7 +500,7 @@
                     <div class="swiper-slide">
                         <div class="testimonials-slider__slide">
                             <div class="testimonials-slider__photo">
-                                <img src="images/testimonials/galina-tm.jpg" alt="">
+                                <img src="medical/images/testimonials/galina-tm.jpg" alt="">
                             </div>
                             <span class="testimonials-slider__name">Галина Чернышева, 35 лет</span>
                             <p class="testimonials-slider__comment">Прошла курс лечебного массажа у Виолетты Вячеславовны моя дочь. Сколиоз и прочие подростковые недуги ушли, у ребенка перестала болеть спина, шея, голова. Проходим курсы каждый год, только в Виэль центре, настоящие профессионалы! Рекомендую всем!</p>
@@ -509,7 +509,7 @@
                     <div class="swiper-slide">
                         <div class="testimonials-slider__slide">
                             <div class="testimonials-slider__photo">
-                                <img src="images/testimonials/marina-tm.jpg" alt="">
+                                <img src="medical/images/testimonials/marina-tm.jpg" alt="">
                             </div>
                             <span class="testimonials-slider__name">Марина Онопко, 45 лет</span>
                             <p class="testimonials-slider__comment">Ходим в центр всей семьёй, довольны всеми услугами, прошли курсы лечебного массажа, гирудотерапии, остеопатии. Поэтому можем смело рекомендовать.</p>
@@ -518,7 +518,7 @@
                     <div class="swiper-slide">
                         <div class="testimonials-slider__slide">
                             <div class="testimonials-slider__photo">
-                                <img src="images/testimonials/ilshat-tm.jpg" alt="">
+                                <img src="medical/images/testimonials/ilshat-tm.jpg" alt="">
                             </div>
                             <span class="testimonials-slider__name">Ильшат, 33 года</span>
                             <p class="testimonials-slider__comment">Добрый день! Обратился с проблемой сколиоза 2 степени. спина болела жутко. Попал в центр к специалисту Виолетте. Замечательный специалист с золотыми руками. мою мужскую огромную спину ( а я вешу 108 кг), своими сильными пальцами так намяла, я был в шоке. Сколиоз не беспокоит больше.</p>
@@ -527,7 +527,7 @@
                     <div class="swiper-slide">
                         <div class="testimonials-slider__slide">
                             <div class="testimonials-slider__photo">
-                                <img src="images/testimonials/olga.jpg" alt="">
+                                <img src="medical/images/testimonials/olga.jpg" alt="">
                             </div>
                             <span class="testimonials-slider__name">Ольга, 42 года</span>
                             <p class="testimonials-slider__comment">
@@ -538,7 +538,7 @@
                     <div class="swiper-slide">
                         <div class="testimonials-slider__slide">
                             <div class="testimonials-slider__photo">
-                                <img src="images/testimonials/evg.jpg" alt="">
+                                <img src="medical/images/testimonials/evg.jpg" alt="">
                             </div>
                             <span class="testimonials-slider__name">Евгений, 53 года</span>
                             <p class="testimonials-slider__comment">
@@ -549,7 +549,7 @@
                     <div class="swiper-slide">
                         <div class="testimonials-slider__slide">
                             <div class="testimonials-slider__photo">
-                                <img src="images/testimonials/egor.jpg" alt="">
+                                <img src="medical/images/testimonials/egor.jpg" alt="">
                             </div>
                             <span class="testimonials-slider__name">Егор Лукьянов, 28  лет</span>
                             <p class="testimonials-slider__comment">
@@ -560,7 +560,7 @@
                     <div class="swiper-slide">
                         <div class="testimonials-slider__slide">
                             <div class="testimonials-slider__photo">
-                                <img src="images/testimonials/marg.jpg" alt="">
+                                <img src="medical/images/testimonials/marg.jpg" alt="">
                             </div>
                             <span class="testimonials-slider__name">Маргарита, 26  лет</span>
                             <p class="testimonials-slider__comment">
@@ -571,7 +571,7 @@
                     <div class="swiper-slide">
                         <div class="testimonials-slider__slide">
                             <div class="testimonials-slider__photo">
-                                <img src="images/testimonials/maks.jpg" alt="">
+                                <img src="medical/images/testimonials/maks.jpg" alt="">
                             </div>
                             <span class="testimonials-slider__name">Максим Сергеевич, 37  лет</span>
                             <p class="testimonials-slider__comment">
@@ -582,10 +582,10 @@
                 </div>
 
                 <div class="swiper-button-prev testimonials-slider__prev">
-                    <img src="images/left-arrow.svg" alt="prev">
+                    <img src="medical/images/left-arrow.svg" alt="prev">
                 </div>
                 <div class="swiper-button-next testimonials-slider__next">
-                    <img src="images/right-arrow.svg" alt="next">
+                    <img src="medical/images/right-arrow.svg" alt="next">
                 </div>
             </div>
         </div>
@@ -595,7 +595,7 @@
         <div class="container question-section__container">
             <div class="question-section__left-col">
                 <div class="question-section__picture">
-                    <img  src="images/elvira-official.png" alt=" Эльвира Бычик, руководитель Центра “Виэль”">
+                    <img  src="medical/images/elvira-official.png" alt=" Эльвира Бычик, руководитель Центра “Виэль”">
                 </div>
             </div>
             <div class="question-section__right-col">
@@ -658,7 +658,7 @@
 <div class="popup" id="get-price">
     <div class="popup__top-bar">
         <a class="popup__close" href="#">
-            <img src="images/close.svg" alt="close">
+            <img src="medical/images/close.svg" alt="close">
         </a>
     </div>
     <div class="popup__body">
@@ -701,7 +701,7 @@
 <div class="popup" id="callback">
     <div class="popup__top-bar">
         <a class="popup__close" href="#">
-            <img src="images/close.svg" alt="close">
+            <img src="medical/images/close.svg" alt="close">
         </a>
     </div>
     <div class="popup__body">
@@ -743,7 +743,7 @@
 <div class="popup" id="get-promo">
     <div class="popup__top-bar">
         <a class="popup__close" href="#">
-            <img src="images/close.svg" alt="close">
+            <img src="medical/images/close.svg" alt="close">
         </a>
     </div>
     <div class="popup__body">
@@ -790,7 +790,7 @@
 <div class="popup popup-employment" id="empl1">
     <div class="popup__top-bar">
         <a class="popup__close" href="#">
-            <img src="images/close.svg" alt="close">
+            <img src="medical/images/close.svg" alt="close">
         </a>
     </div>
     <div class="popup__body popup-employment__body">
@@ -810,7 +810,7 @@
         </div>
         <div class="popup-employment__right-col">
             <div class="popup-employment__employer-photo">
-                <img src="images/person/violetta-empl.png" alt="Бычик Виолетта ">
+                <img src="medical/images/person/violetta-empl.png" alt="Бычик Виолетта ">
             </div>
         </div>
     </div>
@@ -844,7 +844,7 @@
 <div class="popup popup-employment" id="empl2">
     <div class="popup__top-bar">
         <a class="popup__close" href="#">
-            <img src="images/close.svg" alt="close">
+            <img src="medical/images/close.svg" alt="close">
         </a>
     </div>
     <div class="popup__body popup-employment__body">
@@ -861,7 +861,7 @@
         </div>
         <div class="popup-employment__right-col">
             <div class="popup-employment__employer-photo">
-                <img src="images/person/drozdov-empl.png" alt="Дроздов ">
+                <img src="medical/images/person/drozdov-empl.png" alt="Дроздов ">
             </div>
         </div>
     </div>
@@ -894,7 +894,7 @@
 <div class="popup popup-employment" id="empl3">
     <div class="popup__top-bar">
         <a class="popup__close" href="#">
-            <img src="images/close.svg" alt="close">
+            <img src="medical/images/close.svg" alt="close">
         </a>
     </div>
     <div class="popup__body popup-employment__body">
@@ -907,7 +907,7 @@
         </div>
         <div class="popup-employment__right-col">
             <div class="popup-employment__employer-photo">
-                <img src="images/person/elvira-empl.png" alt="Дроздов ">
+                <img src="medical/images/person/elvira-empl.png" alt="Дроздов ">
             </div>
         </div>
     </div>
@@ -940,13 +940,13 @@
 
 <div class="static-widgets">
     <a href="https://t.me/VielCenter" class="static-widgets__link" target="_blank">
-            <img src="images/tg.png">
+            <img src="medical/images/tg.png">
     </a>
     <a href="https://wa.me/79615000039?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%2C%20%D0%BC%D0%B5%D0%BD%D1%8F%20%D0%B8%D0%BD%D1%82%D0%B5%D1%80%D0%B5%D1%81%D1%83%D0%B5%D1%82" class="static-widgets__link" target="_blank" >
-            <img  src="images/whatsapp-logo.png">
+            <img  src="medical/images/whatsapp-logo.png">
     </a>
     <a href="https://vk.com/vielcenter" class="static-widgets__link" target="_blank">
-            <img src="images/vk.png">
+            <img src="medical/images/vk.png">
     </a>
 </div>
 
