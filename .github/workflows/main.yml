@@ -7,6 +7,12 @@ jobs:
     steps:
     - name: 🚚 Get latest code
       uses: actions/checkout@v3
+      
+    - name: Update buildId in files
+      uses: jacobtomlinson/gha-find-replace@v3
+      with:
+        find: "{BUILD_ID}"
+        replace: ${{ github.sha }}
     
     - name: 📂 Sync files Edu
       uses: SamKirkland/FTP-Deploy-Action@v4.3.4
