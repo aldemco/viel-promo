@@ -25,3 +25,11 @@ jobs:
         username: ${{ secrets.FTP_USERNAME_MED }}
         password: ${{ secrets.FTP_PASSWORD_MED }}
         local-dir: ./dist/
+        
+    - name: 📂 Sync files Main
+      uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+      with:
+        server: ${{ secrets.FTP_SERVER }}
+        username: ${{ secrets.FTP_USERNAME_MAIN }}
+        password: ${{ secrets.FTP_PASSWORD_MAIN }}
+        local-dir: ./dist/
