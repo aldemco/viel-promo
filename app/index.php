@@ -1,5 +1,5 @@
 <!--#set var="title" value="Центр массажа и остеопрактики в Краснодаре - Виэль" -->
-<!--#include virtual="/parts/header.html" -->
+<!--#include virtual="/parts/header-main.html" -->
 
 <header>
     <div class="container">

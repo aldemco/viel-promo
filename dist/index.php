@@ -5,7 +5,7 @@
 <head>
 
 	<meta charset="utf-8">
-	<!-- <base href="/"> -->
+	<base href="/medical/">
 
 	<title>Центр массажа и остеопрактики в Краснодаре - Виэль</title>
 	<meta name="description" content="Виэль">
