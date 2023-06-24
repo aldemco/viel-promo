@@ -7,6 +7,12 @@ jobs:
     steps:
     - name: 🚚 Get latest code
       uses: actions/checkout@v3
+      
+    - name: Update buildId in files
+      uses: jacobtomlinson/gha-find-replace@v3
+      with:
+        find: "{BUILD_ID}"
+        replace: ${{ github.sha }}
     
     - name: 📂 Sync files Edu
       uses: SamKirkland/FTP-Deploy-Action@v4.3.4
@@ -25,6 +31,14 @@ jobs:
         username: ${{ secrets.FTP_USERNAME_MED }}
         password: ${{ secrets.FTP_PASSWORD_MED }}
         local-dir: ./dist/
+        
+    - name: Update images path for main site
+      uses: jacobtomlinson/gha-find-replace@v3
+      with:
+        find: "/images/"
+        replace: "/medical/images/"
+        include: "**app.min.css"
+        regex: true
         
     - name: 📂 Sync files Main
       uses: SamKirkland/FTP-Deploy-Action@v4.3.4
