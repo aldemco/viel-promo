@@ -123,10 +123,10 @@ document.addEventListener('DOMContentLoaded', () => {
 			  })
 				.then(function (response) {
 				  if(response.data.status == 'success'){
+					setMessage('Ваше сообщение отправлено')
 					let counterId = Number(Object.keys(window.Ya._metrika.counters)[0].slice(0, -2))
 					console.log(counterId, goal)
 					ym(counterId,'reachGoal', goal)
-					setMessage('Ваше сообщение отправлено')
 					clearInputs(formInputs)
 				  }
 
