@@ -114,7 +114,9 @@ function buildcopy() {
 
 async function buildhtml() {
 	let includes = new ssi('app/', 'dist/', '/**/*.html')
+	let includesPhp = new ssi('app/', 'dist/', '/**/*.php')
 	includes.compile()
+	includesPhp.compile()
 	await deleteAsync('dist/parts', { force: true })
 }
 
