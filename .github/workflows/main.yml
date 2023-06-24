@@ -26,6 +26,13 @@ jobs:
         password: ${{ secrets.FTP_PASSWORD_MED }}
         local-dir: ./dist/
         
+    - name: Find and Replace
+      uses: jacobtomlinson/gha-find-replace@v3
+      with:
+        find: "/images/"
+        replace: "/medical/images/"
+        include: "./dist/css/*.css"
+        
     - name: 📂 Sync files Main
       uses: SamKirkland/FTP-Deploy-Action@v4.3.4
       with:
