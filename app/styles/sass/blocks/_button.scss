@@ -43,7 +43,7 @@
     }
     &_warning {
         &.btn_line{
-            color: $accent;
+            color: #000;
             &:hover{
                 color:$accent;
             }
@@ -54,6 +54,20 @@
         background-color: $accent;
         border-color: $accent;
         color: $textcolor;
+    }
+    &_danger {
+        &.btn_line{
+            color: #ff0047;
+            &:hover{
+                color:#000;
+            }
+        }
+        &:hover{
+            color:#000;
+        }
+        background-color: #ff0047;
+        border-color: #ff0047;
+        color: #fff;
     }
     &_line {
         background-color: initial;
