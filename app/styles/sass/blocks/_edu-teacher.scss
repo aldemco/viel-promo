@@ -1,6 +1,7 @@
 .teacher-section {
     min-height: 720px;
-    background: linear-gradient(180deg, #F8F8F8 0%, rgba(248, 248, 248, 0) 100%);
+    //background: linear-gradient(180deg, #F8F8F8 0%, rgba(248, 248, 248, 0) 100%);
+    background-color: $gray;
     padding: 55px 0px 55px 0px;
     &__container { 
         display: flex;

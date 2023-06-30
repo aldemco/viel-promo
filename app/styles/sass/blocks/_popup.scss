@@ -74,6 +74,14 @@
 	&__textarea {
         height: 85px;
     }
+    &__checkbox-container{
+        display: flex;
+        flex-direction: column;
+        padding: 5px;
+        background-color: $gray;
+        border-radius: 10px;
+        margin-bottom: 20px;
+    }
 
     & .message{
         display: none;

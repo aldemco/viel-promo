@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
 			const toggleBtn =  el.querySelector('.header-navigation__menu-toggle');
 			const links = el.querySelectorAll('.header-menu__link');
 
-			const toggle = () => {
+			const toggle = (event) => {
 				el.classList.toggle("show");
 			}
 
