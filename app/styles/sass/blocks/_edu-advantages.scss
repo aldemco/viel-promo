@@ -1,0 +1,86 @@
+.advantages-section {
+    padding: 55px 0px 55px 0px;
+    background-color: $gray;
+    background-image: url(/images/advantages-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+	&__container { }
+	&__heading {
+        margin-bottom: 60px;
+    }
+	&__advantages-list {
+
+    }
+    &__photo {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 20px;
+        img{
+            width: 100%;
+            border-radius: 30px;
+            box-shadow: 0 0 30px rgba(0,0,0,.063);
+        }
+    }
+    &__content{
+
+    }
+
+}
+
+.advantages-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 2em;
+    &__item{
+        border: solid 3px #7ca950;
+        border-radius: 20px 0px 0 20px;
+        padding: 15px;
+        counter-increment: item;
+        font-size: 22px;
+        font-weight: 200;
+        list-style-type: none;
+        word-wrap: break-word;
+        max-height: 230px;
+        overflow-x: auto;
+        &::-webkit-scrollbar {
+            width: 6px;
+            background-color: #F5F5F5;
+        }
+        &::before{
+            content: counter(item);
+            mask-image: url(/images/hexagon20.svg);
+            mask-size: contain;
+            mask-repeat: no-repeat;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding-right: 7px;
+            width: 60px;
+            height: 60px;
+            margin-right: 0.5em;
+            background-color: $success;
+            color: white;
+            font-weight: 200;
+            font-size: 140%;
+        }
+    }
+}
+
+@include media-breakpoint-down(lg) {
+    .advantages-list {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+}
+
+@include media-breakpoint-down(md) {
+    .advantages-list {
+        display: grid;
+        grid-template-columns: 1fr;
+        &__item{
+            max-height: initial;
+            border-radius: 20px;
+        }
+    }
+}

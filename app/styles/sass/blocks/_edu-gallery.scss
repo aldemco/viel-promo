@@ -22,6 +22,7 @@
         border-radius: 10px;
         & img {
             transition: 1s;
+            width: 100%;
         }
         &:hover{
             box-shadow: 0 0 20px #00000020;
