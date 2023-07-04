@@ -27,12 +27,18 @@
         padding: 1em;
     }
 	&__photo {
+        display: flex;
+        align-items: center;
+        justify-content: center;
         overflow: hidden;
         border-radius: 100%;
-        background-color: $accent;
+        background-color: $success;
         height: 110px;
         width: 110px;
         margin-bottom: 16px;
+        font-size: 40px;
+        font-weight: 200;
+        color: white;
     }
 	&__name { 
         font-weight: 200;
