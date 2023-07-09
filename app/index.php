@@ -657,6 +657,7 @@
                         Краснодар, ул. Кожевенная, 24 <br>
                         Режим работы: 09:00–21:00
                     </p>
+                    <a href="mailto:info@viel-center.ru" class="contacts-section__email">info@viel-center.ru</a>
                     <a href="tel:+79615000039" class="contacts-section__phone" >+7 (961) 500-00-39</a>
                     <a href="#callback" class="popup_btn contacts-section__btn btn btn_success btn_medium" data-popup-from="Контакты">
                         Заказать обратный звонок
