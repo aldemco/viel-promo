@@ -128,6 +128,7 @@ document.addEventListener('DOMContentLoaded', () => {
 					console.log(counterId, goal)
 					ym(counterId,'reachGoal', goal)
 					clearInputs(formInputs)
+					VK.Goal('lead')
 				  }
 
 				})
