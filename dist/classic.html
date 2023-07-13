@@ -1,5 +1,25 @@
-<!--#set var="title" value="Учебный центр Виэль в Краснодаре" -->
-<!--#include virtual="/parts/header.html" -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<meta charset="utf-8">
+	<!-- <base href="/"> -->
+
+	<title>Учебный центр Виэль в Краснодаре</title>
+	<meta name="description" content="Виэль">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<link rel="icon" href="images/logo.png">
+	<meta property="og:image" content="images/prof-illustration.png">
+	
+	<link rel="stylesheet" href="css/app.min.css?v={BUILD_ID}">
+
+</head>
+
+<body>
 
 <header>
     <div class="container">
@@ -52,16 +72,18 @@
                 <img src="images/edu-main-cert.png" alt="Авторские курсы">
             </div>
             <h2 class="edu-section__subtitle heading heading_small">Авторские курсы Виолетты Бычик</h2>
-            <h1 class="edu-section__title heading heading_large "> Массажные техники для 
-                новичков и профессионалов </h1>
+            <h1 class="edu-section__title heading heading_large "> Получи востребованную профессию Массажиста </h1>
+
+            <p class="edu-section__license"> Начни свою частную практику уже после обучения </p>
+
             <h3 class="edu-section__about heading heading_small text-center"> Сертификат государственного<br> образца </h3>
 
             <div class="edu-section__actions">
                 <a href="#get-price" class="popup_btn edu-section__btn btn btn_warning btn_medium">
-                    Получить прайс на offline обучение
+                    Получить прайс
                 </a>
-                <a href="https://courses.viel-center.ru" target="_blank" class="edu-section__btn btn btn_danger btn_medium">
-                    Распродажа онлайн курсов
+                <a href="#schedule" class="edu-section__btn btn btn_danger btn_medium">
+                    Выбрать даты обучения
                 </a>
             </div>
 
@@ -102,77 +124,26 @@
         </div>
     </section>
 
-    <section class="booking-section">
+    <section class="booking-section" id="schedule">
         <div class="container booking-section__container">
             <h2 class="booking-section__heading heading heading_large text-center">
-                Off-line курсы  <span class="heading__success">в июле и августе</span>
+                Off-line курсы  <span class="heading__success">в августе</span>
             </h2>
             <div class="booking-section__menu booking-menu">
                 <div class="booking-menu__item">
                     <div class="booking-menu__name">
-                        Гирудотерапия
+                        Классический массаж
                     </div>
                     <div class="booking-menu__date">
-                        18 июля
+                        1 - 21 августа
                     </div>
                     <div class="booking-menu__actions">
-                        <a href="#callback" class="popup_btn booking-menu__btn btn  btn_warning btn_small">
-                            Забронировать место
+                        <a href="#" class="popup_btn booking-menu__btn btn   btn_warning btn_small">
+                            Мест нет
                         </a>
                     </div>
                 </div>
-                <div class="booking-menu__item">
-                    <div class="booking-menu__name">
-                        Детский массаж (до 1 года)
-                    </div>
-                    <div class="booking-menu__date">
-                        20-21 июля
-                    </div>
-                    <div class="booking-menu__actions">
-                        <a href="#callback" class="popup_btn booking-menu__btn btn  btn_warning btn_small">
-                            Забронировать место
-                        </a>
-                    </div>
-                </div>
-                <div class="booking-menu__item">
-                    <div class="booking-menu__name">
-                        Логомассаж
-                    </div>
-                    <div class="booking-menu__date">
-                        27-28 июля
-                    </div>
-                    <div class="booking-menu__actions">
-                        <a href="#callback" class="popup_btn booking-menu__btn btn   btn_warning btn_small">
-                            Забронировать место
-                        </a>
-                    </div>
-                </div>
-                <div class="booking-menu__item">
-                    <div class="booking-menu__name">
-                        Массаж для беременных
-                    </div>
-                    <div class="booking-menu__date">
-                        8 августа
-                    </div>
-                    <div class="booking-menu__actions">
-                        <a href="#callback" class="popup_btn booking-menu__btn btn   btn_warning btn_small">
-                            Забронировать место
-                        </a>
-                    </div>
-                </div>
-                <div class="booking-menu__item">
-                    <div class="booking-menu__name">
-                        Гирудотерапия
-                    </div>
-                    <div class="booking-menu__date">
-                        12 августа
-                    </div>
-                    <div class="booking-menu__actions">
-                        <a href="#callback" class="popup_btn booking-menu__btn btn  btn_warning btn_small">
-                            Забронировать место
-                        </a>
-                    </div>
-                </div>
+
                 <div class="booking-menu__item">
                     <div class="booking-menu__name">
                         Классический массаж
@@ -557,7 +528,7 @@
                 </div>
                 <div>
                     <input type="hidden" name="from" value="Нужна консультация">
-                    <input type="hidden" name="site" value="УЦ">
+                    <input type="hidden" name="site" value="УЦ-Классика">
                     <button type="submit" class="cons-section__btn btn btn_warning btn_medium" data-popup-from="Получить консультацию">
                         Получить консультацию
                     </button>
@@ -869,7 +840,7 @@
             </div>
             <div class="popup__form-row">
                 <input type="hidden" name="from" value="Получить прайс (popup)">
-                <input type="hidden" name="site" value="УЦ">
+                <input type="hidden" name="site" value="УЦ-Классика">
                 <input type="submit" class="contacts-section__btn btn btn_warning btn_medium"  value="Получить прайс">
             </div>
         </form>
@@ -909,7 +880,7 @@
             </div>
             <div class="popup__form-row">
                 <input type="hidden" name="from" value="Обратный звонок (popup)">
-                <input type="hidden" name="site" value="УЦ">
+                <input type="hidden" name="site" value="УЦ-Классика">
                 <input type="submit" class="contacts-section__btn btn btn_warning btn_medium"  value="Отправить">
             </div>
         </form>
@@ -950,7 +921,7 @@
             </div>
             <div class="popup__form-row">
                 <input type="hidden" name="from" value="Получить программы курсов (popup)">
-                <input type="hidden" name="site" value="УЦ">
+                <input type="hidden" name="site" value="УЦ-Классика">
                 <input type="submit" class="contacts-section__btn btn btn_warning btn_medium"  value="Получить программы">
             </div>
         </form>
@@ -990,7 +961,7 @@
             </div>
             <div class="popup__form-row">
                 <input type="hidden" name="from" value="Получить расписание курсов (popup)">
-                <input type="hidden" name="site" value="УЦ">
+                <input type="hidden" name="site" value="УЦ-Классика">
                 <input type="submit" class="contacts-section__btn btn btn_warning btn_medium"  value="Получить расписание">
             </div>
         </form>
@@ -1021,7 +992,7 @@
             </div>
             <div class="popup__form-row">
                 <input type="hidden" name="from" value="Получить программу курса">
-                <input type="hidden" name="site" value="УЦ">
+                <input type="hidden" name="site" value="УЦ-Классика">
                 <input type="submit" class="contacts-section__btn btn btn_warning btn_medium"  value="Получить программу курса">
             </div>
         </form>
@@ -1049,7 +1020,10 @@
  <noscript><div><img src="https://mc.yandex.ru/watch/90115197" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
  <!-- /Yandex.Metrika counter -->
 
-<!--#include virtual="/parts/footer.html" -->
+	<script src="js/app.min.js?v={BUILD_ID}"></script>
+
+</body>
+</html>
 
 <div class="static-widgets">
     <a href="https://t.me/viel_ucheba" class="static-widgets__link" target="_blank">
