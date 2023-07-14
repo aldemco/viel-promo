@@ -1,25 +1,5 @@
-
-<!DOCTYPE html>
-<html>
-
-<head>
-
-	<meta charset="utf-8">
-	<!-- <base href="/"> -->
-
-	<title>Учебный центр Виэль в Краснодаре</title>
-	<meta name="description" content="Виэль">
-
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-
-	<link rel="icon" href="images/logo.png">
-	<meta property="og:image" content="images/prof-illustration.png">
-	
-	<link rel="stylesheet" href="css/app.min.css?v={BUILD_ID}">
-
-</head>
-
-<body>
+<!--#set var="title" value="Учебный центр Виэль в Краснодаре" -->
+<!--#include virtual="/parts/header.html" -->
 
 <header>
     <div class="container">
@@ -37,7 +17,7 @@
             <nav class="header-navigation"> 
                 <ul class="header-menu">
                     <li class="header-menu__item">
-                        <a class="header-menu__link" href="#beginner">Новичкам</a>
+                        <a class="header-menu__link" href="#schedule">Расписание</a>
                     </li>
                     <li class="header-menu__item">
                         <a class="header-menu__link" href="#prof">Профессионалам</a>
@@ -63,7 +43,7 @@
 </header>
 
 <main>
-    <section class="edu-section edu-section_gradient" id="edu">
+    <section class="edu-section edu-section_big edu-section_gradient" id="edu">
         <div class="container edu-section__container">
             <div class="edu-section__massager">
                 <img src="images/edu-main-illustration.png" alt="Авторские курсы">
@@ -71,12 +51,9 @@
             <div class="edu-section__sertificat">
                 <img src="images/edu-main-cert.png" alt="Авторские курсы">
             </div>
-            <h2 class="edu-section__subtitle heading heading_small">Авторские курсы Виолетты Бычик</h2>
-            <h1 class="edu-section__title heading heading_large "> Освой востребованную профессию Массажиста </h1>
+            <h1 class="edu-section__title heading heading_large "> Освой востребованный и высокооплачиваемый навык Гирудотерапии </h1>
 
-            <p class="edu-section__license"> Начни свою частную практику уже после обучения </p>
-
-            <h3 class="edu-section__about heading heading_small text-center"> Сертификат государственного<br> образца </h3>
+            <h3 class="edu-section__about heading heading_small text-center"> Сертификат государственного<br> образца* </h3>
 
             <div class="edu-section__actions">
                 <a href="#get-price" class="popup_btn edu-section__btn btn btn_warning btn_medium">
@@ -88,7 +65,7 @@
             </div>
 
             <p class="edu-section__license"> Лицензия на осуществление образовательной деятельности: 
-                23Л01 0004146 от 13.11.2015 </p>
+                23Л01 0004146 от 13.11.2015. *Сертификат гос. образца выдается только медработникам.</p>
         </div>
     </section>
 
@@ -97,7 +74,7 @@
             <div class="stat-list">
                 <div class="stat-card drop-shadow">
                     <div class="stat-card__num"><span class="countUp">17</span> <span class="stat-card__small-text">лет</span></div>
-                    <div class="stat-card__desc">обучаем массажу</div>
+                    <div class="stat-card__desc">Обучаем</div>
                 </div>
                 <div class="stat-card drop-shadow">
                     <div class="stat-card__num"><span class="countUp">2883</span></div>
@@ -127,15 +104,15 @@
     <section class="booking-section" id="schedule">
         <div class="container booking-section__container">
             <h2 class="booking-section__heading heading heading_large text-center">
-                Off-line курсы  <span class="heading__success">в августе</span>
+                Ближайшие даты  <span class="heading__success">курсов</span>
             </h2>
             <div class="booking-section__menu booking-menu">
                 <div class="booking-menu__item">
                     <div class="booking-menu__name">
-                        Классический массаж
+                        Гирудотерапия
                     </div>
                     <div class="booking-menu__date">
-                        1 - 21 августа
+                        14 июля
                     </div>
                     <div class="booking-menu__actions">
                         <a href="#" class="booking-menu__btn btn  btn_warning btn_small">
@@ -143,13 +120,12 @@
                         </a>
                     </div>
                 </div>
-
                 <div class="booking-menu__item">
                     <div class="booking-menu__name">
-                        Классический массаж
+                        Гирудотерапия
                     </div>
                     <div class="booking-menu__date">
-                        28 августа - 15 сентября
+                        18 июля
                     </div>
                     <div class="booking-menu__actions">
                         <a href="#callback" class="popup_btn booking-menu__btn btn  btn_warning btn_small">
@@ -157,7 +133,32 @@
                         </a>
                     </div>
                 </div>
-
+                <div class="booking-menu__item">
+                    <div class="booking-menu__name">
+                        Гирудотерапия
+                    </div>
+                    <div class="booking-menu__date">
+                        12 августа
+                    </div>
+                    <div class="booking-menu__actions">
+                        <a href="#callback" class="popup_btn booking-menu__btn btn  btn_warning btn_small">
+                            Забронировать место
+                        </a>
+                    </div>
+                </div>
+                <div class="booking-menu__item">
+                    <div class="booking-menu__name">
+                        Гирудотерапия
+                    </div>
+                    <div class="booking-menu__date">
+                        17 сентября
+                    </div>
+                    <div class="booking-menu__actions">
+                        <a href="#callback" class="popup_btn booking-menu__btn btn  btn_warning btn_small">
+                            Забронировать место
+                        </a>
+                    </div>
+                </div>
 
             </div>
         </div>
@@ -1020,10 +1021,7 @@
  <noscript><div><img src="https://mc.yandex.ru/watch/90115197" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
  <!-- /Yandex.Metrika counter -->
 
-	<script src="js/app.min.js?v={BUILD_ID}"></script>
-
-</body>
-</html>
+<!--#include virtual="/parts/footer.html" -->
 
 <div class="static-widgets">
     <a href="https://t.me/viel_ucheba" class="static-widgets__link" target="_blank">
