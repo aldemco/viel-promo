@@ -27,6 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 			const toggle = (event) => {
 				el.classList.toggle("show");
+				event.preventDefault();
 			}
 
 			links.forEach((link)=>{
