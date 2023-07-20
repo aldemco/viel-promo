@@ -30,8 +30,12 @@ document.addEventListener('DOMContentLoaded', () => {
 				event.preventDefault();
 			}
 
+			const toggleLink = (event) => {
+				el.classList.toggle("show");
+			}
+
 			links.forEach((link)=>{
-				link.addEventListener('click', toggle)
+				link.addEventListener('click', toggleLink)
 			})
 			
 			toggleBtn.addEventListener('click', toggle)
