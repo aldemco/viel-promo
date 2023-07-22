@@ -67,7 +67,6 @@ document.addEventListener('DOMContentLoaded', () => {
 		const overlay = document.querySelector(overlaySelector);
 
 		const overlayToggle = (event) => {
-			console.log(1)
 			overlay.classList.toggle((overlaySelector+'_active').slice(1))
 		}
 
