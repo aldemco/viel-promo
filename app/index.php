@@ -821,150 +821,156 @@
 <div class="popup popup-employment" id="empl1">
     <div class="popup__top-bar">
         <a class="popup__close" href="#">
-            <img src="medical/images/close.svg" alt="close">
+            <img src="images/close.svg" alt="close">
         </a>
     </div>
-    <div class="popup__body popup-employment__body">
-        <div class="popup-employment__left-col">
-            <h3 class="popup-employment__heading heading heading_small">Бычик Виолетта Вячеславовна</h3>
-            <p class="popup-employment__message">Остепат,  Стаж работы: 29 лет  </p>
-            <div class="popup-employment__about">
-                В индустрии массажа с 1994 года. Преподаватель лечебных техник и SPA методик, 
-                «Виртуоз России» - призер V-го Чемпионата SPA массажа. 
-                Член жюри VI-го Чемпионата России «Лучший SPA-мастер 2014».
-                <br>
-                Занимается:
-                - коррекцией костной системы, 
-                - подбором Лечебной гимнастики, 
-                - выстраивает программы по коррекции фигуры, - висцеральный массаж, 
+    <div class="popup__body ">
+        <div class="popup-employment__body">
+            <div class="popup-employment__left-col">
+                <h3 class="popup-employment__heading heading heading_small">Бычик Виолетта Вячеславовна</h3>
+                <p class="popup-employment__message">Остепат,  Стаж работы: 29 лет  </p>
+                <div class="popup-employment__about">
+                    В индустрии массажа с 1994 года. Преподаватель лечебных техник и SPA методик, 
+                    «Виртуоз России» - призер V-го Чемпионата SPA массажа. 
+                    Член жюри VI-го Чемпионата России «Лучший SPA-мастер 2014».
+                    <br>
+                    Занимается:
+                    - коррекцией костной системы, 
+                    - подбором Лечебной гимнастики, 
+                    - выстраивает программы по коррекции фигуры, - висцеральный массаж, 
+                </div>
+            </div>
+            <div class="popup-employment__right-col">
+                <div class="popup-employment__employer-photo">
+                    <img src="images/person/violetta-empl.png" alt="Бычик Виолетта ">
+                </div>
             </div>
         </div>
-        <div class="popup-employment__right-col">
-            <div class="popup-employment__employer-photo">
-                <img src="medical/images/person/violetta-empl.png" alt="Бычик Виолетта ">
-            </div>
+        <div class="popup__footer popup-employment__footer">
+            <form action="/" method="POST" class="popup-employment__form" id="record-form" data-goal="zapis">
+                <div class="popup-employment__form-row message">
+                </div>
+                <div class="popup-employment__form-row">
+                    <input class="popup-employment__input form-input form-input_line form-input_success" placeholder="Имя" type="text" name="name">
+                </div>
+                <div class="popup-employment__form-row">
+                    <input class="popup__input form-input form-input form-input_line form-input_success" type="text" name="phone"  placeholder="+7" required>
+                </div>
+                <div class="popup-employment__form-row">
+                    <input class="popup__input form-input form-input form-input_line form-input_success" type="email" name="email"  placeholder="Email">
+                </div>
+                <div class="popup-employment__form-row">
+                    <input type="hidden" name="from" value="Запись Бычик Виолетта Вячеславовна (popup)">
+                    <input type="hidden" name="site" value="МЦ">
+                    <input type="submit" class="contacts-section__btn btn btn_warning btn_medium"  value="Записаться">
+                </div>
+                <div class="popup-employment__form-row popup__agree">
+                    <input type="checkbox" name="agree" checked required> 
+                    <span>Я принимаю условия и соглашаюсь на обработку персональных данных в соответствии с <a href="privacy-med.pdf" target="_blank">Политикой в отношении обработки персональных данных </a> в ООО «ВИЭЛЬ» </span>
+                </div>
+            </form>
         </div>
-    </div>
-    <div class="popup__footer popup-employment__footer">
-        <form action="/" method="POST" class="popup-employment__form" id="record-form" data-goal="zapis">
-            <div class="popup-employment__form-row message">
-            </div>
-            <div class="popup-employment__form-row">
-                <input class="popup-employment__input form-input form-input_line form-input_success" placeholder="Имя" type="text" name="name">
-            </div>
-            <div class="popup-employment__form-row">
-                <input class="popup__input form-input form-input form-input_line form-input_success" type="text" name="phone"  placeholder="+7" required>
-            </div>
-            <div class="popup-employment__form-row">
-                <input class="popup__input form-input form-input form-input_line form-input_success" type="email" name="email"  placeholder="Email">
-            </div>
-            <div class="popup-employment__form-row">
-                <input type="hidden" name="from" value="Запись Бычик Виолетта Вячеславовна (popup)">
-                <input type="hidden" name="site" value="МЦ-ГЛАВНЫЙ">
-                <input type="submit" class="contacts-section__btn btn btn_warning btn_medium"  value="Записаться">
-            </div>
-            <div class="popup-employment__form-row popup__agree">
-                <input type="checkbox" name="agree" checked required> 
-                <span>Я принимаю условия и соглашаюсь на обработку персональных данных в соответствии с <a href="privacy-med.pdf" target="_blank">Политикой в отношении обработки персональных данных </a> в ООО «ВИЭЛЬ» </span>
-            </div>
-        </form>
-    </div>
 </div>
-
+</div>
 
 <div class="popup popup-employment" id="empl2">
     <div class="popup__top-bar">
         <a class="popup__close" href="#">
-            <img src="medical/images/close.svg" alt="close">
+            <img src="images/close.svg" alt="close">
         </a>
     </div>
-    <div class="popup__body popup-employment__body">
-        <div class="popup-employment__left-col">
-            <h3 class="popup-employment__heading heading heading_small">Дроздов Игорь Юрьевич</h3>
-            <p class="popup-employment__message">Остеопат, Стаж работы: 26 лет  </p>
-            <div class="popup-employment__about">
-                Игорь владеет различными биодинамическими и медитативными техниками, которые помогают ему диагностировать и устранять проблемы со здоровьем на основе индивидуальных особенностей каждого пациента.
+    <div class="popup__body">
+        <div class="popup-employment__body">
+            <div class="popup-employment__left-col">
+                <h3 class="popup-employment__heading heading heading_small">Дроздов Игорь Юрьевич</h3>
+                <p class="popup-employment__message">Остеопат, Стаж работы: 26 лет  </p>
+                <div class="popup-employment__about">
+                    Игорь владеет различными биодинамическими и медитативными техниками, которые помогают ему диагностировать и устранять проблемы со здоровьем на основе индивидуальных особенностей каждого пациента.
 
-                Он также предлагает услуги по созданию ортопедических стелек, которые позволяют улучшить осанку, снизить нагрузку на суставы и предотвратить развитие различных заболеваний.
-                
-                Игорь является профессионалом своего дела и всегда стремится к достижению наилучших результатов для своих пациентов.    
+                    Он также предлагает услуги по созданию ортопедических стелек, которые позволяют улучшить осанку, снизить нагрузку на суставы и предотвратить развитие различных заболеваний.
+                    
+                    Игорь является профессионалом своего дела и всегда стремится к достижению наилучших результатов для своих пациентов.    
+                </div>
             </div>
+            <div class="popup-employment__right-col">
+                <div class="popup-employment__employer-photo">
+                    <img src="images/person/drozdov-empl.png" alt="Дроздов ">
+                </div>
+            </div>
+         </div>
+
+        <div class="popup__footer popup-employment__footer">
+            <form action="/" method="POST" class="popup-employment__form" id="record-form" data-goal="zapis">
+                <div class="popup-employment__form-row message">
+                </div>
+                <div class="popup-employment__form-row">
+                    <input class="popup-employment__input form-input form-input_line form-input_success" placeholder="Имя" type="text" name="name">
+                </div>
+                <div class="popup-employment__form-row">
+                    <input class="popup__input form-input form-input form-input_line form-input_success" type="text" name="phone"  placeholder="+7" required>
+                </div>
+                <div class="popup-employment__form-row">
+                    <input class="popup__input form-input form-input form-input_line form-input_success" type="email" name="email"  placeholder="Email">
+                </div>
+                <div class="popup-employment__form-row">
+                    <input type="hidden" name="from" value="Запись Дроздов Игорь Юрьевич (popup)">
+                    <input type="hidden" name="site" value="МЦ">
+                    <input type="submit" class="contacts-section__btn btn btn_warning btn_medium"  value="Записаться">
+                </div>
+                <div class="popup-employment__form-row popup__agree">
+                    <input type="checkbox" name="agree" checked required> 
+                    <span>Я принимаю условия и соглашаюсь на обработку персональных данных в соответствии с <a href="privacy-med.pdf" target="_blank">Политикой в отношении обработки персональных данных </a> в ООО «ВИЭЛЬ» </span>
+                </div>
+            </form>
         </div>
-        <div class="popup-employment__right-col">
-            <div class="popup-employment__employer-photo">
-                <img src="medical/images/person/drozdov-empl.png" alt="Дроздов ">
-            </div>
-        </div>
-    </div>
-    <div class="popup__footer popup-employment__footer">
-        <form action="/" method="POST" class="popup-employment__form" id="record-form" data-goal="zapis">
-            <div class="popup-employment__form-row message">
-            </div>
-            <div class="popup-employment__form-row">
-                <input class="popup-employment__input form-input form-input_line form-input_success" placeholder="Имя" type="text" name="name">
-            </div>
-            <div class="popup-employment__form-row">
-                <input class="popup__input form-input form-input form-input_line form-input_success" type="text" name="phone"  placeholder="+7" required>
-            </div>
-            <div class="popup-employment__form-row">
-                <input class="popup__input form-input form-input form-input_line form-input_success" type="email" name="email"  placeholder="Email">
-            </div>
-            <div class="popup-employment__form-row">
-                <input type="hidden" name="from" value="Запись Дроздов Игорь Юрьевич (popup)">
-                <input type="hidden" name="site" value="МЦ-ГЛАВНЫЙ">
-                <input type="submit" class="contacts-section__btn btn btn_warning btn_medium"  value="Записаться">
-            </div>
-            <div class="popup-employment__form-row popup__agree">
-                <input type="checkbox" name="agree" checked required> 
-                <span>Я принимаю условия и соглашаюсь на обработку персональных данных в соответствии с <a href="privacy-med.pdf" target="_blank">Политикой в отношении обработки персональных данных </a> в ООО «ВИЭЛЬ» </span>
-            </div>
-        </form>
     </div>
 </div>
 
 <div class="popup popup-employment" id="empl3">
     <div class="popup__top-bar">
         <a class="popup__close" href="#">
-            <img src="medical/images/close.svg" alt="close">
+            <img src="images/close.svg" alt="close">
         </a>
     </div>
-    <div class="popup__body popup-employment__body">
-        <div class="popup-employment__left-col">
-            <h3 class="popup-employment__heading heading heading_small">Бычик Эльвира Игоревна</h3>
-            <p class="popup-employment__message">Специалист по аппаратным техникам. Стаж работы: 7 лет </p>
-            <div class="popup-employment__about">
-                Эльвира - профессиональный массажист. Она специализируется на аппаратном массаже, который включает в себя различные техники и методики. Эльвира использует современное оборудование и инновационные методы для достижения максимального эффекта от массажа. Она работает с клиентами разных возрастов и состояний здоровья, помогая им улучшить свое физическое и эмоциональное состояние. Эльвира является экспертом в области аппаратного массажа и всегда готова помочь своим клиентам достичь желаемых результатов.
+    <div class="popup__body">
+        <div class="popup-employment__body">
+            <div class="popup-employment__left-col">
+                <h3 class="popup-employment__heading heading heading_small">Бычик Эльвира Игоревна</h3>
+                <p class="popup-employment__message">Специалист по аппаратным техникам. Стаж работы: 7 лет </p>
+                <div class="popup-employment__about">
+                    Эльвира - профессиональный массажист. Она специализируется на аппаратном массаже, который включает в себя различные техники и методики. Эльвира использует современное оборудование и инновационные методы для достижения максимального эффекта от массажа. Она работает с клиентами разных возрастов и состояний здоровья, помогая им улучшить свое физическое и эмоциональное состояние. Эльвира является экспертом в области аппаратного массажа и всегда готова помочь своим клиентам достичь желаемых результатов.
+                </div>
+            </div>
+            <div class="popup-employment__right-col">
+                <div class="popup-employment__employer-photo">
+                    <img src="images/person/elvira-empl.png" alt="Дроздов ">
+                </div>
             </div>
         </div>
-        <div class="popup-employment__right-col">
-            <div class="popup-employment__employer-photo">
-                <img src="medical/images/person/elvira-empl.png" alt="Дроздов ">
-            </div>
+        <div class="popup__footer popup-employment__footer">
+            <form action="/" method="POST" class="popup-employment__form" id="record-form" data-goal="zapis">
+                <div class="popup-employment__form-row message">
+                </div>
+                <div class="popup-employment__form-row">
+                    <input class="popup-employment__input form-input form-input_line form-input_success" placeholder="Имя" type="text" name="name">
+                </div>
+                <div class="popup-employment__form-row">
+                    <input class="popup__input form-input form-input form-input_line form-input_success" type="text" name="phone"  placeholder="+7" required>
+                </div>
+                <div class="popup-employment__form-row">
+                    <input class="popup__input form-input form-input form-input_line form-input_success" type="email" name="email"  placeholder="Email">
+                </div>
+                <div class="popup-employment__form-row">
+                    <input type="hidden" name="from" value="Запись Бычик Эльвира Игоревна (popup)">
+                    <input type="hidden" name="site" value="МЦ">
+                    <input type="submit" class="contacts-section__btn btn btn_warning btn_medium"  value="Записаться">
+                </div>
+                <div class="popup-employment__form-row popup__agree">
+                    <input type="checkbox" name="agree" checked required> 
+                    <span>Я принимаю условия и соглашаюсь на обработку персональных данных в соответствии с <a href="privacy-med.pdf" target="_blank">Политикой в отношении обработки персональных данных </a> в ООО «ВИЭЛЬ» </span>
+                </div>
+            </form>
         </div>
-    </div>
-    <div class="popup__footer popup-employment__footer">
-        <form action="/" method="POST" class="popup-employment__form" id="record-form" data-goal="zapis">
-            <div class="popup-employment__form-row message">
-            </div>
-            <div class="popup-employment__form-row">
-                <input class="popup-employment__input form-input form-input_line form-input_success" placeholder="Имя" type="text" name="name">
-            </div>
-            <div class="popup-employment__form-row">
-                <input class="popup__input form-input form-input form-input_line form-input_success" type="text" name="phone"  placeholder="+7" required>
-            </div>
-            <div class="popup-employment__form-row">
-                <input class="popup__input form-input form-input form-input_line form-input_success" type="email" name="email"  placeholder="Email">
-            </div>
-            <div class="popup-employment__form-row">
-                <input type="hidden" name="from" value="Запись Бычик Эльвира Игоревна (popup)">
-                <input type="hidden" name="site" value="МЦ-ГЛАВНЫЙ">
-                <input type="submit" class="contacts-section__btn btn btn_warning btn_medium"  value="Записаться">
-            </div>
-            <div class="popup-employment__form-row popup__agree">
-                <input type="checkbox" name="agree" checked required> 
-                <span>Я принимаю условия и соглашаюсь на обработку персональных данных в соответствии с <a href="privacy-med.pdf" target="_blank">Политикой в отношении обработки персональных данных </a> в ООО «ВИЭЛЬ» </span>
-            </div>
-        </form>
     </div>
 </div>
 

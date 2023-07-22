@@ -66,7 +66,8 @@ document.addEventListener('DOMContentLoaded', () => {
 		const openPopupBtns = document.querySelectorAll(openLinkSelector);
 		const overlay = document.querySelector(overlaySelector);
 
-		const overlayToggle = () => {
+		const overlayToggle = (event) => {
+			console.log(1)
 			overlay.classList.toggle((overlaySelector+'_active').slice(1))
 		}
 
@@ -84,7 +85,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		}
 		
 		const openPopup = (event) => {
-			const popupTargetSelector = event.target.attributes.href.nodeValue;
+			const popupTargetSelector = event.currentTarget.getAttribute('href');
 			const targetPopup = document.querySelector(popupTargetSelector);
 			const open = (targetPopup) => {
 				targetPopup.classList.add((popupSelector+'_active').slice(1));				
@@ -99,7 +100,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		})
 
 		openPopupBtns.forEach(element => {
-			element.addEventListener('click', openPopup)
+			element.addEventListener('click', openPopup, true)
 		});
 
 	}
