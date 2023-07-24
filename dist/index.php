@@ -886,6 +886,30 @@
 </div>
 
 
+<script src="https://myreviews.dev/widget/dist/index.js" defer></script>
+<script defer>
+    (function (){
+      let myReviewsInit = function () {
+        new window.myReviews.BlockWidget({
+        uuid: "b1a53951-7ae6-4a80-8664-bf0bc09aa0a3",
+        name: "g8926696",
+        additionalFrame:"none",
+        lang:"ru",
+        widgetId: "0"
+        }).init();
+
+      };
+    if (document.readyState === "loading") {
+      document.addEventListener('DOMContentLoaded', function () {
+          myReviewsInit()
+      })
+    } else {
+      myReviewsInit()
+    }
+    })()
+</script>
+
+
 <!-- Yandex.Metrika counter -->
 <script type="text/javascript" >
     (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
