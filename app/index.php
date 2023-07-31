@@ -415,7 +415,7 @@
             <form action="/" method="POST" class="cons-section__form" data-goal="seance">
                 <div>
                     <div class="message"></div>
-                    <input type="text" name="phone" required class="cons-section__input form-input form-input_success form-input_line" placeholder="+7">
+                    <input type="text" name="phone" required class="cons-section__input form-input form-input_success form-input_line" placeholder="">
                 </div>
                 <div>
                     <input class="cons-section__input form-input form-input_success form-input_line" type="email" name="email" placeholder="Email">
@@ -598,7 +598,7 @@
         <form action="/" method="POST" class="popup__form" id="get-price-form"  data-goal="price">
             <div class="popup__form-row">
                 <label class="popup__form-label" for="phone">Ваш телефон: *  </label>
-                <input class="popup__input form-input" type="text" name="phone"  placeholder="+7" required>
+                <input class="popup__input form-input" type="text" name="phone"  placeholder="" required>
             </div>
             <div class="popup__form-row">
                 <label class="popup__form-label" for="email">Email:   </label>
@@ -640,7 +640,7 @@
         <form action="/" method="POST" class="popup__form" id="callback-form"  data-goal="zvonok">
             <div class="popup__form-row">
                 <label class="popup__form-label" for="phone">Ваш телефон: *  </label>
-                <input class="popup__input form-input" type="text" name="phone"  placeholder="+7" required>
+                <input class="popup__input form-input" type="text" name="phone"  placeholder="" required>
             </div>
             <div class="popup__form-row">
                 <label class="popup__form-label" for="email">Email:   </label>
@@ -691,7 +691,7 @@
             </div>
             <div class="popup__form-row">
                 <label class="popup__form-label" for="phone">Ваш телефон:*  </label>
-                <input class="popup__input form-input" type="text" name="phone"  placeholder="+7" required>
+                <input class="popup__input form-input" type="text" name="phone"  placeholder="" required>
             </div>
             <div class="popup__form-row">
                 <label class="popup__form-label" for="email">Email:   </label>
@@ -752,7 +752,7 @@
                     <input class="popup-employment__input form-input form-input_line form-input_success" placeholder="Имя" type="text" name="name">
                 </div>
                 <div class="popup-employment__form-row">
-                    <input class="popup__input form-input form-input form-input_line form-input_success" type="text" name="phone"  placeholder="+7" required>
+                    <input class="popup__input form-input form-input form-input_line form-input_success" type="text" name="phone"  placeholder="" required>
                 </div>
                 <div class="popup-employment__form-row">
                     <input class="popup__input form-input form-input form-input_line form-input_success" type="email" name="email"  placeholder="Email">
@@ -805,7 +805,7 @@
                     <input class="popup-employment__input form-input form-input_line form-input_success" placeholder="Имя" type="text" name="name">
                 </div>
                 <div class="popup-employment__form-row">
-                    <input class="popup__input form-input form-input form-input_line form-input_success" type="text" name="phone"  placeholder="+7" required>
+                    <input class="popup__input form-input form-input form-input_line form-input_success" type="text" name="phone"  placeholder="" required>
                 </div>
                 <div class="popup-employment__form-row">
                     <input class="popup__input form-input form-input form-input_line form-input_success" type="email" name="email"  placeholder="Email">
@@ -853,7 +853,7 @@
                     <input class="popup-employment__input form-input form-input_line form-input_success" placeholder="Имя" type="text" name="name">
                 </div>
                 <div class="popup-employment__form-row">
-                    <input class="popup__input form-input form-input form-input_line form-input_success" type="text" name="phone"  placeholder="+7" required>
+                    <input class="popup__input form-input form-input form-input_line form-input_success" type="text" name="phone"  placeholder="" required>
                 </div>
                 <div class="popup-employment__form-row">
                     <input class="popup__input form-input form-input form-input_line form-input_success" type="email" name="email"  placeholder="Email">

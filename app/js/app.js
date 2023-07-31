@@ -181,7 +181,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	countUpJS();
 	popUpInit('.popup', '.popup_btn', '.popup-background')
 	formHandler()
-	phoneMask()
+	//phoneMask()
 	stickyHeader();
 
 	// Custom JS
