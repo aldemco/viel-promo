@@ -415,7 +415,7 @@
             <form action="/" method="POST" class="cons-section__form" data-goal="seance">
                 <div>
                     <div class="message"></div>
-                    <input type="text" name="phone" required class="cons-section__input form-input form-input_success form-input_line" placeholder="">
+                    <input type="text" name="phone" required class="cons-section__input form-input form-input_success form-input_line" placeholder="Телефон">
                 </div>
                 <div>
                     <input class="cons-section__input form-input form-input_success form-input_line" type="email" name="email" placeholder="Email">
