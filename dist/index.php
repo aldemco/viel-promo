@@ -11,7 +11,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
 	<link rel="icon" href="medical/images/logo.png">
-	<meta property="og:image" content="images/prof-illustration.png">
+	<meta property="og:image" content="medical/images/prof-illustration.png">
 	
 	<link rel="stylesheet" href="medical/css/app.min.css?v={BUILD_ID}">
 
@@ -782,7 +782,7 @@
 <div class="popup popup-employment" id="empl1">
     <div class="popup__top-bar">
         <a class="popup__close" href="#">
-            <img src="images/close.svg" alt="close">
+            <img src="medical/images/close.svg" alt="close">
         </a>
     </div>
     <div class="popup__body ">
@@ -803,7 +803,7 @@
             </div>
             <div class="popup-employment__right-col">
                 <div class="popup-employment__employer-photo">
-                    <img src="images/person/violetta-empl.png" alt="Бычик Виолетта ">
+                    <img src="medical/images/person/violetta-empl.png" alt="Бычик Виолетта ">
                 </div>
             </div>
         </div>
@@ -837,7 +837,7 @@
 <div class="popup popup-employment" id="empl2">
     <div class="popup__top-bar">
         <a class="popup__close" href="#">
-            <img src="images/close.svg" alt="close">
+            <img src="medical/images/close.svg" alt="close">
         </a>
     </div>
     <div class="popup__body">
@@ -855,7 +855,7 @@
             </div>
             <div class="popup-employment__right-col">
                 <div class="popup-employment__employer-photo">
-                    <img src="images/person/drozdov-empl.png" alt="Дроздов ">
+                    <img src="medical/images/person/drozdov-empl.png" alt="Дроздов ">
                 </div>
             </div>
          </div>
@@ -890,7 +890,7 @@
 <div class="popup popup-employment" id="empl3">
     <div class="popup__top-bar">
         <a class="popup__close" href="#">
-            <img src="images/close.svg" alt="close">
+            <img src="medical/images/close.svg" alt="close">
         </a>
     </div>
     <div class="popup__body">
@@ -904,7 +904,7 @@
             </div>
             <div class="popup-employment__right-col">
                 <div class="popup-employment__employer-photo">
-                    <img src="images/person/elvira-empl.png" alt="Дроздов ">
+                    <img src="medical/images/person/elvira-empl.png" alt="Дроздов ">
                 </div>
             </div>
         </div>
