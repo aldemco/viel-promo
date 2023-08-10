@@ -383,7 +383,7 @@
                     <img src="images/gift-sertificate.jpg" alt="Лучший подарок - процедуры массажа">
                 </div>
             </div>
-            <a href="#callback" class="popup_btn sertificate-section__btn btn btn_light btn_large" data-popup-from="Приобрести сертификат">
+            <a href="#get-sert" class="popup_btn sertificate-section__btn btn btn_light btn_large" data-popup-from="Приобрести сертификат">
                 Приобрести сертификат
             </a>
         </div>
@@ -693,6 +693,69 @@
                 <input type="hidden" name="from" value="Акции (popup)">
                 <input type="hidden" name="site" value="МЦ">
                 <input type="submit" class="contacts-section__btn btn btn_warning btn_medium"  value="Купить по скидке">
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="popup" id="get-sert">
+    <div class="popup__top-bar">
+        <a class="popup__close" href="#">
+            <img src="images/close.svg" alt="close">
+        </a>
+    </div>
+
+    <div class="popup__body">
+        <h3 class="popup__heading heading heading_medium">Выпуск сертификата</h3>
+        <p class="popup__message">
+        </p>
+        <form action="https://viel-center.ru/onlinepayment" method="GET" class="popup__form" id="get-price-form" data-goal="price">
+            <div class="popup__form-row">
+                <label class="popup__form-label" for="phone">Имя плательщика: * </label>
+                <input class="popup__input form-input" type="text" name="name"  placeholder="" required>
+            </div>
+            <div class="popup__form-row">
+                <label class="popup__form-label" for="phone">Фамилия плательщика: *  </label>
+                <input class="popup__input form-input" type="text" name="lastname"  placeholder="" required>
+            </div>
+            <div class="popup__form-row">
+                <label class="popup__form-label" for="phone">Ваш телефон:* </label>
+                <span>На этот номер придет номер и ссылка на электронный сертификат (без +7)</span>
+                <input class="popup__input form-input" type="text" name="phone"  placeholder=""  required>
+            </div>
+            <div class="popup__form-row">
+                <label class="popup__form-label" for="email">Email *:   </label>
+                <span>На этот адрес придет номер и ссылка на электронный сертификат</span>
+                <input class="popup__input form-input" type="email" name="email">
+            </div>
+            <div class="popup__form-row">
+                <label class="popup__form-label" for="name">Имя владельца сертификата:</label>
+                <span>Eсли вы покупаете для себя то пропустите этот шаг</span>
+                <input class="popup__input form-input" type="text" name="ownername">
+            </div>
+            <div class="popup__form-row">
+                <label class="popup__form-label" for="name">Фамилия владельца сертификата:</label>
+                <input class="popup__input form-input" type="text" name="ownerlastname">
+            </div>
+            <div class="popup__form-row">
+                <label class="popup__form-label" for="name">Номинал сертификата:</label>
+                <input class="popup__input form-input" type="number" name="cost" value="5000">
+            </div>
+            <div class="popup__form-row">
+                <label class="popup__form-label" for="message">Сообщение:  </label>
+                <textarea maxlength="499" class="popup__textarea form-textarea" name="message"></textarea>
+            </div>
+            <div class="popup__form-row popup__agree">
+                <input type="checkbox" name="agree" checked required> 
+                <span>Я принимаю условия и соглашаюсь на обработку своих персональных данных в соответствии с <a href="privacy-med.pdf" target="_blank">Политикой в отношении обработки персональных данных </a> в ООО «ВИЭЛЬ», а также принимаю <a href="https://viel-center.ru/onlinepayment/" target="_blank"> условия 
+                выпуска, использования и аннулирования подарочных сертификатов</a>
+                </span>
+            </div>
+            <div class="popup__form-row message">
+            </div>
+            <div class="popup__form-row">
+                <input type="hidden" name="service" value="0">
+                <input type="submit" class="contacts-section__btn btn btn_warning btn_medium"  value="Перейти к оплате">
             </div>
         </form>
     </div>

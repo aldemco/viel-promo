@@ -105,7 +105,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	}
 
 	const formHandler = () =>{
-		const forms = document.querySelectorAll('form');
+		const forms = document.querySelectorAll("form[method='POST']");
 		const sendData = ( event ) =>{
 			const formInputs = event.target.querySelectorAll("[type='text'],textarea")
 			const formData = new FormData(event.target)
