@@ -16,7 +16,7 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: dist
-          path: ./dist/
+          path: dist/
 
   web-deploy:
     name: 🎉 Deploy sites
@@ -27,7 +27,7 @@ jobs:
       uses: actions/upload-artifact@v3
       with:
         name: dist
-        path: ./dist/
+        path: dist/
       
     - name: Update buildId in files
       uses: jacobtomlinson/gha-find-replace@v3
@@ -41,7 +41,7 @@ jobs:
         server: ${{ secrets.FTP_SERVER }}
         username: ${{ secrets.FTP_USERNAME }}
         password: ${{ secrets.FTP_PASSWORD }}
-        local-dir: ./dist/
+        local-dir: dist/
         exclude: |
           /old/
 
