@@ -12,14 +12,21 @@ jobs:
           cache: 'npm'
       - run: npm install
       - run: gulp build
+      - name: Upload dist artifalct
+        uses: actions/upload-artifact@v3
+        with:
+          name: dist
+          path: /dist/
 
   web-deploy:
     name: 🎉 Deploy sites
     runs-on: ubuntu-latest
     needs: [build]
     steps:
-    - name: 🚚 Get latest code
-      uses: actions/checkout@v3
+    - name: Upload artifact
+      uses: actions/upload-artifact@v3
+      with:
+        name: dist
       
     - name: Update buildId in files
       uses: jacobtomlinson/gha-find-replace@v3
