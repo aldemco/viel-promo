@@ -113,17 +113,17 @@
                 <div class="swiper-wrapper">
                     <div class="swiper-slide promo-slider__slide">
                         <a href="#get-promo" class="">
-                            <img class="promo-slider__banner" src="images/promo/ac-09.jpg" alt="ac">
+                            <img class="promo-slider__banner" src="medical/images/promo/ac-09.jpg" alt="ac">
                         </a>
                     </div>
                     <div class="swiper-slide promo-slider__slide">
                         <a href="#get-promo" class="">
-                            <img class="promo-slider__banner" src="images/promo/family-09.jpg" alt="pr">
+                            <img class="promo-slider__banner" src="medical/images/promo/family-09.jpg" alt="pr">
                         </a>
                     </div>
                     <div class="swiper-slide promo-slider__slide">
                         <a href="#get-promo" class="">
-                            <img class="promo-slider__banner" src="images/promo/press-09.jpg" alt="pt">
+                            <img class="promo-slider__banner" src="medical/images/promo/press-09.jpg" alt="pt">
                         </a>
                     </div>
                     <div class="swiper-slide promo-slider__slide">
