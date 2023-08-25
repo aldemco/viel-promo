@@ -27,6 +27,11 @@ jobs:
       uses: actions/download-artifact@v3
       with:
         name: dist
+        path: dist/
+    
+    - name: Display structure of downloaded files
+      run: ls -R
+      working-directory: dist/
       
     - name: Update buildId in files
       uses: jacobtomlinson/gha-find-replace@v3
