@@ -719,7 +719,7 @@
 <div class="popup" id="get-sert">
     <div class="popup__top-bar">
         <a class="popup__close" href="#">
-            <img src="images/close.svg" alt="close">
+            <img src="medical/images/close.svg" alt="close">
         </a>
     </div>
 
