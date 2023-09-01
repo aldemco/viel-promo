@@ -112,23 +112,28 @@
             <div class="swiper promo-slider promo-section__promo-slider">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide promo-slider__slide">
-                        <a href="#get-promo" class="">
+                        <a href="#get-promo" class="popup_btn">
                             <img class="promo-slider__banner" src="medical/images/promo/ac-09.jpg" alt="ac">
                         </a>
                     </div>
                     <div class="swiper-slide promo-slider__slide">
-                        <a href="#get-promo" class="">
+                        <a href="#get-promo" class="popup_btn">
                             <img class="promo-slider__banner" src="medical/images/promo/family-09.jpg" alt="pr">
                         </a>
                     </div>
                     <div class="swiper-slide promo-slider__slide">
-                        <a href="#get-promo" class="">
+                        <a href="#get-promo" class="popup_btn">
                             <img class="promo-slider__banner" src="medical/images/promo/press-09.jpg" alt="pt">
                         </a>
                     </div>
                     <div class="swiper-slide promo-slider__slide">
-                        <a href="#get-promo" class="">
+                        <a href="#get-promo" class="popup_btn">
                             <img class="promo-slider__banner" src="medical/images/promo/stelki.jpg" alt="st">
+                        </a>
+                    </div>
+                    <div class="swiper-slide promo-slider__slide">
+                        <a href="#get-promo" class="popup_btn">
+                            <img class="promo-slider__banner" src="medical/images/promo/site-meditation-09.jpg" alt="st">
                         </a>
                     </div>
                 </div>
