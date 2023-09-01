@@ -692,6 +692,7 @@
                     <option value="Антицеллюлитный массаж">Антицеллюлитный массаж - 2 подарка</option>
                     <option value="Прессотерапия">Прессотерапия - Абонемент на 12 процедур</option>
                     <option value="Стельки">Стельки</option>
+                    <option value="Медитация">Медитация</option>
                 </select>
             </div>
             <div class="popup__form-row">
