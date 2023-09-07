@@ -1,5 +1,8 @@
 .sertificate-section {
     background-image: url(/images/sertificate-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: $success;
     min-height: 500px;
     display: flex;
     align-items: center;

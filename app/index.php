@@ -597,19 +597,19 @@
         </p>
         <form action="/" method="POST" class="popup__form" id="get-price-form"  data-goal="price">
             <div class="popup__form-row">
-                <label class="popup__form-label" for="phone">Ваш телефон: *  </label>
+                <span class="popup__form-label" >Ваш телефон: *  </span>
                 <input class="popup__input form-input" type="text" name="phone"  placeholder="" required>
             </div>
             <div class="popup__form-row">
-                <label class="popup__form-label" for="email">Email:   </label>
+                <span class="popup__form-label" >Email:</span>
                 <input class="popup__input form-input" type="email" name="email">
             </div>
             <div class="popup__form-row">
-                <label class="popup__form-label" for="name">Ваше имя:   </label>
+                <span class="popup__form-label" >Ваше имя:</span>
                 <input class="popup__input form-input" type="text" name="name">
             </div>
             <div class="popup__form-row">
-                <label class="popup__form-label" for="message">Сообщение:  </label>
+                <span class="popup__form-label" >Сообщение:  </span>
                 <textarea maxlength="499" class="popup__textarea form-textarea" name="message"></textarea>
             </div>
             <div class="popup__form-row popup__agree">
@@ -639,19 +639,19 @@
         </p>
         <form action="/" method="POST" class="popup__form" id="callback-form"  data-goal="zvonok">
             <div class="popup__form-row">
-                <label class="popup__form-label" for="phone">Ваш телефон: *  </label>
+                <span class="popup__form-label" >Ваш телефон: *  </span>
                 <input class="popup__input form-input" type="text" name="phone"  placeholder="" required>
             </div>
             <div class="popup__form-row">
-                <label class="popup__form-label" for="email">Email:   </label>
+                <span class="popup__form-label" >Email:</span>
                 <input class="popup__input form-input" type="email" name="email">
             </div>
             <div class="popup__form-row">
-                <label class="popup__form-label" for="name">Ваше имя: </label>
+                <span class="popup__form-label" >Ваше имя: </span>
                 <input class="popup__input form-input" type="text" name="name">
             </div>
             <div class="popup__form-row">
-                <label class="popup__form-label" for="message">Сообщение: </label>
+                <span class="popup__form-label" >Сообщение: </span>
                 <textarea maxlength="499" class="popup__textarea form-textarea" name="message"></textarea>
             </div>
             <div class="popup__form-row popup__agree">
@@ -690,15 +690,15 @@
                 </select>
             </div>
             <div class="popup__form-row">
-                <label class="popup__form-label" for="phone">Ваш телефон:*  </label>
+                <span class="popup__form-label" >Ваш телефон:*  </span>
                 <input class="popup__input form-input" type="text" name="phone"  placeholder="" required>
             </div>
             <div class="popup__form-row">
-                <label class="popup__form-label" for="email">Email:   </label>
+                <span class="popup__form-label" >Email:</span>
                 <input class="popup__input form-input" type="email" name="email">
             </div>
             <div class="popup__form-row">
-                <label class="popup__form-label" for="name">Ваше имя:   </label>
+                <span class="popup__form-label" >Ваше имя:</span>
                 <input class="popup__input form-input" type="text" name="name">
             </div>
             <div class="popup__form-row popup__agree">
@@ -729,45 +729,45 @@
         </p>
         <form action="https://viel-center.ru/onlinepayment" method="GET" class="popup__form" id="get-price-form" data-goal="price">
             <div class="popup__form-row">
-                <label class="popup__form-label" for="phone">Имя плательщика: * </label>
+                <span class="popup__form-label" >Имя плательщика: * </span>
                 <input class="popup__input form-input" type="text" name="name"  placeholder="" required>
             </div>
             <div class="popup__form-row">
-                <label class="popup__form-label" for="phone">Фамилия плательщика: *  </label>
+                <span class="popup__form-label" >Фамилия плательщика: *  </span>
                 <input class="popup__input form-input" type="text" name="lastname"  placeholder="" required>
             </div>
             <div class="popup__form-row">
-                <label class="popup__form-label" for="phone">Ваш телефон:* </label>
+                <span class="popup__form-label" >Ваш телефон:* </span>
                 <span>На этот номер придет ссылка на электронный сертификат (без +7)</span>
                 <input class="popup__input form-input" type="text" name="phone"  placeholder=""  required>
             </div>
             <div class="popup__form-row">
-                <label class="popup__form-label" for="email">Email *: </label>
+                <span class="popup__form-label" >Email *: </span>
                 <span>На этот адрес придет номер и ссылка на электронный сертификат</span>
                 <input class="popup__input form-input" type="email" name="email">
             </div>
             <div class="popup__form-row">
-                <label class="popup__form-label" for="name">Имя владельца сертификата:</label>
+                <span class="popup__form-label" >Имя владельца сертификата:</span>
                 <span>Eсли вы покупаете для себя то пропустите этот шаг</span>
                 <input class="popup__input form-input" type="text" name="ownername">
             </div>
             <div class="popup__form-row">
-                <label class="popup__form-label" for="name">Фамилия владельца сертификата:</label>
+                <span class="popup__form-label" >Фамилия владельца сертификата:</span>
                 <input class="popup__input form-input" type="text" name="ownerlastname">
             </div>
             <div class="popup__form-row">
-                <label class="popup__form-label" for="name">Номинал сертификата:</label>
+                <span class="popup__form-label" >Номинал сертификата:</span>
                 <input class="popup__input form-input" type="number" name="cost" value="5000">
             </div>
             <div class="popup__form-row">
-                <label class="popup__form-label" for="message">Сообщение:  </label>
+                <span class="popup__form-label" >Сообщение:  </span>
                 <textarea maxlength="499" class="popup__textarea form-textarea" name="message"></textarea>
             </div>
             <div class="popup__form-row popup__agree">
                 <input type="checkbox" name="agree" checked required> 
                 <span>Я принимаю условия и соглашаюсь на обработку своих персональных данных в соответствии с <a href="privacy-med.pdf" target="_blank">Политикой в отношении обработки персональных данных </a> в ООО «ВИЭЛЬ», а также принимаю <a href="https://viel-center.ru/onlinepayment/" target="_blank"> условия 
                 выпуска, использования и аннулирования подарочных сертификатов</a>
-                </span>
+             </span>
             </div>
             <div class="popup__form-row message">
             </div>
@@ -815,7 +815,7 @@
                     <input class="popup-employment__input form-input form-input_line form-input_success" placeholder="Имя" type="text" name="name">
                 </div>
                 <div class="popup-employment__form-row">
-                    <input class="popup__input form-input form-input form-input_line form-input_success" type="text" name="phone"  placeholder="" required>
+                    <input class="popup__input form-input form-input form-input_line form-input_success" type="text" name="phone"  placeholder="Телефон" required>
                 </div>
                 <div class="popup-employment__form-row">
                     <input class="popup__input form-input form-input form-input_line form-input_success" type="email" name="email"  placeholder="Email">
@@ -868,7 +868,7 @@
                     <input class="popup-employment__input form-input form-input_line form-input_success" placeholder="Имя" type="text" name="name">
                 </div>
                 <div class="popup-employment__form-row">
-                    <input class="popup__input form-input form-input form-input_line form-input_success" type="text" name="phone"  placeholder="" required>
+                    <input class="popup__input form-input form-input form-input_line form-input_success" type="text" name="phone"  placeholder="Телефон" required>
                 </div>
                 <div class="popup-employment__form-row">
                     <input class="popup__input form-input form-input form-input_line form-input_success" type="email" name="email"  placeholder="Email">
@@ -916,7 +916,7 @@
                     <input class="popup-employment__input form-input form-input_line form-input_success" placeholder="Имя" type="text" name="name">
                 </div>
                 <div class="popup-employment__form-row">
-                    <input class="popup__input form-input form-input form-input_line form-input_success" type="text" name="phone"  placeholder="" required>
+                    <input class="popup__input form-input form-input form-input_line form-input_success" type="text" name="phone"  placeholder="Телефон" required>
                 </div>
                 <div class="popup-employment__form-row">
                     <input class="popup__input form-input form-input form-input_line form-input_success" type="email" name="email"  placeholder="Email">
