@@ -69,7 +69,7 @@
         <div class="container main-section-container">
             <div class="main-section__bg-video">
                 <video loop="" muted="" autoplay="" poster="medical/images/main-bg.jpg" class="">
-                    <source src="videos/massage.mp4" type="medical/video/mp4">
+                    <source src="medical/videos/massage.mp4" type="video/mp4">
                 </video>
             </div>
             <h2 class="main-section__subtitle heading heading_small"> Центр массажа и остеопрактики в Краснодаре</h2>
