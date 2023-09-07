@@ -112,23 +112,28 @@
             <div class="swiper promo-slider promo-section__promo-slider">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide promo-slider__slide">
-                        <a href="#get-promo" class="">
-                            <img class="promo-slider__banner" src="medical/images/promo/anticellulit.jpg" alt="ac">
+                        <a href="#get-promo" class="popup_btn">
+                            <img class="promo-slider__banner" src="medical/images/promo/ac-09.jpg" alt="ac">
                         </a>
                     </div>
                     <div class="swiper-slide promo-slider__slide">
-                        <a href="#get-promo" class="">
-                            <img class="promo-slider__banner" src="medical/images/promo/buccalniy.jpg" alt="bc">
+                        <a href="#get-promo" class="popup_btn">
+                            <img class="promo-slider__banner" src="medical/images/promo/family-09.jpg" alt="pr">
                         </a>
                     </div>
                     <div class="swiper-slide promo-slider__slide">
-                        <a href="#get-promo" class="">
-                            <img class="promo-slider__banner" src="medical/images/promo/presstherapy.jpg" alt="pt">
+                        <a href="#get-promo" class="popup_btn">
+                            <img class="promo-slider__banner" src="medical/images/promo/press-09.jpg" alt="pt">
                         </a>
                     </div>
                     <div class="swiper-slide promo-slider__slide">
-                        <a href="#get-promo" class="">
+                        <a href="#get-promo" class="popup_btn">
                             <img class="promo-slider__banner" src="medical/images/promo/stelki.jpg" alt="st">
+                        </a>
+                    </div>
+                    <div class="swiper-slide promo-slider__slide">
+                        <a href="#get-promo" class="popup_btn">
+                            <img class="promo-slider__banner" src="medical/images/promo/site-meditation-09.jpg" alt="st">
                         </a>
                     </div>
                 </div>
@@ -683,10 +688,11 @@
             <div class="popup__form-row">
                 <select name="promo" id="" class="popup__select form-select">
                     <option value="Не выбрано">Выберите акцию</option>
-                    <option value="Буккально-скульптурный массаж">Буккально-скульптурный массаж</option>
-                    <option value="Антицеллюлитный массаж">Антицеллюлитный массаж</option>
-                    <option value="Прессотерапия">Прессотерапия</option>
+                    <option value="С семьей">Посещение с семьей</option>
+                    <option value="Антицеллюлитный массаж">Антицеллюлитный массаж - 2 подарка</option>
+                    <option value="Прессотерапия">Прессотерапия - Абонемент на 12 процедур</option>
                     <option value="Стельки">Стельки</option>
+                    <option value="Медитация">Медитация</option>
                 </select>
             </div>
             <div class="popup__form-row">
@@ -719,7 +725,7 @@
 <div class="popup" id="get-sert">
     <div class="popup__top-bar">
         <a class="popup__close" href="#">
-            <img src="images/close.svg" alt="close">
+            <img src="medical/images/close.svg" alt="close">
         </a>
     </div>
 
