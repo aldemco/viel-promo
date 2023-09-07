@@ -107,7 +107,8 @@ function buildcopy() {
 		'app/*.pdf',
 		'app/images/**/*.*',
 		'!app/images/src/**/*',
-		'app/fonts/**/*'
+		'app/fonts/**/*',
+		'app/videos/**/*'
 	], { base: 'app/' })
 	.pipe(dest('dist'))
 }
