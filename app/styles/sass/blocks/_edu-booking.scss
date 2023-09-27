@@ -44,6 +44,16 @@
     }
 }
 
+.loading{
+    display: block;
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    background-color: $success;
+    border-radius: 10px;
+    color: white;
+}
+
 @include media-breakpoint-down(md) {
     .booking-menu{
         display: flex;
