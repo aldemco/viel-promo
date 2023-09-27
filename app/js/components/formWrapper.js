@@ -27,21 +27,6 @@ export default {
             default: 'POST',
         },
     },
-    computed: {
-      itemsFromLocalStorage() {
-          return JSON.parse(localStorage.getItem('form') ?? {});
-      },
-    },
-    watch: {
-      form: {
-        deep: true,
-        immediate: true,
-        handler(newform, oldform) {
-          Object.assign(newform, this.itemsFromLocalStorage);
-          localStorage.setItem('form', JSON.stringify(newform));
-        }
-      },
-    },
     methods: {
       submit(event) {
         this.isLoading = true
@@ -91,7 +76,6 @@ export default {
       }
     },
     created() {
-      this.form = this.itemsFromLocalStorage;
       this.form.site = this.site
       this.form.from = this.from
     },
