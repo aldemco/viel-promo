@@ -460,7 +460,7 @@
                     <div class="employer__info">
                         <span class="employer__name">Бычик Виолетта 
                             Вячеславовна</span>
-                        <span class="employer__job">Остепат, 
+                        <span class="employer__job">Остеопат, 
                             Стаж работы: 29 лет </span>
                     </div>
                     <div class="employer__actions">
@@ -480,7 +480,7 @@
                         <span class="employer__name">Дроздов 
                             Игорь Юрьевич</span>
                         <span class="employer__job"> Остеопат,
-                            Стаж работы: 26 лет </span>
+                            Стаж работы: 11 лет </span>
                     </div>
                     <div class="employer__actions">
                         <a href="#empl2"  @click="openPopup('empl2')" class="popup_btn employer__btn btn btn_line btn_success btn_small">
@@ -751,7 +751,7 @@
     <div class="popup-employment__body">
         <div class="popup-employment__left-col">
             <h3 class="popup-employment__heading heading heading_small">Бычик Виолетта Вячеславовна</h3>
-            <p class="popup-employment__message">Остепат,  Стаж работы: 29 лет  </p>
+            <p class="popup-employment__message">Остеопат,  Стаж работы: 29 лет  </p>
             <div class="popup-employment__about">
                 В индустрии массажа с 1994 года. Преподаватель лечебных техник и SPA методик, 
                 «Виртуоз России» - призер V-го Чемпионата SPA массажа. 
@@ -798,9 +798,9 @@
     <div class="popup-employment__body">
         <div class="popup-employment__left-col">
             <h3 class="popup-employment__heading heading heading_small">Дроздов Игорь Юрьевич</h3>
-            <p class="popup-employment__message">Остеопат, Стаж работы: 26 лет  </p>
+            <p class="popup-employment__message">Остеопат, Стаж работы: 11 лет  </p>
             <div class="popup-employment__about">
-                Игорь владеет различными биодинамическими и медитативными техниками, которые помогают ему диагностировать и устранять проблемы со здоровьем на основе индивидуальных особенностей каждого пациента.
+                Игорь Юрьевич владеет различными остеопатическими, биодинамическими и медитативными техниками, которые помогают ему диагностировать и устранять проблемы со здоровьем на основе индивидуальных особенностей каждого пациента.
 
                 Он также предлагает услуги по созданию ортопедических стелек, которые позволяют улучшить осанку, снизить нагрузку на суставы и предотвратить развитие различных заболеваний.
                 
