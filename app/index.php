@@ -69,7 +69,7 @@
         <div class="container main-section-container">
             <div class="main-section__bg-video">
                 <video loop="" muted="" autoplay="" poster="medical/images/main-bg.jpg" class="">
-                    <source src="videos/massage.mp4" type="video/mp4">
+                    <source src="medical/videos/massage.mp4" type="video/mp4">
                 </video>
             </div>
             <h2 class="main-section__subtitle heading heading_small"> Центр массажа и остеопрактики в Краснодаре</h2>
@@ -420,9 +420,9 @@
     <section class="cons-section">
         <div class="container cons-section__container">
             <h2 class="cons-section__heading heading heading_large">
-                Запишитесь на массаж и получите первый сеанс <br> <span class="heading__success">со скидкой 20%</span>
+                Запишитесь на массаж и получите первый сеанс <br> <span class="heading__success">со скидкой 15%</span>
             </h2>
-            <formwrapper site="МЦ" class="cons-section__form" from="Запишитесь на массаж и получите первый сеанс со скидкой 20%" method="POST"  goal="seance">
+            <formwrapper site="МЦ" class="cons-section__form" from="Запишитесь на массаж и получите первый сеанс со скидкой 15%" method="POST"  goal="seance">
                 <template #default="{ form }">
                     <div>
                         <div class="message"></div>
@@ -432,8 +432,6 @@
                         <input class="cons-section__input form-input form-input_success form-input_line" type="email" name="email" placeholder="Email" v-model="form.email">
                     </div>
                     <div>
-                        <input type="hidden" name="from" value="Запишитесь на массаж и получите первый сеанс со скидкой 20%">
-                        <input type="hidden" name="site" value="МЦ">
                         <button type="submit" class="cons-section__btn btn btn_warning btn_medium" data-popup-from="Получить консультацию">
                             &nbsp; Записаться на массаж &nbsp; 
                         </button>
