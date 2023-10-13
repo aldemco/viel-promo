@@ -117,28 +117,18 @@
             <div class="swiper promo-slider promo-section__promo-slider">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide promo-slider__slide">
+                        <a href="#get-promo"  @click="openPopup('getpromo')" class="popup_btn">
+                            <img class="promo-slider__banner" src="medical/images/promo/site-meditation-10.jpg" alt="st">
+                        </a>
+                    </div>
+                    <div class="swiper-slide promo-slider__slide">
                         <a href="#get-promo" @click="openPopup('getpromo')" class="popup_btn">
-                            <img class="promo-slider__banner" src="medical/images/promo/ac-09.jpg" alt="ac">
-                        </a>
-                    </div>
-                    <div class="swiper-slide promo-slider__slide">
-                        <a href="#get-promo"  @click="openPopup('getpromo')" class="popup_btn">
-                            <img class="promo-slider__banner" src="medical/images/promo/family-09.jpg" alt="pr">
-                        </a>
-                    </div>
-                    <div class="swiper-slide promo-slider__slide">
-                        <a href="#get-promo"  @click="openPopup('getpromo')" class="popup_btn">
-                            <img class="promo-slider__banner" src="medical/images/promo/press-09.jpg" alt="pt">
+                            <img class="promo-slider__banner" src="medical/images/promo/site-bd-10.jpg" alt="bd">
                         </a>
                     </div>
                     <div class="swiper-slide promo-slider__slide">
                         <a href="#get-promo"  @click="openPopup('getpromo')" class="popup_btn">
                             <img class="promo-slider__banner" src="medical/images/promo/stelki.jpg" alt="st">
-                        </a>
-                    </div>
-                    <div class="swiper-slide promo-slider__slide">
-                        <a href="#get-promo"  @click="openPopup('getpromo')" class="popup_btn">
-                            <img class="promo-slider__banner" src="medical/images/promo/site-meditation-09.jpg" alt="st">
                         </a>
                     </div>
                 </div>
@@ -660,12 +650,10 @@
         <template #default="{ form }">
             <div class="popup__form-row">
                 <select name="promo" class="popup__select form-select" v-model="form.promo">
-                    <option value="Не выбрано">Выберите акцию</option>
-                    <option value="С семьей">Посещение с семьей</option>
-                    <option value="Антицеллюлитный массаж">Антицеллюлитный массаж - 2 подарка</option>
-                    <option value="Прессотерапия">Прессотерапия - Абонемент на 12 процедур</option>
-                    <option value="Стельки">Стельки</option>
+                    <option value="Не выбрано" default>Выберите акцию</option>
                     <option value="Медитация">Медитация</option>
+                    <option value="Скидка на день рождения">Скидка на день рождения</option>
+                    <option value="Стельки">Стельки</option>
                 </select>
             </div>
             <div class="popup__form-row">
