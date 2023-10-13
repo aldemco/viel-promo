@@ -8,11 +8,17 @@ export default {
     }
   },
   methods: {
-    open() {
+    open(event) {
         this.isOpen = true
+        if (event) {
+          event.preventDefault()
+        }
     },
-    close(){
+    close(event){
         this.isOpen = false
+        if (event) {
+          event.preventDefault()
+        }
     }
   },
     template: `
