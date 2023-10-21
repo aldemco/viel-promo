@@ -73,7 +73,7 @@
                 </video>
             </div>
             <h2 class="main-section__subtitle heading heading_small"> Центр массажа и остеопрактики в Краснодаре</h2>
-            <h1 class="main-section__title heading heading_large "> <span class="main-section__accent"> 134 </span> техники массажа для вашего здоровья и релаксации </h1>
+            <h1 class="main-section__title heading heading_large "> <span class="main-section__accent"> 137 </span> массажных техник для вашего здоровья и релаксации </h1>
             <a href="#get-price" @click="openPopup('getprice')" class="main-section__btn btn btn_warning btn_medium popup_btn">
                 Получить прайс
             </a>
@@ -117,11 +117,6 @@
             <div class="swiper promo-slider promo-section__promo-slider">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide promo-slider__slide">
-                        <a href="#get-promo"  @click="openPopup('getpromo')" class="popup_btn">
-                            <img class="promo-slider__banner" src="medical/images/promo/site-meditation-10.jpg" alt="st">
-                        </a>
-                    </div>
-                    <div class="swiper-slide promo-slider__slide">
                         <a href="#get-promo" @click="openPopup('getpromo')" class="popup_btn">
                             <img class="promo-slider__banner" src="medical/images/promo/site-bd-10.jpg" alt="bd">
                         </a>
@@ -129,6 +124,11 @@
                     <div class="swiper-slide promo-slider__slide">
                         <a href="#get-promo"  @click="openPopup('getpromo')" class="popup_btn">
                             <img class="promo-slider__banner" src="medical/images/promo/stelki.jpg" alt="st">
+                        </a>
+                    </div>
+                    <div class="swiper-slide promo-slider__slide">
+                        <a href="#get-promo"  @click="openPopup('getpromo')" class="popup_btn">
+                            <img class="promo-slider__banner" src="medical/images/site-giruda-10.jpg" alt="gt">
                         </a>
                     </div>
                 </div>
