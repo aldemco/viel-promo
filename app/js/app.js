@@ -10,6 +10,7 @@ import menuToggle from './utils/menuToggle.js'
 import stickyHeader from './utils/stickyHeader.js'
 
 
+
 document.addEventListener('DOMContentLoaded', () => {
 	const app = createApp({
 		data() {
@@ -20,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		components: {
 			'schedule': schedule,
 			'popup': popup,
-			'formwrapper': formWrapper
+			'formwrapper': formWrapper,
 		},
 		methods: {
 			openPopup(ref) {
@@ -30,7 +31,6 @@ document.addEventListener('DOMContentLoaded', () => {
 		created() {
 		}
 	  })
-
 	app.mount('#application')
 
 	menuToggle();

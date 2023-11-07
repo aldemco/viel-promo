@@ -121,3 +121,18 @@ label {
     cursor: wait;
     filter: grayscale(0.5);
 }
+
+.form-row{
+    margin-bottom: 10px;
+    &_checkbox{
+        display: flex;
+        flex-direction: row;
+        flex-wrap:nowrap;
+        &>input{
+            margin-right: 5px;
+            width: 25px;
+            height: 25px;
+        }
+    }
+
+}

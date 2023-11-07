@@ -33,6 +33,10 @@ function browsersync() {
 			baseDir: 'app/',
 			middleware: bssi({ baseDir: 'app/', ext: '.html' })
 		},
+		ui: {
+			port: 8081
+		},
+		port: 8080,
 		ghostMode: { clicks: false },
 		notify: false,
 		online: true,
