@@ -1,6 +1,6 @@
 // // Import vendor jQuery plugin example
 // import '~/app/libs/mmenu/dist/mmenu.js'
-import Swiper, { Autoplay, Navigation, Parallax } from 'swiper';
+import Swiper, { Autoplay, Navigation, Pagination, Parallax } from 'swiper';
 import {createApp} from 'vue/dist/vue.esm-browser.js'
 import schedule from './components/schedule.js'
 import popup from './components/popup.js'
@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	countUp();
 	stickyHeader('header');
 
-	Swiper.use([ Parallax, Navigation, Autoplay ])
+	Swiper.use([ Parallax, Navigation, Autoplay, Pagination ])
 	const promo = new Swiper('.promo-slider', {
 		direction: 'horizontal',
 		loop: true,
@@ -47,8 +47,35 @@ document.addEventListener('DOMContentLoaded', () => {
 		  },
 
 		navigation: {
-		  nextEl: '.swiper-button-next',
-		  prevEl: '.swiper-button-prev',
+		  nextEl: '.promo-slider__next',
+		  prevEl: '.promo-slider__prev',
+		},
+	  
+	  });
+
+	  const employee = new Swiper('.employee-slider', {
+		direction: 'horizontal',
+		slidesPerView: 3,
+		speed: 2400,
+		parallax: true,
+		loop: false,
+		autoplay: {
+			delay: 3000,
+		},
+		pagination: {
+			el: ".swiper-pagination",
+			clickable: true,
+		},
+		breakpoints: {
+			320: {
+				slidesPerView: 1,
+			  },
+			900: {
+				slidesPerView: 2,
+			},
+			1200: {
+				slidesPerView: 3,
+			}
 		},
 	  
 	  });
@@ -63,7 +90,6 @@ document.addEventListener('DOMContentLoaded', () => {
 		autoplay: {
 			delay: 3000,
 		  },
-
 		breakpoints: {
 			320: {
 				slidesPerView: 1,

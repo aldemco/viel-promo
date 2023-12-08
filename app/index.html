@@ -426,63 +426,91 @@
             <h2 class="employee-section__heading heading heading_medium heading_underline">
                 Наши специалисты
             </h2>
-            <div class="employee-section__list">
-                <div class="employer">
-                    <div class="employer__photo drop-shadow">
-                        <img src="images/person/violetta-empl.png" alt="Бычик Виолетта ">
+            <div class="swiper employee-slider">
+                <div class="swiper-wrapper eployee-slider__wrapper">
+                    <div class="swiper-slide employee-slider__slide">
+                        <div class="employer">
+                            <div class="employer__photo drop-shadow">
+                                <img src="images/person/violetta-empl.png" alt="Бычик Виолетта ">
+                            </div>
+                            <div class="employer__info">
+                                <span class="employer__name">Бычик Виолетта 
+                                    Вячеславовна</span>
+                                <span class="employer__job">Остеопат, 
+                                    Стаж работы: 29 лет </span>
+                            </div>
+                            <div class="employer__actions">
+                                <a href="#empl1" @click="openPopup('empl1')" class="popup_btn employer__btn btn btn_line btn_success btn_small">
+                                    Подробнее
+                                </a>
+                                <a href="#empl1" @click="openPopup('empl1')" class="popup_btn employer__btn btn btn_warning btn_small">
+                                    Записаться на прием
+                                </a>
+                            </div>
+                         </div>
                     </div>
-                    <div class="employer__info">
-                        <span class="employer__name">Бычик Виолетта 
-                            Вячеславовна</span>
-                        <span class="employer__job">Остеопат, 
-                            Стаж работы: 29 лет </span>
+                    <div class="swiper-slide employee-slider__slide">
+                        <div class="employer">
+                            <div class="employer__photo drop-shadow">
+                                <img src="images/person/drozdov-empl.png" alt="Дроздов Игорь">
+                            </div>
+                            <div class="employer__info">
+                                <span class="employer__name">Дроздов 
+                                    Игорь Юрьевич</span>
+                                <span class="employer__job"> Остеопат,
+                                    Стаж работы: 11 лет </span>
+                            </div>
+                            <div class="employer__actions">
+                                <a href="#empl2"  @click="openPopup('empl2')" class="popup_btn employer__btn btn btn_line btn_success btn_small">
+                                    Подробнее
+                                </a>
+                                <a href="#empl2" @click="openPopup('empl2')" class="popup_btn employer__btn btn btn_warning btn_small">
+                                    Записаться на прием
+                                </a>
+                            </div>
+                        </div>
                     </div>
-                    <div class="employer__actions">
-                        <a href="#empl1" @click="openPopup('empl1')" class="popup_btn employer__btn btn btn_line btn_success btn_small">
-                            Подробнее
-                        </a>
-                        <a href="#empl1" @click="openPopup('empl1')" class="popup_btn employer__btn btn btn_warning btn_small">
-                            Записаться на прием
-                        </a>
+                    <div class="swiper-slide employee-slider__slide">
+                        <div class="employer">
+                            <div class="employer__photo drop-shadow">
+                                <img src="images/person/berejok-empl.png" alt="Бережок Василий">
+                            </div>
+                            <div class="employer__info">
+                                <span class="employer__name">Бережок Василий Михайлович</span>
+                                <span class="employer__job">Массажист. Стаж работы: 14 лет </span>
+                            </div>
+                            <div class="employer__actions">
+                                <a href="#empl3" @click="openPopup('empl4')" class="popup_btn employer__btn btn btn_line btn_success btn_small">
+                                    Подробнее
+                                </a>
+                                <a href="#empl3" @click="openPopup('empl4')" class="popup_btn employer__btn btn btn_warning btn_small">
+                                    Записаться на прием
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide employee-slider__slide">
+                        <div class="employer">
+                            <div class="employer__photo drop-shadow">
+                                <img src="images/person/elvira-empl.png" alt="Бычик Эльвира">
+                            </div>
+                            <div class="employer__info">
+                                <span class="employer__name">Бычик Эльвира
+                                    Игоревна</span>
+                                <span class="employer__job">Аппаратный массажист. Стаж работы: 7 лет </span>
+                            </div>
+                            <div class="employer__actions">
+                                <a href="#empl3" @click="openPopup('empl3')" class="popup_btn employer__btn btn btn_line btn_success btn_small">
+                                    Подробнее
+                                </a>
+                                <a href="#empl3" @click="openPopup('empl3')" class="popup_btn employer__btn btn btn_warning btn_small">
+                                    Записаться на прием
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="employer">
-                    <div class="employer__photo drop-shadow">
-                        <img src="images/person/drozdov-empl.png" alt="Дроздов Игорь">
-                    </div>
-                    <div class="employer__info">
-                        <span class="employer__name">Дроздов 
-                            Игорь Юрьевич</span>
-                        <span class="employer__job"> Остеопат,
-                            Стаж работы: 11 лет </span>
-                    </div>
-                    <div class="employer__actions">
-                        <a href="#empl2"  @click="openPopup('empl2')" class="popup_btn employer__btn btn btn_line btn_success btn_small">
-                            Подробнее
-                        </a>
-                        <a href="#empl2" @click="openPopup('empl2')" class="popup_btn employer__btn btn btn_warning btn_small">
-                            Записаться на прием
-                        </a>
-                    </div>
-                </div>
-                <div class="employer">
-                    <div class="employer__photo drop-shadow">
-                        <img src="images/person/elvira-empl.png" alt="Бычик Эльвира">
-                    </div>
-                    <div class="employer__info">
-                        <span class="employer__name">Бычик Эльвира
-                            Игоревна</span>
-                        <span class="employer__job">Специалист по аппаратным техникам. Стаж работы: 7 лет </span>
-                    </div>
-                    <div class="employer__actions">
-                        <a href="#empl3" @click="openPopup('empl3')" class="popup_btn employer__btn btn btn_line btn_success btn_small">
-                            Подробнее
-                        </a>
-                        <a href="#empl3" @click="openPopup('empl3')" class="popup_btn employer__btn btn btn_warning btn_small">
-                            Записаться на прием
-                        </a>
-                    </div>
-                </div>
+                <div class="swiper-pagination employee-slider__pagination"></div>
             </div>
         </div>
     </section>
@@ -770,7 +798,7 @@
         </div>
         <div class="popup-employment__right-col">
             <div class="popup-employment__employer-photo">
-                <img src="images/person/elvira-empl.png" alt="Дроздов ">
+                <img src="images/person/elvira-empl.png" alt="Бычик Эльвира">
             </div>
         </div>
     </div>
@@ -798,6 +826,43 @@
     </div>
 </popup>
 
+<popup class="popup-employment" ref="empl4">
+    <div class="popup-employment__body">
+        <div class="popup-employment__left-col">
+            <h3 class="popup-employment__heading heading heading_small">Бережок Василий Михайлович</h3>
+            <p class="popup-employment__message">Массажист. Стаж работы: 14 лет</p>
+            <div class="popup-employment__about">
+                Василий Михайлович - профессиональный массажист с более чем 14 летним стажем работы. Он специализируется на спа массаже, который помогает снять стресс, улучшает кровообращение и расслабляет мышцы. Массаж для него это искусство, помогающее людям забыть о своих заботах. В своей работе он использует только качественные натуральные масла. Регулярно повышает свою квалификацию, обучаясь у ведущих специалистов.</div>
+        </div>
+        <div class="popup-employment__right-col">
+            <div class="popup-employment__employer-photo">
+                <img src="images/person/berejok-empl.png" alt="Бережок">
+            </div>
+        </div>
+    </div>
+    <div class="popup__footer popup-employment__footer">
+        <formwrapper site="МЦ" from="Запись Бережок Василий (popup)" method="POST" class="popup-employment__form"  goal="zapis">
+            <div class="popup-employment__form-row message">
+            </div>
+            <div class="popup-employment__form-row">
+                <input class="popup-employment__input form-input form-input_line form-input_success" placeholder="Имя" type="text" name="name" v-model="form.name">
+            </div>
+            <div class="popup-employment__form-row">
+                <input class="popup__input form-input form-input form-input_line form-input_success" type="text" name="phone"  placeholder="Телефон" v-model="form.phone" required>
+            </div>
+            <div class="popup-employment__form-row">
+                <input class="popup__input form-input form-input form-input_line form-input_success" type="email" name="email"  placeholder="Email" v-model="form.email">
+            </div>
+            <div class="popup-employment__form-row">
+                <button type="submit" class="contacts-section__btn btn btn_warning btn_medium">Записаться</button>
+            </div>
+            <div class="popup-employment__form-row popup__agree">
+                <input type="checkbox" name="agree" checked required> 
+                <span>Я принимаю условия и соглашаюсь на обработку персональных данных в соответствии с <a href="privacy-med.pdf" target="_blank">Политикой в отношении обработки персональных данных </a> в ООО «ВИЭЛЬ» </span>
+            </div>
+        </formwrapper>
+    </div>
+</popup>
 
 <div class="static-widgets">
     <a href="https://t.me/VielCenter" class="static-widgets__link" target="_blank">
