@@ -30,6 +30,7 @@ export default {
     methods: {
       submit(event) {
         this.isLoading = true
+        this.form.secret = new Date().toISOString();
         axios({
             method: this.method,
             url: this.endpoint,
