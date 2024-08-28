@@ -93,7 +93,7 @@
                 <div class="stat-card drop-shadow">
                     <div class="stat-card__num">
                         <span class="stat-card__small-text">от</span> 
-                        <span class="countUp">10 </span>
+                        <span class="countUp">12 </span>
                         <span class="stat-card__small-text">т.р.</span>
                     </div>
                     <div class="stat-card__desc">Стоимость</div>
@@ -206,7 +206,7 @@
                     сертификата государственного образца
                 </p>
                 <div class="accordion tech-section__accordion">
-                    <a class="accordion__item popup_btn" href="#get-program" @click="openPopup('getprogram')">
+                    <a class="accordion__item popup_btn" href="#get-program" @click="openPopup('getprogram', {target: 'Лечебные техники'})">
                         <div class="accordion__label">
                             Лечебные техники
                         </div>
@@ -868,8 +868,8 @@
     </formwrapper>
 </popup>
 
-<popup ref="getprogram" >
-    <h3 class="popup__heading heading heading_medium">Получить программу курса</h3>
+<popup ref="getprogram" #default="{ target }">
+    <h3 class="popup__heading heading heading_medium">Получить программу курса <span>{{target}}</span></h3>
     <formwrapper site="УЦ" from="Получить программу курса" method="POST" class="popup__form"  goal="raspisanie">
         <template #default="{ form }">
             <div class="popup__form-row">
