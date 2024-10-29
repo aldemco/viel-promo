@@ -69,6 +69,20 @@
         border-color: #ff0047;
         color: #fff;
     }
+    &_black {
+        &.btn_line{
+            color: #000000;
+            &:hover{
+                color:#faf7f7;
+            }
+        }
+        &:hover{
+            color:#000;
+        }
+        background-color: #000000;
+        border-color: #000000;
+        color: #ffffff;
+    }
     &_line {
         background-color: initial;
         border-width: $border;
