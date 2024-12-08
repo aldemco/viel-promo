@@ -24,8 +24,8 @@ document.addEventListener('DOMContentLoaded', () => {
 			'formwrapper': formWrapper,
 		},
 		methods: {
-			openPopup(ref) {
-				this.$refs[ref].open()
+			openPopup(ref, params = {}) {
+				this.$refs[ref].open(event, params)
 			},
 		  },
 		created() {

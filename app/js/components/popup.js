@@ -5,11 +5,16 @@ export default {
   data() {
     return {
       isOpen: false,
+      target: null
     }
   },
   methods: {
-    open(event) {
+    open(event, params = {}) {
         this.isOpen = true
+        if('target' in params) {
+          this.target = params.target
+          console.log(this.target)
+        }
         if (event) {
           event.preventDefault()
         }
