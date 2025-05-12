@@ -5,7 +5,7 @@ jobs:
     name: 🎉 Build
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - uses: actions/setup-node@v3
         with:
           node-version: 14
@@ -13,7 +13,7 @@ jobs:
       - run: npm install
       - run: gulp build
       - name: Upload dist artifalct
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: dist
           path: dist/
@@ -24,7 +24,7 @@ jobs:
     needs: [build]
     steps:
     - name: Download dist artifact
-      uses: actions/download-artifact@v3
+      uses: actions/download-artifact@v4
       with:
         name: dist
         path: dist/
@@ -49,10 +49,10 @@ jobs:
         exclude: |
           /old/
 
-    - name: 📂 Sync files Medical
-      uses: SamKirkland/FTP-Deploy-Action@v4.3.4
-      with:
-        server: ${{ secrets.FTP_SERVER }}
-        username: ${{ secrets.FTP_USERNAME_MED }}
-        password: ${{ secrets.FTP_PASSWORD_MED }}
-        local-dir: ./dist/
+    # - name: 📂 Sync files Medical
+    #   uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+    #   with:
+    #     server: ${{ secrets.FTP_SERVER }}
+    #     username: ${{ secrets.FTP_USERNAME_MED }}
+    #     password: ${{ secrets.FTP_PASSWORD_MED }}
+    #     local-dir: ./dist/
