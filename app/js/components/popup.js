@@ -10,14 +10,13 @@ export default {
   },
   methods: {
     open(event, params = {}) {
-        this.isOpen = true
-        if('target' in params) {
-          this.target = params.target
-          console.log(this.target)
-        }
-        if (event) {
-          event.preventDefault()
-        }
+      this.isOpen = true;
+      
+      if ('target' in params) {
+        this.target = params.target;
+      }
+      
+      event?.preventDefault();
     },
     close(event){
         this.isOpen = false
