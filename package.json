@@ -43,7 +43,7 @@
 		"webpack-stream": "^7.0.0"
 	},
 	"dependencies": {
-		"axios": "^1.4.0",
+		"axios": "^1.7.4",
 		"countup.js": "^2.6.2",
 		"imask": "^6.6.1",
 		"swiper": "^9.3.2",
