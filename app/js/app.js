@@ -8,7 +8,7 @@ import formWrapper from './components/formWrapper.js'
 import countUp from './utils/countUp.js'
 import menuToggle from './utils/menuToggle.js'
 import stickyHeader from './utils/stickyHeader.js'
-
+import videoSection from './components/videoSection.js';
 
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -22,6 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
 			'schedule': schedule,
 			'popup': popup,
 			'formwrapper': formWrapper,
+			'videosection': videoSection,
 		},
 		methods: {
 			openPopup(ref, params = {}) {

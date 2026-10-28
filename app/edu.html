@@ -522,21 +522,14 @@
 
             <div class="text-center teacher-section__heading">
                 <h2 class="heading heading_medium heading_underline">
-                    Видео наших занятий
+                    Видео о нас
                 </h2>
             </div>
-            
-            <div class="video-section__videos">
-                <div class="video-section__video">
-                    <div style="position: relative; padding-top: 56.25%; width: 100%"><iframe src="https://kinescope.io/embed/8FD73y1VgMkLHPbsDQ8KDh" allow="autoplay; fullscreen; picture-in-picture; encrypted-media; gyroscope; accelerometer; clipboard-write; screen-wake-lock;" frameborder="0" allowfullscreen style="position: absolute; width: 100%; height: 100%; top: 0; left: 0;"></iframe></div>
-                </div>
-                <div class="video-section__video">
-                    <div style="position: relative; padding-top: 56.21%; width: 100%"><iframe src="https://kinescope.io/embed/7eZEgzevwF8599WXke2oBe" allow="autoplay; fullscreen; picture-in-picture; encrypted-media; gyroscope; accelerometer; clipboard-write; screen-wake-lock;" frameborder="0" allowfullscreen style="position: absolute; width: 100%; height: 100%; top: 0; left: 0;"></iframe></div>
-                </div>
-                <div class="video-section__video">
-                    <div style="position: relative; padding-top: 56.25%; width: 100%"><iframe src="https://kinescope.io/embed/dMjsMz4w83hKHkYQD2LcXE" allow="autoplay; fullscreen; picture-in-picture; encrypted-media; gyroscope; accelerometer; clipboard-write; screen-wake-lock;" frameborder="0" allowfullscreen style="position: absolute; width: 100%; height: 100%; top: 0; left: 0;"></iframe></div>
-                </div>
+
+            <div id="videos">
+                <video-section placement="ucheba" :per-page="3"></video-section>
             </div>
+            
         </div>
     </section>
 
