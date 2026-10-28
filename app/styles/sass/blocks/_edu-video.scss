@@ -14,7 +14,7 @@
     }
 
     &__video {
-        flex-basis: 32%;
+        flex-basis: 31%;
         overflow: hidden;
         border-radius: 10px;
         background-color: $success;
@@ -38,6 +38,7 @@
         }
         &__video {
             flex-basis: auto;
+            min-height: 320px;
         }
     }
 }
