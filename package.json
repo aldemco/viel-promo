@@ -5,48 +5,41 @@
 	"main": "index.js",
 	"author": "Aldemco",
 	"type": "module",
+	"engines": {
+		"node": ">=24.15.0"
+	},
 	"browserslist": [
 		"last 10 versions"
 	],
 	"license": "ISC",
 	"scripts": {
-		"start": "gulp"
+		"start": "gulp",
+		"build": "gulp build"
 	},
 	"devDependencies": {
-		"@babel/core": "^7.21.8",
-		"@babel/preset-env": "^7.21.5",
-		"autoprefixer": "^10.4.14",
-		"babel-loader": "^9.1.2",
-		"babel-plugin-module-resolver": "^5.0.0",
+		"@babel/core": "^8.0.10",
+		"@babel/preset-env": "^8.0.7",
+		"autoprefixer": "^10.6.2",
+		"babel-loader": "^10.1.1",
 		"babel-plugin-root-import": "^6.6.0",
-		"bootstrap": "^5.2.3",
-		"browser-sync": "^2.29.1",
-		"browsersync-ssi": "^0.2.4",
-		"cssnano": "^6.0.1",
-		"del": "^7.0.0",
-		"gulp": "^4.0.2",
-		"gulp-changed": "^4.0.3",
-		"gulp-concat": "^2.6.1",
-		"gulp-imagemin": "^8.0.0",
-		"gulp-less": "^5.0.0",
-		"gulp-less-glob": "^1.0.0",
-		"gulp-noop": "^1.0.1",
-		"gulp-postcss": "^9.0.1",
-		"gulp-rsync": "0.1.0",
-		"gulp-sass": "^5.1.0",
-		"gulp-sass-glob": "^1.1.0",
-		"gulp-stylus": "^3.0.0",
-		"postcss": "^8.4.23",
-		"sass": "^1.62.1",
-		"terser-webpack-plugin": "^5.3.8",
-		"webpack": "^5.82.1",
-		"webpack-stream": "^7.0.0"
+		"bootstrap": "^5.3.8",
+		"cssnano": "^9.9.0",
+		"del": "^9.0.1",
+		"gulp": "^5.0.1",
+		"gulp-changed": "^5.0.4",
+		"postcss": "^8.5.32",
+		"sass": "^1.107.1",
+		"sharp": "^0.35.5",
+		"svgo": "^4.1.0",
+		"terser-webpack-plugin": "^5.6.1",
+		"vite": "^8.3.5",
+		"webpack": "^5.112.2"
 	},
 	"dependencies": {
-		"axios": "^1.7.4",
-		"countup.js": "^2.6.2",
-		"imask": "^6.6.1",
-		"swiper": "^9.3.2",
-		"vue": "^3.3.4"
+		"axios": "^1.21.0",
+		"countup.js": "^2.10.1",
+		"imask": "^7.6.1",
+		"swiper": "^14.4.0",
+		"vue": "^3.5.44"
 	}
 }

@@ -1,6 +1,7 @@
 // // Import vendor jQuery plugin example
 // import '~/app/libs/mmenu/dist/mmenu.js'
-import Swiper, { Autoplay, Navigation, Pagination, Parallax } from 'swiper';
+import Swiper from 'swiper'
+import { Autoplay, Navigation, Pagination, Parallax } from 'swiper/modules'
 import {createApp} from 'vue/dist/vue.esm-browser.js'
 import schedule from './components/schedule.js'
 import popup from './components/popup.js'
@@ -38,8 +39,8 @@ document.addEventListener('DOMContentLoaded', () => {
 	countUp();
 	stickyHeader('header');
 
-	Swiper.use([ Parallax, Navigation, Autoplay, Pagination ])
 	const promo = new Swiper('.promo-slider', {
+		modules: [Autoplay, Navigation],
 		direction: 'horizontal',
 		loop: true,
 		slidesPerView: 1,
@@ -55,6 +56,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	  });
 
 	  const employee = new Swiper('.employee-slider', {
+		modules: [Autoplay, Pagination, Parallax],
 		direction: 'horizontal',
 		slidesPerView: 3,
 		speed: 2400,
@@ -82,6 +84,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	  });
 
 	  const testimonials = new Swiper('.testimonials-slider', {
+		modules: [Autoplay, Navigation, Parallax],
 		direction: 'horizontal',
 		slidesPerView: 3,
 		spaceBetween: 55,

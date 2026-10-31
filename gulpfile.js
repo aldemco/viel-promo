@@ -1,108 +1,165 @@
-let preprocessor = 'sass', // Preprocessor (sass, less, styl); 'sass' also work with the Scss syntax in blocks/ folder.
-		fileswatch   = 'html,php,htm,txt,json,md,woff2' // List of files extensions for watching & hard reload
+import { spawn } from 'node:child_process'
+import { Transform } from 'node:stream'
+import path from 'node:path'
+import { mkdir, readdir, readFile, writeFile } from 'node:fs/promises'
+import { createServer } from 'vite'
+import { optimize } from 'svgo'
+import sharp from 'sharp'
+import gulp from 'gulp'
+import webpack from 'webpack'
+import TerserPlugin from 'terser-webpack-plugin'
+import * as dartSass from 'sass'
+import postcss from 'postcss'
+import cssnano from 'cssnano'
+import autoprefixer from 'autoprefixer'
+import changed from 'gulp-changed'
+import { deleteAsync } from 'del'
+import { createSsiMiddleware, expandSsiIncludes } from './build/ssi.js'
 
-import pkg from 'gulp'
-const { gulp, src, dest, parallel, series, watch } = pkg
+const { src, dest, parallel, series, watch } = gulp
+const styleDirectory = 'app/styles/sass'
+const imageDirectory = 'app/images/src'
+const imageOutputDirectory = 'app/images/dist'
 
-import browserSync   from 'browser-sync'
-import bssi          from 'browsersync-ssi'
-import ssi           from 'ssi'
-import webpackStream from 'webpack-stream'
-import webpack       from 'webpack'
-import TerserPlugin  from 'terser-webpack-plugin'
-import gulpSass      from 'gulp-sass'
-import dartSass      from 'sass'
-import sassglob      from 'gulp-sass-glob'
-const  sass          = gulpSass(dartSass)
-import less          from 'gulp-less'
-import lessglob      from 'gulp-less-glob'
-import styl          from 'gulp-stylus'
-import stylglob      from 'gulp-noop'
-import postCss       from 'gulp-postcss'
-import cssnano       from 'cssnano'
-import autoprefixer  from 'autoprefixer'
-import imagemin      from 'gulp-imagemin'
-import changed       from 'gulp-changed'
-import concat        from 'gulp-concat'
-import rsync         from 'gulp-rsync'
-import {deleteAsync} from 'del'
-
-function browsersync() {
-	browserSync.init({
-		server: {
-			baseDir: 'app/',
-			middleware: bssi({ baseDir: 'app/', ext: '.html' })
+function scripts() {
+	const compiler = webpack({
+		mode: 'production',
+		entry: path.resolve('app/js/app.js'),
+		output: {
+			path: path.resolve('app/js'),
+			filename: 'app.min.js'
 		},
-		ui: {
-			port: 8081
+		performance: { hints: false },
+		module: {
+			rules: [
+				{
+					test: /\.m?js$/,
+					exclude: /(node_modules)/,
+					use: {
+						loader: 'babel-loader',
+						options: {
+							presets: ['@babel/preset-env'],
+							plugins: ['babel-plugin-root-import']
+						}
+					}
+				}
+			]
 		},
-		port: 8080,
-		ghostMode: { clicks: false },
-		notify: false,
-		online: true,
-		// tunnel: 'yousutename', // Attempt to use the URL https://yousutename.loca.lt
+		optimization: {
+			minimize: true,
+			minimizer: [
+				new TerserPlugin({
+					terserOptions: { format: { comments: false } },
+					extractComments: false
+				})
+			]
+		}
+	})
+
+	return new Promise((resolve, reject) => {
+		compiler.run((error, stats) => {
+			const finish = (buildError) => {
+				compiler.close((closeError) => {
+					if (buildError) {
+						reject(buildError)
+					} else if (closeError) {
+						reject(closeError)
+					} else {
+						resolve()
+					}
+				})
+			}
+
+			if (error) {
+				finish(error)
+			} else if (stats.hasErrors()) {
+				finish(new Error(stats.toString({ all: false, errors: true, errorDetails: true })))
+			} else {
+				finish()
+			}
+		})
 	})
 }
 
-function scripts() {
-	return src(['app/js/*.js', '!app/js/*.min.js'])
-		.pipe(webpackStream({
-			mode: 'production',
-			performance: { hints: false },
-			plugins: [
-				new webpack.ProvidePlugin({ $: 'jquery', jQuery: 'jquery', 'window.jQuery': 'jquery' }), // jQuery (npm i jquery)
-			],
-			module: {
-				rules: [
-					{
-						test: /\.m?js$/,
-						exclude: /(node_modules)/,
-						use: {
-							loader: 'babel-loader',
-							options: {
-								presets: ['@babel/preset-env'],
-								plugins: ['babel-plugin-root-import']
-							}
-						}
-					}
-				]
-			},
-			optimization: {
-				minimize: true,
-				minimizer: [
-					new TerserPlugin({
-						terserOptions: { format: { comments: false } },
-						extractComments: false
-					})
-				]
-			},
-		}, webpack)).on('error', (err) => {
-			this.emit('end')
-		})
-		.pipe(concat('app.min.js'))
-		.pipe(dest('app/js'))
-		.pipe(browserSync.stream())
-}
+async function styles() {
+	const entries = await readdir(styleDirectory, { withFileTypes: true })
+	const styleFiles = entries
+		.filter((entry) => entry.isFile() && !entry.name.startsWith('_') && /\.(sass|scss)$/i.test(entry.name))
+		.map((entry) => path.join(styleDirectory, entry.name))
+		.sort()
 
-function styles() {
-	return src([`app/styles/${preprocessor}/*.*`, `!app/styles/${preprocessor}/_*.*`])
-		.pipe(eval(`${preprocessor}glob`)())
-		.pipe(eval(preprocessor)({ 'include css': true }))
-		.pipe(postCss([
-			autoprefixer({ grid: 'autoplace' }),
-			cssnano({ preset: ['default', { discardComments: { removeAll: true } }] })
-		]))
-		.pipe(concat('app.min.css'))
-		.pipe(dest('app/css'))
-		.pipe(browserSync.stream())
+	const compiledStyles = await Promise.all(styleFiles.map(async (file) => (
+		dartSass.compileAsync(file, {
+			loadPaths: [path.resolve('node_modules')],
+			style: 'expanded'
+		})
+	)))
+	const swiperStyles = await Promise.all([
+		readFile('node_modules/swiper/swiper.css', 'utf8'),
+		readFile('node_modules/swiper/modules/pagination.css', 'utf8')
+	])
+	const css = [...swiperStyles, ...compiledStyles.map((result) => result.css)].join('\n')
+	const result = await postcss([
+		autoprefixer({ grid: 'autoplace' }),
+		cssnano({ preset: ['default', { discardComments: { removeAll: true } }] })
+	]).process(css, { from: undefined })
+
+	await mkdir('app/css', { recursive: true })
+	await writeFile('app/css/app.min.css', result.css)
 }
 
 function images() {
-	return src(['app/images/src/**/*'])
-		.pipe(changed('app/images/dist'))
-		.pipe(imagemin())
-		.pipe(dest('app/images/dist'))
-		.pipe(browserSync.stream())
+	return src([`${imageDirectory}/**/*`])
+		.pipe(changed(imageOutputDirectory))
+		.pipe(new Transform({
+			objectMode: true,
+			transform(file, encoding, callback) {
+				if (file.isNull()) {
+					callback(null, file)
+					return
+				}
+				if (!file.isBuffer()) {
+					callback(new Error(`Expected a buffered image: ${file.path}`))
+					return
+				}
+
+				const extension = path.extname(file.path).toLowerCase()
+				if (extension === '.svg') {
+					try {
+						file.contents = Buffer.from(optimize(file.contents.toString(), { path: file.path }).data)
+						callback(null, file)
+					} catch (error) {
+						callback(error)
+					}
+					return
+				}
+
+				const formats = {
+					'.avif': 'avif',
+					'.gif': 'gif',
+					'.jpg': 'jpeg',
+					'.jpeg': 'jpeg',
+					'.png': 'png',
+					'.tif': 'tiff',
+					'.tiff': 'tiff',
+					'.webp': 'webp'
+				}
+				const format = formats[extension]
+				if (!format) {
+					callback(null, file)
+					return
+				}
+
+				sharp(file.contents, { animated: format === 'gif' })
+					.toFormat(format)
+					.toBuffer()
+					.then((contents) => {
+						file.contents = contents
+						callback(null, file)
+					}, callback)
+			}
+		}))
+		.pipe(dest(imageOutputDirectory))
 }
 
 function buildcopy() {
@@ -118,10 +175,23 @@ function buildcopy() {
 }
 
 async function buildhtml() {
-	let includes = new ssi('app/', 'dist/', '/**/*.html')
-	let includesPhp = new ssi('app/', 'dist/', '/**/*.php')
-	includes.compile()
-	includesPhp.compile()
+	async function compileDirectory(directory) {
+		const entries = await readdir(directory, { withFileTypes: true })
+		for (const entry of entries) {
+			const sourcePath = path.join(directory, entry.name)
+			if (entry.isDirectory()) {
+				await compileDirectory(sourcePath)
+			} else if (/\.(html|php)$/i.test(entry.name)) {
+				const relativePath = path.relative('app', sourcePath)
+				const outputPath = path.join('dist', relativePath)
+				const source = await readFile(sourcePath, 'utf8')
+				await mkdir(path.dirname(outputPath), { recursive: true })
+				await writeFile(outputPath, await expandSsiIncludes(source, sourcePath, path.resolve('app')))
+			}
+		}
+	}
+
+	await compileDirectory(path.resolve('app'))
 	await deleteAsync('dist/parts', { force: true })
 }
 
@@ -130,30 +200,55 @@ async function cleandist() {
 }
 
 function deploy() {
-	return src('dist/')
-		.pipe(rsync({
-			root: 'dist/',
-			hostname: 'username@yousite.com',
-			destination: 'yousite/public_html/',
-			clean: true, // Mirror copy with file deletion
-			include: [/* '*.htaccess' */], // Included files to deploy,
-			exclude: [ '**/Thumbs.db', '**/*.DS_Store' ],
-			recursive: true,
-			archive: true,
-			silent: false,
-			compress: true
-		}))
+	return new Promise((resolve, reject) => {
+		const rsync = spawn('rsync', [
+			'--archive',
+			'--compress',
+			'--delete',
+			'--exclude=**/Thumbs.db',
+			'--exclude=**/*.DS_Store',
+			'dist/',
+			'username@yousite.com:yousite/public_html/'
+		], { stdio: 'inherit' })
+
+		rsync.once('error', reject)
+		rsync.once('close', (code) => {
+			if (code === 0) {
+				resolve()
+			} else {
+				reject(new Error(`rsync exited with code ${code}`))
+			}
+		})
+	})
 }
 
 function startwatch() {
-	watch(`app/styles/${preprocessor}/**/*`, { usePolling: true }, styles)
+	watch(`${styleDirectory}/**/*`, { usePolling: true }, styles)
 	watch(['app/js/**/*.js', '!app/js/**/*.min.js'], { usePolling: true }, scripts)
-	watch('app/images/src/**/*', { usePolling: true }, images)
-	watch(`app/**/*.{${fileswatch}}`, { usePolling: true }).on('change', browserSync.reload)
+	watch(`${imageDirectory}/**/*`, { usePolling: true }, images)
+}
+
+async function devServer() {
+	const server = await createServer({
+		root: path.resolve('app'),
+		server: { port: Number(process.env.PORT ?? 8081), strictPort: true },
+		plugins: [{
+			name: 'local-ssi-includes',
+			configureServer(viteServer) {
+				viteServer.middlewares.use(createSsiMiddleware(path.resolve('app'), { injectViteClient: true }))
+				viteServer.watcher.on('change', (filePath) => {
+					if (/\.(html|php|htm|txt|json|md|woff2)$/i.test(filePath)) {
+						viteServer.ws.send({ type: 'full-reload' })
+					}
+				})
+			}
+		}]
+	})
+	await server.listen()
 }
 
 export { scripts, styles, images, deploy }
 export let assets = series(scripts, styles, images)
 export let build = series(cleandist, images, scripts, styles, buildcopy, buildhtml)
 
-export default series(scripts, styles, images, parallel(browsersync, startwatch))
+export default series(scripts, styles, images, parallel(devServer, startwatch))
