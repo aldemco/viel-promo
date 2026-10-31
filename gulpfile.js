@@ -221,14 +221,13 @@ function images() {
 }
 
 async function buildcopy() {
-	// Обычные файлы. Картинок тут больше нет — images() уже пишет прямо в dist/images.
 	await pipeline(
 		src([
 			'{app/js,app/css}/*.min.*',
 			'app/*.pdf',
 			'app/fonts/**/*',
 			'app/videos/**/*'
-		], { base: 'app/' }),
+		], { base: 'app/', encoding: false }), // ← ключевое изменение
 		dest('dist')
 	)
 }
