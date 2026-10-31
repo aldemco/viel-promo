@@ -36,7 +36,7 @@ jobs:
       working-directory: dist/
       
     - name: Update buildId in files
-      uses: jacobtomlinson/gha-find-replace@v3.0.5
+      uses: jacobtomlinson/gha-find-replace@v3
       with:
         find: "{BUILD_ID}"
         replace: ${{ github.sha }}
