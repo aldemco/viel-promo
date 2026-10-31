@@ -1,5 +1,6 @@
 import { spawn } from 'node:child_process'
 import { Transform } from 'node:stream'
+import { pipeline } from 'node:stream/promises'
 import path from 'node:path'
 import { mkdir, readdir, readFile, writeFile } from 'node:fs/promises'
 import { createServer } from 'vite'
@@ -18,8 +19,8 @@ import { createSsiMiddleware, expandSsiIncludes } from './build/ssi.js'
 
 const { src, dest, parallel, series, watch } = gulp
 const styleDirectory = 'app/styles/sass'
-const imageDirectory = 'app/images/src'
-const imageOutputDirectory = 'app/images/dist'
+const imageDirectory = 'app/images'
+const imageOutputDirectory = 'dist/images'
 
 function scripts() {
 	const compiler = webpack({
@@ -109,7 +110,20 @@ async function styles() {
 }
 
 function images() {
-	return src([`${imageDirectory}/**/*`])
+	const formats = {
+		'.avif': 'avif',
+		'.gif': 'gif',
+		'.jpg': 'jpeg',
+		'.jpeg': 'jpeg',
+		'.png': 'png',
+		'.tif': 'tiff',
+		'.tiff': 'tiff',
+		'.webp': 'webp'
+	}
+
+	// Пишем в промежуточный буфер, а не сразу в dest — чтобы при ошибке
+	// не оставить частично записанный (битый) файл.
+	return src([`${imageDirectory}/**/*`], { encoding: false })
 		.pipe(changed(imageOutputDirectory))
 		.pipe(new Transform({
 			objectMode: true,
@@ -124,54 +138,99 @@ function images() {
 				}
 
 				const extension = path.extname(file.path).toLowerCase()
+
+				// --- SVG ---
 				if (extension === '.svg') {
 					try {
-						file.contents = Buffer.from(optimize(file.contents.toString(), { path: file.path }).data)
+						const result = optimize(file.contents.toString('utf8'), { path: file.path })
+						if (!result || typeof result.data !== 'string' || result.data.length === 0) {
+							throw new Error('svgo returned empty data')
+						}
+						file.contents = Buffer.from(result.data)
 						callback(null, file)
 					} catch (error) {
-						callback(error)
+						console.warn(`[images] ${file.path}: ${error.message} — copying original`)
+						callback(null, file)
 					}
 					return
 				}
 
-				const formats = {
-					'.avif': 'avif',
-					'.gif': 'gif',
-					'.jpg': 'jpeg',
-					'.jpeg': 'jpeg',
-					'.png': 'png',
-					'.tif': 'tiff',
-					'.tiff': 'tiff',
-					'.webp': 'webp'
-				}
 				const format = formats[extension]
+
+				// Неизвестный формат — копируем как есть
 				if (!format) {
 					callback(null, file)
 					return
 				}
 
-				sharp(file.contents, { animated: format === 'gif' })
-					.toFormat(format)
-					.toBuffer()
-					.then((contents) => {
-						file.contents = contents
+				// sharp в текущей сборке может не уметь ПИСАТЬ этот формат.
+				// Тогда просто копируем исходник без перекодирования.
+				const outputSupported = sharp.format?.[format]?.output
+				if (outputSupported === false) {
+					callback(null, file)
+					return
+				}
+
+				const isAnimated = format === 'gif'
+
+				let pipeline = sharp(file.contents, {
+					animated: isAnimated,
+					failOn: 'none'
+				})
+
+				switch (format) {
+					case 'jpeg':
+						pipeline = pipeline.jpeg({ quality: 82, mozjpeg: true, progressive: true })
+						break
+					case 'png':
+						pipeline = pipeline.png({ compressionLevel: 9, palette: true })
+						break
+					case 'webp':
+						pipeline = pipeline.webp({ quality: 82, effort: 4 })
+						break
+					case 'avif':
+						pipeline = pipeline.avif({ quality: 50, effort: 4 })
+						break
+					case 'gif':
+						pipeline = pipeline.gif({ effort: 7 })
+						break
+					case 'tiff':
+						pipeline = pipeline.tiff({ compression: 'lzw', predictor: 'horizontal' })
+						break
+					default:
 						callback(null, file)
-					}, callback)
+						return
+				}
+
+				pipeline
+					.toBuffer({ resolveWithObject: true })
+					.then(({ data, info }) => {
+						if (!data || data.length === 0 || info.width === 0 || info.height === 0) {
+							throw new Error('sharp produced an empty image')
+						}
+						file.contents = data
+						callback(null, file)
+					})
+					.catch((error) => {
+						console.warn(`[images] ${file.path}: ${error.message} — copying original`)
+						callback(null, file)
+					})
 			}
 		}))
 		.pipe(dest(imageOutputDirectory))
 }
 
-function buildcopy() {
-	return src([
-		'{app/js,app/css}/*.min.*',
-		'app/*.pdf',
-		'app/images/**/*.*',
-		'!app/images/src/**/*',
-		'app/fonts/**/*',
-		'app/videos/**/*'
-	], { base: 'app/' })
-	.pipe(dest('dist'))
+async function buildcopy() {
+	// Обычные файлы. Картинок тут больше нет — images() уже пишет прямо в dist/images.
+	await pipeline(
+		src([
+			'{app/js,app/css}/*.min.*',
+			'app/*.pdf',
+			'app/fonts/**/*',
+			'app/videos/**/*'
+		], { base: 'app/' }),
+		dest('dist')
+	)
 }
 
 async function buildhtml() {
@@ -196,7 +255,10 @@ async function buildhtml() {
 }
 
 async function cleandist() {
-	await deleteAsync('dist/**/*', { force: true })
+	// Чистим и dist/, и промежуточную папку app/images/dist.
+	// Иначе gulp-changed будет пропускать файлы, считая их «свежими»,
+	// и в dist попадут устаревшие ре-энкоды.
+	await deleteAsync(['dist', imageOutputDirectory], { force: true })
 }
 
 function deploy() {
@@ -231,7 +293,7 @@ function startwatch() {
 async function devServer() {
 	const server = await createServer({
 		root: path.resolve('app'),
-		server: { port: Number(process.env.PORT ?? 8081), strictPort: true },
+		server: { port: Number(process.env.PORT ?? 8080), strictPort: true },
 		plugins: [{
 			name: 'local-ssi-includes',
 			configureServer(viteServer) {
