@@ -789,7 +789,12 @@
 <popup ref="getprice">
     <h3 class="popup__heading heading heading_medium">Получить прайс</h3>
     <p class="popup__message">Оставьте заявку и получите полный прайс на образовательные услуги Школы массажа "Виэль”</p>
-    <formwrapper site="УЦ" from="Получить прайс (popup)" method="POST" class="popup__form"  goal="price">
+    <formwrapper site="УЦ" 
+        from="Получить прайс (popup)" 
+        method="POST" 
+        class="popup__form"  
+        goal="price"
+        :defaults="{ connection: 'Звонок' }">
         <template #default="{ form }">
             <div class="popup__form-row">
                 <span class="popup__form-label" >Ваш телефон: *  </span>
@@ -808,8 +813,14 @@
                 <input class="popup__input form-input" type="text" name="city" v-model="form.city">
             </div>
             <div class="popup__form-row">
-                <span class="popup__form-label" >Сообщение:  </span>
-                <textarea maxlength="499" class="popup__textarea form-textarea" name="message" v-model="form.message"></textarea>
+                <span class="popup__form-label" >Как будет удобнее связаться?  </span>
+                <select name="connection" class="popup__select form-select" v-model="form.connection">
+                    <option value="Email">Электронная почта</option>
+                    <option value="Звонок">Звонок</option>
+                    <option value="Whatsapp">Whatsapp</option>
+                    <option value="Telegram">Telegram</option>
+                    <option value="Max">Max</option>
+                </select>
             </div>
             <div class="popup__form-row popup__agree">
                 <input  type="checkbox" name="agree" checked required> 
@@ -825,7 +836,13 @@
 <popup ref="callback" >
     <h3 class="popup__heading heading heading_medium">Обратный звонок</h3>
     <p class="popup__message">Оставьте Ваши контакты и наш специалист  свяжется с Вами в самое ближайшее время</p>
-    <formwrapper site="УЦ" from="Обратный звонок (popup)" method="POST" class="popup__form"  goal="zvonok">
+    <formwrapper 
+        site="УЦ" 
+        from="Обратный звонок (popup)" 
+        method="POST" 
+        class="popup__form"  
+        goal="zvonok"
+        :defaults="{ connection: 'Звонок' }" >
         <template #default="{ form }">
             <div class="popup__form-row">
                 <span class="popup__form-label" >Ваш телефон: *  </span>
@@ -844,8 +861,14 @@
                 <input class="popup__input form-input" type="text" name="city" v-model="form.city">
             </div>
             <div class="popup__form-row">
-                <span class="popup__form-label" >Сообщение: </span>
-                <textarea maxlength="499" class="popup__textarea form-textarea" name="message"  v-model="form.message"></textarea>
+                <span class="popup__form-label" >Как будет удобнее связаться?  </span>
+                <select name="connection" class="popup__select form-select" v-model="form.connection">
+                    <option value="Email">Электронная почта</option>
+                    <option value="Звонок">Звонок</option>
+                    <option value="Whatsapp">Whatsapp</option>
+                    <option value="Telegram">Telegram</option>
+                    <option value="Max">Max</option>
+                </select>
             </div>
             <div class="popup__form-row popup__agree">
                 <input  type="checkbox" name="agree" checked required> 
@@ -861,7 +884,13 @@
 <popup ref="getprograms" >
     <h3 class="popup__heading heading heading_medium">Получить программы курсов</h3>
     <p class="popup__message">Оставьте заявку и получите программы курсов Школы массажа “Виэль”</p>
-    <formwrapper site="УЦ" from="Получить программы курсов (popup)" method="POST" class="popup__form"  goal="program">
+    <formwrapper 
+        site="УЦ" 
+        from="Получить программы курсов (popup)" 
+        method="POST" 
+        class="popup__form"  
+        goal="program"
+        :defaults="{ connection: 'Звонок' }">
         <template #default="{ form }">
             <div class="popup__form-row">
                 <span class="popup__form-label" >Ваш телефон: *  </span>
@@ -880,8 +909,14 @@
                 <input class="popup__input form-input" type="text" name="city" v-model="form.city">
             </div>
             <div class="popup__form-row">
-                <span class="popup__form-label" >Сообщение: </span>
-                <textarea maxlength="499" class="popup__textarea form-textarea" name="message" v-model="form.message"></textarea>
+                <span class="popup__form-label" >Как будет удобнее связаться?  </span>
+                <select name="connection" class="popup__select form-select" v-model="form.connection">
+                    <option value="Email">Электронная почта</option>
+                    <option value="Звонок">Звонок</option>
+                    <option value="Whatsapp">Whatsapp</option>
+                    <option value="Telegram">Telegram</option>
+                    <option value="Max">Max</option>
+                </select>
             </div>
             <div class="popup__form-row popup__agree">
                 <input  type="checkbox" name="agree" checked required> 
@@ -897,7 +932,13 @@
 <popup ref="getschedule">
     <h3 class="popup__heading heading heading_medium">Получить расписание курсов</h3>
     <p class="popup__message">Оставьте заявку и получите актуальное расписание  курсов Школы массажа “Виэль”</p>
-    <formwrapper site="УЦ" from="Получить расписание курсов (popup)" method="POST" class="popup__form"  goal="raspisanie">
+    <formwrapper 
+        site="УЦ" 
+        from="Получить расписание курсов (popup)" 
+        method="POST" 
+        class="popup__form"  
+        goal="raspisanie"
+        :defaults="{ connection: 'Звонок' }">
         <template #default="{ form }">
             <div class="popup__form-row">
                 <span class="popup__form-label" >Ваш телефон: *  </span>
@@ -916,8 +957,14 @@
                 <input class="popup__input form-input" type="text" name="city" v-model="form.city">
             </div>
             <div class="popup__form-row">
-                <span class="popup__form-label" >Сообщение: </span>
-                <textarea maxlength="499" class="popup__textarea form-textarea" name="message" v-model="form.message"></textarea>
+                <span class="popup__form-label" >Как будет удобнее связаться?  </span>
+                <select name="connection" class="popup__select form-select" v-model="form.connection">
+                    <option value="Email">Электронная почта</option>
+                    <option value="Звонок">Звонок</option>
+                    <option value="Whatsapp">Whatsapp</option>
+                    <option value="Telegram">Telegram</option>
+                    <option value="Max">Max</option>
+                </select>
             </div>
             <div class="popup__form-row popup__agree">
                 <input type="checkbox" name="agree" checked required> 
@@ -934,7 +981,13 @@
 
 <popup ref="getprogram" #default="{ target }">
     <h3 class="popup__heading heading heading_medium">Получить программу курса <span>{{target}}</span></h3>
-    <formwrapper site="УЦ" from="Получить программу курса" method="POST" class="popup__form"  goal="raspisanie">
+    <formwrapper 
+        site="УЦ" 
+        from="Получить программу курса" 
+        method="POST" 
+        class="popup__form"  
+        goal="raspisanie"
+        :defaults="{ connection: 'Звонок' }">
         <template #default="{ form }">
             <div class="popup__form-row">
                 <span class="popup__form-label" >Ваш телефон: *  </span>
@@ -948,6 +1001,17 @@
                 <span class="popup__form-label">Город: *</span>
                 <input class="popup__input form-input" type="text" name="city" v-model="form.city">
             </div>
+
+            <div class="popup__form-row">
+                <span class="popup__form-label" >Как будет удобнее связаться?  </span>
+                <select name="connection" class="popup__select form-select" v-model="form.connection">
+                    <option value="Звонок">Звонок</option>
+                    <option value="Whatsapp">Whatsapp</option>
+                    <option value="Telegram">Telegram</option>
+                    <option value="Max">Max</option>
+                </select>
+            </div>
+
             <div class="popup__form-row popup__agree">
                 <input type="checkbox" name="agree" checked required> 
                 <span>Я принимаю условия и соглашаюсь на обработку персональных данных в соответствии с <a href="privacy-edu.pdf" target="_blank">Политикой в отношении обработки персональных данных </a> в ООО «ВИЭЛЬ» </span>

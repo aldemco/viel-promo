@@ -27,6 +27,7 @@ export default {
             type: String,
             default: 'POST',
         },
+        defaults: { type: Object, default: () => ({}) },
     },
     methods: {
       submit(event) {
@@ -131,8 +132,7 @@ export default {
     },
 
     created() {
-      this.form.site = this.site
-      this.form.from = this.from
+      this.form = { ...this.defaults, site: this.site, from: this.from }
     },
     template: `
         <form v-bind:class="{ form_loading: this.isLoading }" :method="this.method" v-bind="$attrs" @submit.prevent="submit">
